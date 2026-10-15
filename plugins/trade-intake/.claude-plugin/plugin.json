@@ -1,0 +1,8 @@
+{
+  "name": "trade-intake",
+  "version": "0.4.0",
+  "description": "Plain-words interviews for trade business owners: /quote-intake (quoting), /takeoff-intake (takeoffs from drawings), /po-intake (ordering materials) and /sales-intake (enquiries and follow-up). Each reads two real examples, draws the process for them to check, and makes one file to send to Adam so he can build the tool. Then it builds them their own skill from what it learned, tries it on their first job and walks them through adding it to Cowork.",
+  "author": {
+    "name": "Adam Goodyer"
+  }
+}

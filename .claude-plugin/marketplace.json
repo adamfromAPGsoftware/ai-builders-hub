@@ -1,0 +1,16 @@
+{
+  "name": "trade-tools",
+  "owner": {
+    "name": "Adam Goodyer"
+  },
+  "metadata": {
+    "description": "Short question-and-answer setups for trade businesses. Each one asks how you do a job today and gives you one file to send to Adam, who builds the tool from it."
+  },
+  "plugins": [
+    {
+      "name": "trade-intake",
+      "source": "./plugins/trade-intake",
+      "description": "The questions Adam needs to build your tool: /quote-intake, /takeoff-intake, /po-intake or /sales-intake. Start with the one Adam asks for."
+    }
+  ]
+}
