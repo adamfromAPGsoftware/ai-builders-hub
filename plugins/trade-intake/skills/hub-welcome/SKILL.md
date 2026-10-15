@@ -360,12 +360,13 @@ Ask them to say "saved" or "later". Then one table on how to post the card:
 | # | Post your intro in the Hub (this finishes the intro module) |
 |:-:|---|
 | 1 | Download your welcome card (tap it, then Download or Save) |
-| 2 | Open the AI Builders Hub → **Community** → the **Introductions** category → **Write something** |
-| 3 | Paste your intro text, attach the card picture, post it |
-| 4 | Say g'day to two other new members in the comments |
+| 2 | Open the AI Builders Hub → **Community** → the pinned **Introductions** post at the top |
+| 3 | **Comment** on it: paste your intro text, attach the card picture, post the comment |
+| 4 | Reply g'day to two other new members' comments on the same post |
 | 5 | Mark the intro lesson complete in the Classroom |
 
-Ask them to say "posted" when it's up. If they'd rather post later, that's fine: remind them the
+New members can't start their own posts until Level 2, so the intro is always a comment on the
+pinned post, never "Write something". Ask them to say "posted" when it's up. If they'd rather post later, that's fine: remind them the
 intro isn't finished until the card is posted, and that the card and intro text are in the
 **My Business** folder.
 

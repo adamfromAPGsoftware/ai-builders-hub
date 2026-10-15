@@ -1,6 +1,6 @@
 {
   "name": "trade-intake",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Plain-words interviews for trade business owners. New to the AI Builders Hub? Start with /hub-welcome: a quick visual Q&A about you, your goals and how your business runs, which makes your welcome card for your intro post and a My Business folder to keep for later lessons. Then the tool intakes: /quote-intake (quoting), /takeoff-intake (takeoffs from drawings), /po-intake (ordering materials) and /sales-intake (enquiries and follow-up). Each reads two real examples, draws the process for them to check, makes one file to send to Adam, then builds them their own skill and walks them through adding it to Cowork.",
   "author": {
     "name": "Adam Goodyer"
