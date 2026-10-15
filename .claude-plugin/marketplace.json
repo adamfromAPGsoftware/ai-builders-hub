@@ -10,7 +10,7 @@
     {
       "name": "trade-intake",
       "source": "./plugins/trade-intake",
-      "description": "The questions Adam needs to build your tool: /quote-intake, /takeoff-intake, /po-intake or /sales-intake. Start with the one Adam asks for."
+      "description": "New to the AI Builders Hub? Start with /hub-welcome. Then the questions Adam needs to build your tool: /quote-intake, /takeoff-intake, /po-intake or /sales-intake."
     }
   ]
 }

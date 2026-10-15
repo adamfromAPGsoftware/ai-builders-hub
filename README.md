@@ -4,10 +4,15 @@ Short question-and-answer setups for trade businesses. Each one asks how you do 
 builds you your own Claude skill for that job, ready to add to Cowork. You also get one summary file
 you can send to Adam if you'd like his help taking it further.
 
-There are four. Do the one Adam asks for:
+**New to the AI Builders Hub? Start with /hub-welcome.** About 15 minutes of quick questions about
+you, your goals and how your business runs. You get a welcome card picture to post in the Hub's
+Introductions, your intro post words, and a starter pack. Posting the card finishes the Hub's intro.
+
+Then there are four tool setups. Do the one Adam asks for, or the one your welcome card points to:
 
 | Type this | For |
 |---|---|
+| **/hub-welcome** | Your Hub intro: who you are, how your business runs, your welcome card |
 | **/quote-intake** | How you quote |
 | **/takeoff-intake** | How you do takeoffs from drawings |
 | **/po-intake** | How you order materials (purchase orders) |
