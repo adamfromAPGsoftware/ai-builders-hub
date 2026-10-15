@@ -3,107 +3,114 @@
 
     python3 welcome_card.py card.json welcome-card.png
 
-Needs only Pillow, which Claude's code execution already has. The JSON fields are described in
-references/welcome-card.md. Missing optional fields are left off the card, never made up.
+Needs only Pillow, which Claude's code execution already has. The font (DM Sans, SIL Open Font
+Licence) ships in ../assets/fonts. The JSON fields are described in references/welcome-card.md.
+Missing optional fields are left off the card, never made up.
+
+Look: the AI Builders Hub system, lime on black (#90F23C on #0D0D0D), DM Sans, ALL CAPS
+headlines, no red.
 """
 import json
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 W = 1600
 PAD = 80
 INNER = W - 2 * PAD
 
-# AI Builders Hub palette (Adam Goodyer design system): warm cream, near-black ink, one orange.
-CREAM = (250, 250, 248)
-DOT = (216, 210, 204)
-PANEL = (242, 237, 232)
-LINE = (216, 210, 204)
-INK = (26, 22, 20)
-BODY = (92, 85, 80)
-MUTED = (154, 146, 140)
-ORANGE = (217, 119, 87)
-ORANGE_TEXT = (192, 95, 42)
-ORANGE_SOFT = (251, 232, 223)
-RED = (192, 57, 43)
+BG = (13, 13, 13)          # module cover near-black
+SURFACE = (17, 17, 17)     # cards
+SURFACE_2 = (24, 24, 24)   # step boxes
+BORDER = (36, 36, 36)      # a touch lighter than #1A1A1A so it reads on a phone
+LIME = (144, 242, 60)      # brand green
+LIME_DIM = (144, 242, 60, 26)
 WHITE = (255, 255, 255)
+BODY = (153, 153, 153)     # muted grey
+FAINT = (102, 102, 102)
+BLACK = (0, 0, 0)
 
-FONT_DIRS = [
-    "/usr/share/fonts/opentype/inter",
-    "/usr/share/fonts/truetype/inter",
-    "/usr/share/fonts/truetype/dejavu",
-    "/usr/share/fonts/truetype/liberation",
-    "/Library/Fonts",
-    "/System/Library/Fonts/Supplemental",
+HERE = Path(__file__).resolve().parent
+FONT_PATHS = [
+    HERE.parent / "assets" / "fonts" / "DMSans.ttf",
+    Path("assets/fonts/DMSans.ttf"),
+    Path("DMSans.ttf"),
 ]
-FONT_FILES = {
-    "regular": ["Inter-Regular.otf", "Inter-Regular.ttf", "DejaVuSans.ttf", "LiberationSans-Regular.ttf", "Arial.ttf"],
-    "medium": ["Inter-Medium.otf", "Inter-Medium.ttf", "DejaVuSans.ttf", "LiberationSans-Regular.ttf", "Arial.ttf"],
-    "bold": ["Inter-Bold.otf", "Inter-Bold.ttf", "DejaVuSans-Bold.ttf", "LiberationSans-Bold.ttf", "Arial Bold.ttf"],
-    "black": ["InterDisplay-Bold.otf", "Inter-ExtraBold.otf", "Inter-Bold.otf", "DejaVuSans-Bold.ttf", "LiberationSans-Bold.ttf"],
+FALLBACK = {
+    400: ["/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"],
+    500: ["/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"],
+    700: ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"],
+    900: ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"],
 }
-_font_cache = {}
+_cache = {}
 
 
 def font(weight, size):
     key = (weight, size)
-    if key in _font_cache:
-        return _font_cache[key]
-    for name in FONT_FILES[weight]:
-        for d in FONT_DIRS:
-            p = Path(d) / name
-            if p.exists():
-                _font_cache[key] = ImageFont.truetype(str(p), size)
-                return _font_cache[key]
-    _font_cache[key] = ImageFont.load_default(size=size)
-    return _font_cache[key]
-
-
-def text_w(draw, s, f):
-    return draw.textlength(s, font=f)
-
-
-def wrap(draw, s, f, width):
-    words, lines, cur = str(s).split(), [], ""
-    for w in words:
-        trial = (cur + " " + w).strip()
-        if text_w(draw, trial, f) <= width or not cur:
-            cur = trial
-        else:
-            lines.append(cur)
-            cur = w
-    if cur:
-        lines.append(cur)
-    return lines or [""]
+    if key in _cache:
+        return _cache[key]
+    for p in FONT_PATHS:
+        if p.exists():
+            f = ImageFont.truetype(str(p), size)
+            try:
+                f.set_variation_by_axes([min(max(size / 2, 9), 40), weight])
+            except Exception:
+                pass
+            _cache[key] = f
+            return f
+    for p in FALLBACK.get(weight, FALLBACK[400]):
+        if Path(p).exists():
+            _cache[key] = ImageFont.truetype(p, size)
+            return _cache[key]
+    _cache[key] = ImageFont.load_default(size=size)
+    return _cache[key]
 
 
 def line_h(f):
     a, d = f.getmetrics()
-    return int((a + d) * 1.18)
+    return int((a + d) * 1.16)
 
 
 class Card:
-    """Lays the card out top to bottom on a tall canvas, then crops to the content."""
-
     def __init__(self):
-        # Two layers: the dotted backdrop and panels underneath, the content on a clear layer above.
-        self.base = Image.new("RGBA", (W, 6000), CREAM)
+        h = 7000
+        self.base = Image.new("RGBA", (W, h), BG + (255,))
+        glow = Image.new("RGBA", (W, h), (0, 0, 0, 0))
+        ImageDraw.Draw(glow).ellipse((W - 760, -520, W + 360, 560), fill=LIME_DIM)
+        self.base = Image.alpha_composite(self.base, glow.filter(ImageFilter.GaussianBlur(160)))
         self.bd = ImageDraw.Draw(self.base)
-        for y in range(16, 6000, 32):
-            for x in range(16, W, 32):
-                self.bd.ellipse((x - 1.5, y - 1.5, x + 1.5, y + 1.5), fill=DOT)
-        self.ov = Image.new("RGBA", (W, 6000), (0, 0, 0, 0))
+        self.ov = Image.new("RGBA", (W, h), (0, 0, 0, 0))
         self.d = ImageDraw.Draw(self.ov)
         self.y = PAD
 
     # ---- primitives -------------------------------------------------------------------------
-    def text(self, x, y, s, f, fill=INK):
-        self.d.text((x, y), s, font=f, fill=fill)
+    def tw(self, s, f, track=0):
+        return self.d.textlength(s, font=f) + track * max(len(s) - 1, 0)
+
+    def text(self, x, y, s, f, fill=WHITE, track=0):
+        if not track:
+            self.d.text((x, y), s, font=f, fill=fill)
+            return
+        for ch in s:
+            self.d.text((x, y), ch, font=f, fill=fill)
+            x += self.d.textlength(ch, font=f) + track
+
+    def wrap(self, s, f, width):
+        words, lines, cur = str(s).split(), [], ""
+        for w in words:
+            trial = (cur + " " + w).strip()
+            if self.tw(trial, f) <= width or not cur:
+                cur = trial
+            else:
+                lines.append(cur)
+                cur = w
+        if cur:
+            lines.append(cur)
+        return lines or [""]
 
     def para(self, x, y, s, f, width, fill=BODY, max_lines=None):
-        lines = wrap(self.d, s, f, width)
+        lines = self.wrap(s, f, width)
         if max_lines and len(lines) > max_lines:
             lines = lines[:max_lines]
             lines[-1] = lines[-1].rstrip(".,;") + "…"
@@ -111,226 +118,229 @@ class Card:
             self.text(x, y + i * line_h(f), ln, f, fill)
         return y + len(lines) * line_h(f)
 
-    def chip(self, x, y, s, f, fg=INK, bg=WHITE, border=LINE):
-        tw = text_w(self.d, s, f)
-        h = line_h(f) + 18
-        self.d.rounded_rectangle((x, y, x + tw + 36, y + h), radius=h // 2, fill=bg, outline=border, width=2)
-        self.text(x + 18, y + 9, s, f, fg)
-        return x + tw + 36, y + h
+    def pill(self, x, y, s, f, fg, bg=None, border=None, padx=22, track=0):
+        w = self.tw(s, f, track) + 2 * padx
+        h = line_h(f) + 20
+        self.d.rounded_rectangle((x, y, x + w, y + h), radius=h // 2, fill=bg, outline=border, width=2)
+        self.text(x + padx, y + 10, s, f, fg, track)
+        return x + w, y + h
 
-    def chips(self, x, y, items, f, width, **kw):
-        cx, cy, row_h = x, y, line_h(f) + 18
+    def pills(self, x, y, items, f, width, **kw):
+        cx, cy, row_h = x, y, line_h(f) + 20
         for s in items:
-            tw = text_w(self.d, s, f) + 36
-            if cx + tw > x + width and cx > x:
+            w = self.tw(s, f) + 44
+            if cx + w > x + width and cx > x:
                 cx, cy = x, cy + row_h + 14
-            cx, _ = self.chip(cx, cy, s, f, **kw)
-            cx += 14
+            cx, _ = self.pill(cx, cy, s, f, **kw)
+            cx += 12
         return cy + row_h
 
-    def panel(self, top, bottom, fill=WHITE):
-        self.d.rounded_rectangle((PAD, top, W - PAD, bottom), radius=28, fill=fill, outline=LINE, width=2)
+    def label(self, x, y, s):
+        """Lime ALL CAPS section label with a 4px accent bar on the left."""
+        f = font(700, 24)
+        self.d.rectangle((x, y + 2, x + 4, y + 28), fill=LIME)
+        self.text(x + 20, y, s.upper(), f, LIME, track=3)
+        return y + 56
 
-    def heading(self, label, y):
-        f = font("bold", 26)
-        self.d.rectangle((PAD + 40, y + 6, PAD + 48, y + 34), fill=ORANGE)
-        self.text(PAD + 64, y, label.upper(), f, ORANGE_TEXT)
-        return y + 54
+    def panel(self, top, bottom, fill=SURFACE, outline=BORDER):
+        self.bd.rounded_rectangle((PAD, top, W - PAD, bottom), radius=16, fill=fill, outline=outline, width=2)
 
     # ---- sections ---------------------------------------------------------------------------
-    def header(self, c):
-        top = self.y
-        r = 92
-        cx, cy = PAD + r, top + r
-        self.d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=ORANGE)
-        initials = "".join(p[0] for p in c["name"].split()[:2]).upper()
-        fi = font("black", 76)
-        self.text(cx - text_w(self.d, initials, fi) / 2, cy - 50, initials, fi, WHITE)
+    def topbar(self, c):
+        y = self.y
+        s = 92
+        self.d.rounded_rectangle((PAD, y, PAD + s, y + s), radius=20, fill=BLACK, outline=BORDER, width=2)
+        fm = font(900, 34)
+        tw = self.tw("AIB", fm)
+        self.text(PAD + (s - tw) / 2, y + 18, "AIB", fm, WHITE)
+        self.d.rectangle((PAD + (s - tw) / 2, y + 64, PAD + (s + tw) / 2, y + 70), fill=LIME)
+        self.text(PAD + s + 24, y + 18, "AI BUILDERS HUB", font(700, 30), WHITE, track=4)
+        self.text(PAD + s + 24, y + 56, "Member intro", font(400, 24), BODY)
+        if c.get("joined"):
+            f = font(700, 22)
+            w = self.tw(c["joined"].upper(), f, 2) + 44
+            self.pill(W - PAD - w, y + 22, c["joined"].upper(), f, LIME, border=LIME, track=2)
+        self.y = y + s + 72
 
-        x = PAD + 2 * r + 48
-        self.text(x, top + 6, "G'day, I'm " + c["name"], font("black", 72), INK)
-        y = top + 100
-        biz = c.get("business", "")
-        if c.get("trade"):
-            biz = (biz + " · " if biz else "") + c["trade"]
-        y = self.para(x, y, biz, font("medium", 34), W - PAD - x, INK, max_lines=2)
+    def hero(self, c):
+        y = self.y
+        fh = font(900, 112)
+        head = f"HEY, I'M {c['name'].upper()}"
+        while self.tw(head, fh) > INNER and fh.size > 60:
+            fh = font(900, fh.size - 6)
+        self.text(PAD - 4, y, head, fh, WHITE)
+        y += line_h(fh) + 2
+        self.d.rectangle((PAD, y, PAD + 160, y + 8), fill=LIME)
+        y += 40
+        biz = " · ".join(v for v in [c.get("business"), c.get("trade")] if v)
+        if biz:
+            y = self.para(PAD, y, biz, font(500, 38), INNER, WHITE, max_lines=2)
         meta = " · ".join(v for v in [c.get("area"), c.get("team")] if v)
         if meta:
-            y = self.para(x, y + 4, meta, font("regular", 30), W - PAD - x, BODY, max_lines=2)
-        y = max(y, top + 2 * r) + 28
+            y = self.para(PAD, y + 4, meta, font(400, 30), INNER, BODY, max_lines=2)
         if c.get("role"):
-            _, y2 = self.chip(PAD, y, c["role"], font("bold", 28), fg=WHITE, bg=INK, border=INK)
-            y = y2
+            _, y = self.pill(PAD, y + 28, c["role"].upper(), font(700, 24), BLACK, bg=LIME, track=2)
         if c.get("what_i_do"):
-            y = self.para(PAD, y + 26, c["what_i_do"], font("regular", 34), INNER, BODY, max_lines=3)
-        self.y = y + 44
+            y = self.para(PAD, y + 28, c["what_i_do"], font(400, 32), INNER, BODY, max_lines=3)
+        self.y = y + 56
 
     def goals(self, c):
         items = c.get("goals", [])[:3]
         if not items:
             return
         top = self.y
-        y = self.heading("What I'm here for", top + 36)
-        col_w = (INNER - 80 - 2 * 28) / 3
-        fnum, ft = font("black", 56), font("medium", 30)
+        y = self.label(PAD + 44, top + 40, "What I'm here for")
+        col_w = (INNER - 88 - 2 * 32) / 3
         bottoms = []
         for i, g in enumerate(items):
-            x = PAD + 40 + i * (col_w + 28)
-            self.text(x, y, f"{i + 1}", fnum, ORANGE)
-            bottoms.append(self.para(x, y + 74, g, ft, col_w, INK, max_lines=4))
-        bottom = max(bottoms) + 36
-        self._behind(top, bottom)
-        self.y = bottom + 32
+            x = PAD + 44 + i * (col_w + 32)
+            self.text(x, y, f"0{i + 1}", font(900, 60), LIME)
+            bottoms.append(self.para(x, y + 82, g, font(500, 30), col_w, WHITE, max_lines=4))
+        bottom = max(bottoms) + 44
+        self.panel(top, bottom)
+        self.y = bottom + 28
 
     def sop(self, c):
         steps = c.get("steps", [])[:8]
         if not steps:
             return
         top = self.y
-        y = self.heading(c.get("steps_title", "How my business runs"), top + 36)
+        y = self.label(PAD + 44, top + 40, c.get("steps_title", "How my business runs"))
         n = len(steps)
-        per_row = (n + 1) // 2 if n > 4 else n  # 5 to 8 steps: two balanced rows
-        gap = 46
-        bw = (INNER - 80 - gap * (per_row - 1)) / per_row
-        ft, fs, fn = font("bold", 28), font("regular", 23), font("black", 30)
+        per_row = (n + 1) // 2 if n > 4 else n
+        gap = 44
+        bw = (INNER - 88 - gap * (per_row - 1)) / per_row
+        bh = 214
         rows = [steps[i:i + per_row] for i in range(0, n, per_row)]
-        bh = 210
         for ri, row in enumerate(rows):
-            ry = y + ri * (bh + 70)
+            ry = y + ri * (bh + 72)
             for i, s in enumerate(row):
                 idx = ri * per_row + i
-                x = PAD + 40 + i * (bw + gap)
+                x = PAD + 44 + i * (bw + gap)
                 hot = bool(s.get("pain"))
-                self.d.rounded_rectangle((x, ry, x + bw, ry + bh), radius=18,
-                                         fill=ORANGE_SOFT if hot else PANEL,
-                                         outline=ORANGE if hot else LINE, width=3 if hot else 2)
-                self.d.ellipse((x + 18, ry + 18, x + 66, ry + 66), fill=INK)
-                num = str(idx + 1)
-                self.text(x + 42 - text_w(self.d, num, fn) / 2, ry + 23, num, fn, WHITE)
-                ty = self.para(x + 18, ry + 80, s["step"], ft, bw - 36, INK, max_lines=2)
+                self.d.rounded_rectangle((x, ry, x + bw, ry + bh), radius=12, fill=SURFACE_2,
+                                          outline=LIME if hot else BORDER, width=3 if hot else 2)
+                self.text(x + 20, ry + 18, f"{idx + 1:02d}", font(700, 26), LIME if hot else FAINT, track=2)
+                ty = self.para(x + 20, ry + 64, s["step"], font(700, 29), bw - 40, WHITE, max_lines=2)
                 who = " · ".join(v for v in [s.get("who"), s.get("tool")] if v)
                 if who:
-                    self.para(x + 18, ty + 4, who, fs, bw - 36, BODY, max_lines=2)
+                    self.para(x + 20, ty + 6, who, font(400, 23), bw - 40, BODY, max_lines=2)
                 if hot:
-                    self.d.ellipse((x + bw - 58, ry + 16, x + bw - 16, ry + 58), fill=RED)
-                    fb = font("black", 30)
-                    self.text(x + bw - 37 - text_w(self.d, "!", fb) / 2, ry + 19, "!", fb, WHITE)
-                # arrow to the next step in the row
+                    cx, cy = x + bw - 36, ry + 34
+                    self.d.ellipse((cx - 18, cy - 18, cx + 18, cy + 18), fill=LIME)
+                    fb = font(900, 26)
+                    self.text(cx - self.tw("!", fb) / 2, cy - 17, "!", fb, BLACK)
                 if i < len(row) - 1:
                     ax, ay = x + bw + 8, ry + bh / 2
-                    self.d.line((ax, ay, ax + gap - 18, ay), fill=MUTED, width=4)
-                    self.d.polygon([(ax + gap - 14, ay), (ax + gap - 28, ay - 10), (ax + gap - 28, ay + 10)], fill=MUTED)
-            # wrap arrow down to the next row
+                    self.d.line((ax, ay, ax + gap - 18, ay), fill=FAINT, width=3)
+                    self.d.polygon([(ax + gap - 12, ay), (ax + gap - 24, ay - 9), (ax + gap - 24, ay + 9)], fill=FAINT)
             if ri < len(rows) - 1:
-                lx = PAD + 40 + (len(row) - 1) * (bw + gap) + bw / 2
-                fx = PAD + 40 + bw / 2
-                y1, y2 = ry + bh + 8, ry + bh + 62
+                lx = PAD + 44 + (len(row) - 1) * (bw + gap) + bw / 2
+                fx = PAD + 44 + bw / 2
+                y1, y2 = ry + bh + 8, ry + bh + 64
                 mid = (y1 + y2) / 2
-                self.d.line((lx, y1, lx, mid), fill=MUTED, width=4)
-                self.d.line((fx, mid, lx, mid), fill=MUTED, width=4)
-                self.d.line((fx, mid, fx, y2 - 12), fill=MUTED, width=4)
-                self.d.polygon([(fx, y2 - 2), (fx - 10, y2 - 16), (fx + 10, y2 - 16)], fill=MUTED)
-        bottom = y + len(rows) * bh + (len(rows) - 1) * 70 + 24
-        fl = font("regular", 24)
-        self.d.ellipse((PAD + 40, bottom + 4, PAD + 68, bottom + 32), fill=RED)
-        self.text(PAD + 49, bottom + 2, "!", font("black", 24), WHITE)
-        self.text(PAD + 80, bottom + 2, "= where it slows down or goes wrong", fl, BODY)
-        bottom += 70
-        self._behind(top, bottom)
-        self.y = bottom + 32
+                for seg in ((lx, y1, lx, mid), (fx, mid, lx, mid), (fx, mid, fx, y2 - 12)):
+                    self.d.line(seg, fill=FAINT, width=3)
+                self.d.polygon([(fx, y2 - 2), (fx - 9, y2 - 14), (fx + 9, y2 - 14)], fill=FAINT)
+        bottom = y + len(rows) * bh + (len(rows) - 1) * 72 + 28
+        self.d.ellipse((PAD + 44, bottom + 2, PAD + 72, bottom + 30), fill=LIME)
+        self.text(PAD + 53, bottom + 1, "!", font(900, 22), BLACK)
+        self.text(PAD + 86, bottom + 1, "Where it slows down or still runs by hand", font(400, 24), BODY)
+        bottom += 74
+        self.panel(top, bottom)
+        self.y = bottom + 28
 
     def bottlenecks(self, c):
         items = c.get("bottlenecks", [])[:3]
         if not items:
             return
         top = self.y
-        y = self.heading("Biggest bottlenecks", top + 36)
-        ft, fh = font("bold", 32), font("black", 40)
+        y = self.label(PAD + 44, top + 40, "Biggest bottlenecks")
+        fh = font(900, 44)
         for b in items:
             hrs = b.get("hours")
-            hrs_s = f"{hrs} h/wk" if hrs not in (None, "", "not given") else ""
-            hw = text_w(self.d, hrs_s, fh) if hrs_s else 0
-            self.d.ellipse((PAD + 44, y + 12, PAD + 64, y + 32), fill=RED)
-            yb = self.para(PAD + 86, y, b["what"], ft, INNER - 160 - hw, INK, max_lines=2)
+            hrs_s = f"{hrs}h/wk" if hrs not in (None, "", "not given") else ""
+            hw = self.tw(hrs_s, fh) if hrs_s else 0
+            self.d.rectangle((PAD + 44, y + 10, PAD + 58, y + 24), fill=LIME)
+            yb = self.para(PAD + 82, y, b["what"], font(700, 32), INNER - 170 - hw, WHITE, max_lines=2)
             if hrs_s:
-                self.text(W - PAD - 40 - hw, y - 4, hrs_s, fh, ORANGE_TEXT)
+                self.text(W - PAD - 44 - hw, y - 8, hrs_s, fh, LIME)
             if b.get("why"):
-                yb = self.para(PAD + 86, yb + 2, b["why"], font("regular", 26), INNER - 160 - hw, BODY, max_lines=2)
-            y = yb + 26
+                yb = self.para(PAD + 82, yb + 2, b["why"], font(400, 26), INNER - 170 - hw, BODY, max_lines=2)
+            y = yb + 28
         if c.get("hours_lost_total"):
-            self.d.line((PAD + 40, y, W - PAD - 40, y), fill=LINE, width=2)
-            s = f"About {c['hours_lost_total']} hours a week on jobs a computer could help with"
-            y = self.para(PAD + 40, y + 20, s, font("medium", 28), INNER - 80, BODY, max_lines=2) + 8
-        bottom = y + 20
-        self._behind(top, bottom)
-        self.y = bottom + 32
+            self.d.line((PAD + 44, y, W - PAD - 44, y), fill=BORDER, width=2)
+            y += 24
+            big = f"{c['hours_lost_total']} HOURS"
+            fb = font(900, 52)
+            self.text(PAD + 44, y, big, fb, LIME)
+            self.para(PAD + 44 + self.tw(big, fb) + 24, y + 16, "a week on work a computer could help with",
+                      font(400, 28), INNER - 140 - self.tw(big, fb), BODY, max_lines=2)
+            y += line_h(fb) + 4
+        bottom = y + 24
+        self.panel(top, bottom)
+        self.y = bottom + 28
 
-    def two_col(self, c):
+    def chips(self, c):
         manual, tools = c.get("manual", [])[:6], c.get("tools", [])[:8]
         if not manual and not tools:
             return
         top = self.y
-        half = (INNER - 80 - 40) / 2
-        fc = font("medium", 26)
-        yl = yr = top + 36
+        half = (INNER - 88 - 48) / 2
+        f = font(500, 26)
+        yl = yr = top + 40
         if manual:
-            f = font("bold", 26)
-            self.d.rectangle((PAD + 40, yl + 6, PAD + 48, yl + 34), fill=ORANGE)
-            self.text(PAD + 64, yl, "STILL DONE BY HAND", f, ORANGE_TEXT)
-            yl = self.chips(PAD + 40, yl + 54, manual, fc, half, fg=INK, bg=ORANGE_SOFT, border=ORANGE)
+            yl = self.label(PAD + 44, yl, "Still done by hand")
+            yl = self.pills(PAD + 44, yl, manual, f, half, fg=WHITE, border=LIME)
         if tools:
-            x = PAD + 40 + half + 40
-            f = font("bold", 26)
-            self.d.rectangle((x, yr + 6, x + 8, yr + 34), fill=ORANGE)
-            self.text(x + 24, yr, "TOOLS I USE", f, ORANGE_TEXT)
-            yr = self.chips(x, yr + 54, tools, fc, half)
-        bottom = max(yl, yr) + 36
-        self._behind(top, bottom)
-        self.y = bottom + 32
+            x = PAD + 44 + half + 48
+            yr = self.label(x, yr, "Tools I use")
+            yr = self.pills(x, yr, tools, f, half, fg=BODY, border=BORDER)
+        bottom = max(yl, yr) + 40
+        self.panel(top, bottom)
+        self.y = bottom + 28
 
-    def footer_band(self, c):
-        lines = []
+    def callout(self, c):
+        rows = []
         if c.get("automate_first"):
-            lines.append(("First thing I want to automate", c["automate_first"]))
+            rows.append(("First thing I want to automate", c["automate_first"]))
         if c.get("ask_me_about"):
-            lines.append(("Ask me about", c["ask_me_about"]))
-        if not lines:
+            rows.append(("Ask me about", c["ask_me_about"]))
+        if not rows:
             return
         top = self.y
-        y = top + 40
-        for label, val in lines:
-            self.text(PAD + 48, y, label.upper(), font("bold", 24), ORANGE_SOFT)
-            y = self.para(PAD + 48, y + 38, val, font("bold", 36), INNER - 96, WHITE, max_lines=3) + 24
-        bottom = y + 16
-        self._behind(top, bottom, fill=INK)
-        self.y = bottom + 40
+        y = top + 44
+        for i, (lab, val) in enumerate(rows):
+            if i:
+                self.d.line((PAD + 48, y - 14, W - PAD - 48, y - 14), fill=(0, 0, 0, 60), width=2)
+                y += 14
+            self.text(PAD + 48, y, lab.upper(), font(700, 22), BLACK, track=3)
+            y = self.para(PAD + 48, y + 38, val, font(900, 38), INNER - 96, BLACK, max_lines=3) + 30
+        bottom = y + 12
+        self.panel(top, bottom, fill=LIME, outline=LIME)
+        self.y = bottom + 44
 
-    def signoff(self, c):
-        f = font("bold", 28)
-        left = "AI Builders Hub"
-        self.text(PAD, self.y, left, f, INK)
-        self.d.ellipse((PAD + text_w(self.d, left, f) + 14, self.y + 12, PAD + text_w(self.d, left, f) + 26, self.y + 24), fill=ORANGE)
-        right = c.get("joined", "")
-        if right:
-            fr = font("regular", 26)
-            self.text(W - PAD - text_w(self.d, right, fr), self.y + 2, right, fr, MUTED)
-        self.y += 80
-
-    def _behind(self, top, bottom, fill=WHITE):
-        """Panels go on the backdrop layer, under the content already drawn."""
-        self.bd.rounded_rectangle((PAD, top, W - PAD, bottom), radius=28, fill=fill,
-                                  outline=LINE if fill == WHITE else fill, width=2)
+    def footer(self, c):
+        f = font(700, 24)
+        self.text(PAD, self.y, "AI BUILDERS HUB", f, WHITE, track=4)
+        x = PAD + self.tw("AI BUILDERS HUB", f, 4) + 14
+        self.d.rectangle((x, self.y + 10, x + 10, self.y + 20), fill=LIME)
+        url = "skool.com/ai-builders-hub"
+        fu = font(400, 24)
+        self.text(W - PAD - self.tw(url, fu), self.y, url, fu, FAINT)
+        self.y += 76
 
 
 def render(card, out):
     c = Card()
-    c.header(card)
+    c.topbar(card)
+    c.hero(card)
     c.goals(card)
     c.sop(card)
     c.bottlenecks(card)
-    c.two_col(card)
-    c.footer_band(card)
-    c.signoff(card)
+    c.chips(card)
+    c.callout(card)
+    c.footer(card)
     img = Image.alpha_composite(c.base, c.ov).crop((0, 0, W, c.y + PAD // 2)).convert("RGB")
     img.save(out, "PNG", optimize=True)
     return img.size

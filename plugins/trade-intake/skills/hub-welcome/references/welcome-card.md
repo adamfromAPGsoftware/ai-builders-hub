@@ -1,9 +1,14 @@
 # The welcome card (PNG)
 
-Step 5. A tall picture (1600 px wide, about 2,800 to 3,000 tall) the member attaches to their Hub
+Step 5. A tall picture (1600 px wide, about 3,000 to 3,400 tall) the member attaches to their Hub
 intro post, so everyone can see at a glance who they are, how their business runs and where it
 hurts. Drawn by `scripts/welcome_card.py` from a `card.json` you write. Only Pillow is needed,
-which Claude's code execution already has.
+which Claude's code execution already has; the font (DM Sans) ships in `assets/fonts/`.
+
+**The look is the AI Builders Hub system** (Adam's lime-on-black identity for Hub and Skool
+images): near-black `#0D0D0D`, cards `#111111`, brand lime `#90F23C`, white ALL CAPS headline
+"HEY, I'M <NAME>", grey body `#999999`, DM Sans, the AIB mark top left and
+`skool.com/ai-builders-hub` at the foot. **Never red.** Don't restyle it; the script owns the look.
 
 ## 1. Write card.json
 
@@ -21,7 +26,7 @@ guess; the script skips any section with nothing in it.
 | `what_i_do` | One or two sentences | 3 lines on the card |
 | `goals` | Their three 90-day goals (Q6), short | 3 items, ~60 characters each |
 | `steps_title` | "How a job runs at [Business]"; builder track: "How I work with clients" | |
-| `steps` | 3 to 8 items: `step`, `who`, `tool`, and `pain` (a few words) on the bottleneck steps only. Any step with `pain` gets the red ! | `step` ~28 characters |
+| `steps` | 3 to 8 items: `step`, `who`, `tool`, and `pain` (a few words) on the bottleneck steps only. Any step with `pain` gets a lime outline and a lime ! | `step` ~28 characters |
 | `bottlenecks` | Top three (Q12): `what`, `hours` (number a week, or leave out), `why` (one line) | 3 items |
 | `hours_lost_total` | Sum of the hours they gave on bottleneck steps, only if they gave hours and Q16 row 4 is shown | Optional |
 | `manual` | Jobs still done by hand (Q11), short labels | 6 chips |
@@ -51,7 +56,7 @@ Show the picture, then one table:
 |:-:|---|
 | 1 | Name, business and what you do |
 | 2 | Your three goals |
-| 3 | Your steps and the red ! marks |
+| 3 | Your steps and the lime ! marks |
 | 4 | Bottlenecks and hours |
 | 5 | Anything to hide or reword |
 
@@ -63,8 +68,8 @@ last resort).
 
 Ask them to turn on **Settings → Capabilities → Code execution and file creation** and say "try
 again". If they can't, publish the card as a self-contained HTML artifact with the same sections,
-order and colours (cream `#fafaf8` with a dotted grid, ink `#1a1614`, orange `#d97757`, red `#c0392b`
-for the ! marks), 800 px wide, and ask them to screenshot it.
+order and colours (`#0D0D0D` background, `#111111` cards, lime `#90F23C` accents and ! marks,
+white headline, DM Sans from Google Fonts), 800 px wide, and ask them to screenshot it.
 
 ## 5. Worked example
 

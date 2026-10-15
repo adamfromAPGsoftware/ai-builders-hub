@@ -18,26 +18,35 @@ Respect the Q16 choices (hidden business name means no business name here either
 
 ## 2. The starter pack
 
-A folder named `<slug>-hub-starter` (lowercase, hyphens, 64 characters at most), zipped as
-`<slug>-hub-starter.zip` with code execution. Zip the folder itself, so the zip holds
-`<slug>-hub-starter/README.md`, not loose files. Check the listing before offering it.
+**Everything gathered goes in it.** A folder named exactly `My Business`, zipped as
+`<slug>-my-business.zip` (slug: lowercase, hyphens, 64 characters at most) with code execution. Zip
+the folder itself, so the zip holds `My Business/README.md`, not loose files, and unzipping it in
+Documents → AI Builders Hub gives `AI Builders Hub/My Business/`. Check the listing before offering
+it.
 
 ```
-<slug>-hub-starter/
+My Business/
   README.md                    what's in here and what to do with it (template below)
+  profile.md                   the shared business profile Adam's tools and later lessons read
   hub-profile.md               the full profile (template below); also the file for Adam
-  my-business/profile.md       the shared business profile Adam's tools read
+  answers.md                   every question asked and their answer, as tables, incl. parking list
   how-we-run.html              the confirmed process drawing
   bottlenecks.md               ranked table, hours, why, what to automate first, what stays your call
   instructions-for-claude.md   a short "about me" to paste into Claude's settings
-  welcome-card-<slug>.png      the card
-  intro-post.txt               the four lines
+  welcome-card/
+    welcome-card-<slug>.png    the card
+    card.json                  what's on it, so the card can be redrawn later
+    intro-post.txt             the four lines
 ```
 
-- **`my-business/profile.md`** is the same business profile the Hub's other tools and the trade
-  intakes read, so the member never answers "what do you do?" twice. Copy the "Business" and "How
-  the business runs" sections of `hub-profile.md` into it with the heading `# <Business>: business
-  profile`. In Cowork, they save the `my-business` folder in their working folder as `My Business`.
+- **`profile.md`** is the shared business profile the Hub's other tools and the trade intakes read,
+  so the member never answers "what do you do?" twice. Copy the "Business" and "How the business
+  runs" sections of `hub-profile.md` into it with the heading `# <Business>: business profile`.
+- **`answers.md`** is the raw record: one table per part (`| Q | Asked | Their answer | Status |`,
+  status confirmed, from website, assumed or UNCONFIRMED), then the parking list. Nothing gathered
+  is left out of the folder except what rule 3 to 5 of the skill keep out everywhere.
+- **Where it lives.** The skill tells them to make **Documents → AI Builders Hub** and unzip there.
+  Later lessons point Cowork at the AI Builders Hub folder and read `My Business/`.
 - **`instructions-for-claude.md`** is under 150 words: who they are, the business, the tools they
   use, how they like answers (short, tables, Australian English, inc or ex GST on every price), and
   what Claude must always ask them first (Q13). Ends with: "Paste this into Claude → Settings →
@@ -47,17 +56,19 @@ A folder named `<slug>-hub-starter` (lowercase, hyphens, 64 characters at most),
 ### README.md template
 
 ```markdown
-# Your Hub starter pack, <Name>
+# My Business: <Name>, <Business>
 
 | File | What it's for |
 |---|---|
-| welcome-card-<slug>.png | Attach to your intro post in the Hub |
-| intro-post.txt | The words for your intro post |
+| welcome-card/ | Your card picture and intro post words, for the Hub's Introductions |
 | how-we-run.html | Your business, drawn out. Open it in a browser |
 | bottlenecks.md | Where your hours go, and what to fix first |
 | instructions-for-claude.md | Paste into Claude's settings so it knows you |
-| my-business/ | Keep this. Adam's tools read it, so you never repeat yourself |
+| profile.md | Adam's tools and later lessons read this, so you never repeat yourself |
+| answers.md | Every question and your answer |
 | hub-profile.md | Everything in one file |
+
+**Keep this folder in Documents → AI Builders Hub → My Business.** Later lessons use it.
 
 **Your next step:** <the one row from "Your next step" below>
 ```
@@ -132,7 +143,7 @@ flowchart TD
   S1["1 Enquiry comes in"] --> S2["2 Site visit and quote"] --> S3["3 Yes and deposit"]
   S3 --> S4["4 Order the unit"] --> S5["5 Book the install"] --> S6["6 Install and commission"]
   S6 --> S7["7 Invoice and chase"] --> S8["8 Yearly service reminder"]
-  classDef pain stroke:#c0392b,stroke-width:3px
+  classDef pain stroke:#90F23C,stroke-width:3px
   class S1,S2,S6,S7,S8 pain
 ```
 

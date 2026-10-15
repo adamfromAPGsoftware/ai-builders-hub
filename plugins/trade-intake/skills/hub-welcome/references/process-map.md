@@ -14,7 +14,9 @@ One **self-contained HTML page**, shown as an artifact. No outside scripts, font
 - **Forks:** if a step splits ("site visit or plans?"), show the decision as a diamond-badge card
   with both branches labelled in one line ("Homes → visit · Builders → plans"). Keep it to one or
   two forks; this is the big picture.
-- **Red !** on the bottleneck steps, with the hours a week and the why in red under the step.
+- **Lime !** on the bottleneck steps, with the hours a week and the why in lime under the step.
+- **Hub look:** near-black `#0D0D0D`, cards `#111111`, lime `#90F23C`, white text, grey `#999`, DM Sans.
+  Dark in both themes (the Hub is dark). Never red.
 - **Clock note** on slow waits ("waits for the office day").
 - **Legend** at the bottom, and a "Still done by hand" row of chips.
 - Light and dark colour sets; the page sets its own background. No customer or staff names.
@@ -29,12 +31,12 @@ One **self-contained HTML page**, shown as an artifact. No outside scripts, font
    | 1 → 2 → 3 | Enquiry in, you visit and quote, they say yes with a deposit |
 
    "1 Yes · 2 Fix something · 3 Something's missing between them".
-3. Then the red marks: "| ! | Step 2, 6 hours a week writing quotes at night. Is that the main
+3. Then the ! marks: "| ! | Step 2, 6 hours a week writing quotes at night. Is that the main
    pain? |".
 4. Redraw after every change (update the same artifact) and say what changed in one line.
 5. Last: "Is this how [Business] runs? (1 Yes · 2 Not yet)". These checks don't count toward the 20.
 6. No artifact possible: show the steps as a table (# · step · who · using what · !) and the
-   Mermaid source (`flowchart TD`, steps `S1`…, `classDef pain stroke:#c0392b,stroke-width:3px`).
+   Mermaid source (`flowchart TD`, steps `S1`…, `classDef pain stroke:#90F23C,stroke-width:3px`).
 
 The confirmed steps go in the profile's "How the business runs", on the card and in the pack.
 
@@ -50,15 +52,9 @@ Copy the shape; change the steps.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coolabah Air map</title>
 <style>
-  :root { --bg:#fafaf8; --dot:#d8d2cc; --card:#ffffff; --line:#d8d2cc; --ink:#1a1614; --body:#5c5550;
-          --accent:#d97757; --soft:#fbe8df; --red:#c0392b; }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --bg:#171615; --dot:#2c2a28; --card:#1f1d1c; --line:#3a3633;
-          --ink:#f0ebe6; --body:#bdb5ae; --accent:#e08a6c; --soft:#3a2720; --red:#e5675a; }
-  }
-  :root[data-theme="dark"] { --bg:#171615; --dot:#2c2a28; --card:#1f1d1c; --line:#3a3633;
-          --ink:#f0ebe6; --body:#bdb5ae; --accent:#e08a6c; --soft:#3a2720; --red:#e5675a; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 system-ui, sans-serif;
+  :root { --bg:#0d0d0d; --dot:#1a1a1a; --card:#111111; --line:#242424; --ink:#ffffff; --body:#999999;
+          --accent:#90f23c; --soft:rgba(144,242,60,.08); --red:#90f23c; --bang-ink:#000; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 "DM Sans", system-ui, sans-serif;
          background-image:radial-gradient(circle, var(--dot) 1.5px, transparent 1.5px); background-size:32px 32px; }
   main { max-width:560px; margin:0 auto; padding:24px 16px 48px; }
   h1 { font-size:24px; margin:0 0 4px; } .sub { color:var(--body); margin:0 0 20px; }
@@ -71,7 +67,7 @@ Copy the shape; change the steps.
        background:var(--ink); color:var(--bg); font-weight:700; font-size:14px; margin-right:8px; }
   .who { color:var(--body); font-size:14px; margin-top:4px; }
   .bang { position:absolute; right:12px; top:12px; width:26px; height:26px; border-radius:50%;
-          background:var(--red); color:#fff; font-weight:800; display:grid; place-items:center; }
+          background:var(--red); color:var(--bang-ink); font-weight:800; display:grid; place-items:center; }
   .why { color:var(--red); font-size:14px; margin-top:6px; font-weight:600; }
   .chips span { display:inline-block; border:1.5px solid var(--accent); background:var(--soft);
                 border-radius:99px; padding:4px 12px; margin:0 6px 8px 0; font-size:14px; }
@@ -81,6 +77,7 @@ Copy the shape; change the steps.
 <body>
 <main>
   <h1>How Coolabah Air runs</h1>
+  <p class="sub" style="color:var(--accent);font-weight:700;letter-spacing:.12em;font-size:13px;margin:0 0 6px">AI BUILDERS HUB</p>
   <p class="sub">Check each step. Tell me what's wrong or missing.</p>
   <ol>
     <li class="pain"><span class="n">1</span><b>Enquiry comes in</b><span class="bang">!</span>
@@ -100,7 +97,7 @@ Copy the shape; change the steps.
   <p><b>Still done by hand</b></p>
   <div class="chips"><span>Quote write-ups</span><span>Re-keying into ServiceM8</span><span>Compliance certs</span>
     <span>Refrigerant log</span><span>Service reminders</span><span>Invoice chasing</span></div>
-  <p class="legend">Red ! = where it slows down or goes wrong · h/wk = hands-on hours a week</p>
+  <p class="legend">Lime ! = where it slows down or goes wrong · h/wk = hands-on hours a week</p>
 </main>
 </body>
 </html>

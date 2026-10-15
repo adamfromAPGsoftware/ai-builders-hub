@@ -1,6 +1,6 @@
 ---
 name: hub-welcome
-description: Welcomes a new AI Builders Hub member with a short, visual question-and-answer about who they are, what they do, what they want from the Hub, how their business runs from enquiry to paid, and where it slows down or is still done by hand. Every question is shown as a table with numbered options, so it can be answered on a phone with a number or a few spoken words. Draws their process for them to check, then makes a big welcome card picture (PNG) to attach to their Hub intro post, a ready-to-paste intro post, and a starter pack zip (their business profile, process map, bottleneck list, instructions for Claude and their suggested next step). Use whenever someone types /hub-welcome, says "welcome me", "Hub intro", "set me up for the Hub", "make my intro post", or has just installed the plugin from the AI Builders Hub and asks what to do first.
+description: Welcomes a new AI Builders Hub member with a short, visual question-and-answer about who they are, what they do, what they want from the Hub, how their business runs from enquiry to paid, and where it slows down or is still done by hand. Every question is shown as a table with numbered options, so it can be answered on a phone with a number or a few spoken words. Draws their process for them to check, then makes a big welcome card picture (PNG) to attach to their Hub intro post, a ready-to-paste intro post, and a My Business folder zip (everything gathered: profile, answers, process map, bottleneck list, instructions for Claude, the card and their next step) and tells them to keep it in Documents → AI Builders Hub for later lessons. Use whenever someone types /hub-welcome, says "welcome me", "Hub intro", "set me up for the Hub", "make my intro post", or has just installed the plugin from the AI Builders Hub and asks what to do first.
 metadata:
   version: 0.1.0
 ---
@@ -303,7 +303,7 @@ and the unasked questions under **Still to ask**. Make the card only if Parts 1,
 ## 3. See it and confirm it: the drawing
 
 Follow `references/process-map.md`. Short version: draw their steps as a self-contained HTML page
-(one card per step, who and tool on each, red ! on the bottleneck steps with hours, clock on slow
+(one card per step, who and tool on each, lime ! on the bottleneck steps with hours, clock on slow
 waits), publish it as an artifact and say "Here's how your business runs, drawn out. On your phone
 it's in the Artifacts tab." Confirm it **two or three steps at a time** with a table:
 
@@ -340,11 +340,22 @@ layout and tell them to screenshot it.
 Follow `references/starter-pack.md`:
 - **Intro post text**: four short lines in their voice, ready to paste above the picture. Show it in
   a copyable block.
-- **Starter pack**: the folder `<slug>-hub-starter/` zipped as `<slug>-hub-starter.zip`, holding the
-  profile, process map, bottlenecks, instructions for Claude, the welcome card and the post text.
-  Offer the zip and the PNG as downloads.
+- **Starter pack**: a folder named `My Business` zipped as `<slug>-my-business.zip`, holding
+  **everything this chat gathered**: the profile, every answer, the process map, bottlenecks,
+  instructions for Claude, the welcome card, its `card.json` and the post text. Offer the zip and
+  the PNG as downloads.
 
-Then one table on how to post it:
+Then one table on where to keep it. Say why first, in one line: "You'll use this again in later
+lessons, so let's put it somewhere you'll remember."
+
+| # | Keep your business folder (do this on your computer) |
+|:-:|---|
+| 1 | Open **Documents** and make a new folder called **AI Builders Hub** |
+| 2 | Download the zip into it (on a phone: do this when you're next at the computer) |
+| 3 | Double-click the zip to unzip it. You now have **AI Builders Hub → My Business** |
+| 4 | That's your business folder. Later lessons point Claude at **AI Builders Hub**, so don't move or rename it |
+
+Ask them to say "saved" or "later". Then one table on how to post the card:
 
 | # | Post your intro in the Hub (this finishes the intro module) |
 |:-:|---|
@@ -355,7 +366,8 @@ Then one table on how to post it:
 | 5 | Mark the intro lesson complete in the Classroom |
 
 Ask them to say "posted" when it's up. If they'd rather post later, that's fine: remind them the
-intro isn't finished until the card is posted, and that the zip has everything they need.
+intro isn't finished until the card is posted, and that the card and intro text are in the
+**My Business** folder.
 
 ## 7. Next step, and sending to Adam
 
