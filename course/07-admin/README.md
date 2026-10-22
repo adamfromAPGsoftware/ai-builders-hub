@@ -28,7 +28,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 - New starters set up in three systems: about 2 h each
 - Receipts only on one phone, so the books stop when it's away
 
-## Step 1: the intake
+## Step 1: map how you do it
 
 "How we do it" (planned): Map your office week: bills, timesheets, payroll, invoicing, chasing, and who does each.
 

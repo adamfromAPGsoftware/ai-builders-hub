@@ -831,8 +831,8 @@
         "Shared inboxes forwarded by hand: about 5 h a week"
       ],
       "intake": {
-        "skill": null,
-        "what": "Map how a customer message gets answered: where it lands, who picks it up, where the answer lives."
+        "skill": "map-customer-service",
+        "what": "Map how a customer message gets handled: where it lands, who picks it up, how orders are entered and where the answers live."
       },
       "skills": [
         {

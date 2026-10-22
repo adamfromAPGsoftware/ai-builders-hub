@@ -28,7 +28,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 - The same job written out three times: site notes, Excel, then Word
 - Rebuilding quotes after site visits: about 13 h a week across one team
 
-## Step 1: the intake
+## Step 1: map how you do it
 
 `/map-quoting`: Walk through your last two quotes: where each number came from, and every step you did by hand.
 

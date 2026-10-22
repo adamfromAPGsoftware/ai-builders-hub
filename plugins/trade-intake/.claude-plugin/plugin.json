@@ -1,7 +1,7 @@
 {
   "name": "trade-intake",
-  "version": "0.5.2",
-  "description": "Plain-words interviews for trade business owners. New to the AI Builders Hub? Start with /hub-welcome: a quick visual Q&A about you, your goals and how your business runs, which makes your welcome card for your intro post and a My Business folder to keep for later lessons. Then the tool intakes: /map-quoting (quoting), /map-takeoffs (takeoffs from drawings), /map-purchasing (ordering materials) and /map-sales (enquiries and follow-up). Each reads two real examples, draws the process for them to check, makes one file to send to Adam, then builds them their own skill and walks them through adding it to Cowork.",
+  "version": "0.6.0",
+  "description": "Plain-words setups for trade business owners. New to the AI Builders Hub? Start with /hub-welcome: a quick visual Q&A about you, your goals and how your business runs, which makes your welcome card for your intro post and a My Business folder to keep for later lessons. Then map each part of your business, one module at a time: /map-sales (enquiries and follow-up), /map-quoting (quoting), /map-takeoffs (takeoffs from drawings), /map-purchasing (ordering materials) and /map-customer-service (customer messages and orders). Each reads two real examples, draws how you do it today for you to check, then builds your own first assistant from that map and walks you through adding it to Claude.",
   "author": {
     "name": "Adam Goodyer"
   }

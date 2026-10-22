@@ -11,15 +11,21 @@ you can send to Adam if you'd like his help taking it further.
 you, your goals and how your business runs. You get a welcome card picture to post in the Hub's
 Introductions, your intro post words, and a starter pack. Posting the card finishes the Hub's intro.
 
-Then there are four tool setups. Do the one Adam asks for, or the one your welcome card points to:
+Then map each part of your business, one module at a time. Each one maps how you do it today and
+builds your first assistant from that map:
 
-| Type this | For |
-|---|---|
-| **/hub-welcome** | Your Hub intro: who you are, how your business runs, your welcome card |
-| **/map-quoting** | How you quote |
-| **/map-takeoffs** | How you do takeoffs from drawings |
-| **/map-purchasing** | How you order materials (purchase orders) |
-| **/map-sales** | How enquiries come in and become jobs |
+| Type this | Module | For |
+|---|---|---|
+| **/hub-welcome** | Stage 1 | Your Hub intro: who you are, how your business runs, your welcome card |
+| **/map-sales** | 2 | How enquiries come in and become jobs |
+| **/map-quoting** | 3 | How you quote |
+| **/map-takeoffs** | 4 | How you do takeoffs from drawings |
+| **/map-purchasing** | 5 | How you order materials (purchase orders) |
+| **/map-customer-service** | 6 | How customer messages and orders get handled |
+
+Lead generation (Module 1) and admin (Module 7) are coming. Every map uses the same clickable page
+and picture, from `plugins/trade-intake/shared/map/` (run `python3 tools/sync_map.py` after changing
+it).
 
 ## Setup (once, about 5 minutes)
 

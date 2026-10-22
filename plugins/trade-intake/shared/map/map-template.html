@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded',function(){
   h += '<div class="top"><div class="brand"><div class="mark">AIB</div>AI BUILDERS HUB</div>';
   if (M.module) h += '<span class="chip lime">Module '+esc(M.module.n)+' · '+esc(M.module.name)+'</span>';
   h += '</div>';
-  if (M.example) h += '<div class="ribbon">Example map. Tallowood Painting is a made-up business, and its rates are examples.</div>';
+  if (M.example) h += '<div class="ribbon">Example map. '+esc(M.business||'This business')+' is made up, and its rates are examples.</div>';
   h += '<div class="eyebrow">'+esc(M.module ? M.module.name+' map' : 'Process map')+'</div>';
   h += '<h1>'+esc(M.title||'How it works today')+'</h1>';
   if (M.business) h += '<div class="biz"><b>'+esc(M.business)+'</b>'+(M.trade?' · '+esc(M.trade):'')+'</div>';
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded',function(){
   if (M.first_skill){
     var f = M.first_skill;
     var names = takes.map(function(id){var k=-1;steps.forEach(function(s,i){if(s.id===id)k=i});return k>-1?'step '+(k+1):''}).filter(Boolean);
-    h += '<div class="first"><div><div class="eyebrow">Building first</div><h3>'+esc(f.name)+'</h3><p>'+esc(f.what||'')+(names.length?' Takes over '+names.join(' and ')+'.':'')+'</p></div>';
+    h += '<div class="first"><div><div class="eyebrow">Building first</div><h3>'+esc(f.name)+'</h3><p>'+esc(f.what||'')+(names.length?' Takes over '+(names.length>1?names.slice(0,-1).join(', ')+' and '+names[names.length-1]:names[0])+'.':'')+'</p></div>';
     if (f.saves) h += '<div class="save"><b>'+esc(f.saves)+'</b><span class="who">back, on our estimate</span></div>';
     h += '</div>';
   }

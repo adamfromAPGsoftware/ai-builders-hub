@@ -27,9 +27,9 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 - Answers hunted across six places
 - Shared inboxes forwarded by hand: about 5 h a week
 
-## Step 1: the intake
+## Step 1: map how you do it
 
-"How we do it" (planned): Map how a customer message gets answered: where it lands, who picks it up, where the answer lives.
+`/map-customer-service`: Map how a customer message gets handled: where it lands, who picks it up, how orders are entered and where the answers live.
 
 It hands back your own version of the map above, with your tools and your hours, then suggests which skill to build first.
 

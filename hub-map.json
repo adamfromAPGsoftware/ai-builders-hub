@@ -5,7 +5,7 @@
   "marketplace": {
     "name": "trade-tools",
     "plugin": "trade-intake",
-    "plugin_version": "0.5.2"
+    "plugin_version": "0.6.0"
   },
   "stages": [
     {
@@ -343,7 +343,7 @@
       "name": "Customer service and orders",
       "promise": "Orders entered and questions answered fast, by whoever picks up.",
       "folder": "course/06-service",
-      "intake_skill": null,
+      "intake_skill": "map-customer-service",
       "skills": [
         "Order reader",
         "Product answers",

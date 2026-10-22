@@ -4,14 +4,14 @@
 
 Each module is a department of a trade, construction or manufacturing business. Every member starts with Stage 1 and Stage 2, then any module on the paid plan.
 
-| # | Module | Course | Intake |
+| # | Module | Course | Map it with |
 |:-:|---|---|---|
 | 1 | [Lead generation](01-lead-gen/README.md) | structure in Skool | planned |
 | 2 | [Sales and follow-up](02-sales/README.md) | structure in Skool | `/map-sales` |
 | 3 | [Quoting, estimating and proposals](03-quoting/README.md) | written | `/map-quoting` |
 | 4 | [Takeoffs from drawings](04-takeoffs/README.md) | placeholders in Skool | `/map-takeoffs` |
 | 5 | [Purchasing and suppliers](05-purchasing/README.md) | structure in Skool | `/map-purchasing` |
-| 6 | [Customer service and orders](06-service/README.md) | placeholders in Skool | planned |
+| 6 | [Customer service and orders](06-service/README.md) | placeholders in Skool | `/map-customer-service` |
 | 7 | [Finance, timesheets and admin](07-admin/README.md) | structure in Skool | planned |
 
 **Parked for now** (outlines kept in `modules.json`): Job delivery and scheduling, Stock, warehouse and freight, After-sales, warranty and maintenance.

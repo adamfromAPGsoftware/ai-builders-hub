@@ -28,7 +28,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 - Follow-up emails written the next morning, called the most time-consuming part of the job
 - A 20-question handover typed from the CRM into an email
 
-## Step 1: the intake
+## Step 1: map how you do it
 
 `/map-sales`: Map how an enquiry becomes a won job: who answers, where notes go, and when you follow up.
 

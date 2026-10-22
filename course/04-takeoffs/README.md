@@ -28,7 +28,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 - Every revision means redoing the takeoff and comparing by eye
 - After the win, the job team does its own takeoff again
 
-## Step 1: the intake
+## Step 1: map how you do it
 
 `/map-takeoffs`: Map how you take off: which drawings, what you count, the scale, and where the numbers go.
 

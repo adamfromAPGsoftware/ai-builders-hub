@@ -28,7 +28,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 - Chasing the missing job code: about 3 h a week
 - Supplier price lists arrive as PDFs and go stale
 
-## Step 1: the intake
+## Step 1: map how you do it
 
 `/map-purchasing`: Map how you buy: who orders, which suppliers, how you compare, and where the order is typed.
 

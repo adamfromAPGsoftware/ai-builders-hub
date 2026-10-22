@@ -191,7 +191,7 @@ def draw(m, out):
 
     if m.get("example"):
         c.d.rounded_rectangle((PAD, y, W - PAD, y + 38), radius=10, fill=SURFACE_2, outline=FAINT)
-        c.text(PAD + 16, y + 8, "Example map · Tallowood Painting is made up, rates are examples", font(400, 19), BODY)
+        c.text(PAD + 16, y + 8, f"Example map · {m.get('business') or 'this business'} is made up, rates are examples", font(400, 19), BODY)
         y += 52
 
     eyebrow = (f"{mod.get('name')} map" if mod else "Process map").upper()
@@ -335,7 +335,8 @@ def draw(m, out):
             for k, s in enumerate(steps):
                 if s.get("id") == tid:
                     names.append(str(k + 1))
-        line = f"Takes over step{'s' if len(names) > 1 else ''} {' and '.join(names)}." if names else (fs.get("what") or "")
+        joined = ", ".join(names[:-1]) + " and " + names[-1] if len(names) > 1 else "".join(names)
+        line = f"Takes over step{'s' if len(names) > 1 else ''} {joined}." if names else (fs.get("what") or "")
         c.para(PAD + 30, y + 110, line, font(400, 22), INNER - 90 - save_w, BODY, max_lines=2)
         y += 180
 

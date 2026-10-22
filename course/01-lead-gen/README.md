@@ -28,7 +28,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 - Contacts can't be sorted by area or type, so every email goes to everyone
 - Tender alert emails pile up unread
 
-## Step 1: the intake
+## Step 1: map how you do it
 
 "How we do it" (planned): Map where your work comes from: the sources, who chases them, and what gets written down.
 

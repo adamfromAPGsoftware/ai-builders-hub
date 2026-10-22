@@ -51,7 +51,7 @@ def module_readme(m):
           "From businesses APG has audited, anonymised. Hours are staff estimates, not measurements.", ""]
     L += [f"- {p}" for p in m["time_goes"]]
     intake = f"`/{m['intake']['skill']}`" if m["intake"]["skill"] else "\"How we do it\" (planned)"
-    L += ["", "## Step 1: the intake", "", f"{intake}: {m['intake']['what']}", "",
+    L += ["", "## Step 1: map how you do it", "", f"{intake}: {m['intake']['what']}", "",
           "It hands back your own version of the map above, with your tools and your hours, "
           "then suggests which skill to build first.", "",
           "## The skills", ""]
@@ -73,7 +73,7 @@ def main():
     index = [GENERATED, "", "# AI Builders Hub modules", "",
              "Each module is a department of a trade, construction or manufacturing business. "
              "Every member starts with Stage 1 and Stage 2, then any module on the paid plan.", "",
-             "| # | Module | Course | Intake |", "|:-:|---|---|---|"]
+             "| # | Module | Course | Map it with |", "|:-:|---|---|---|"]
     for m in mods:
         d = ROOT / "course" / folder(m)
         d.mkdir(parents=True, exist_ok=True)
