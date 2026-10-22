@@ -1,0 +1,228 @@
+{
+  "example": true,
+  "business": "Tallowood Painting",
+  "trade": "Residential and builder repaints, Sydney",
+  "module": {
+    "n": 3,
+    "name": "Quoting"
+  },
+  "per": "quote",
+  "title": "How we quote today",
+  "summary": "Every quote is measured on site by the owner, priced at night in Excel, then retyped into Word by the office. Follow-up depends on memory.",
+  "updated": "2026-10-22",
+  "before": [
+    {
+      "value": "8",
+      "label": "quotes a week"
+    },
+    {
+      "value": "2 h 35",
+      "label": "hands-on per quote"
+    },
+    {
+      "value": "4–5 days",
+      "label": "enquiry to sent"
+    }
+  ],
+  "steps": [
+    {
+      "id": "enquiry",
+      "title": "Enquiry comes in",
+      "who": "Owner",
+      "tools": [
+        "Phone",
+        "Website form"
+      ],
+      "minutes": 5,
+      "time": "5 min",
+      "detail": {
+        "what": "Most enquiries ring the owner's mobile; the rest come through the website form to the shared inbox. Anything under $500 or over an hour's drive is turned down on the spot.",
+        "rules": [
+          "Skip jobs under $500",
+          "Skip jobs more than an hour from Hornsby"
+        ],
+        "goes_wrong": [
+          "Calls taken on a ladder get written on a scrap of paper and lost"
+        ],
+        "source": "Your answer to Q3"
+      }
+    },
+    {
+      "id": "route",
+      "type": "fork",
+      "title": "Homeowner or builder?",
+      "who": "Owner",
+      "options": [
+        {
+          "label": "Homeowner",
+          "note": "Book a site visit (about 2 in 3)"
+        },
+        {
+          "label": "Builder",
+          "note": "Measure off the plans they email"
+        }
+      ],
+      "detail": {
+        "what": "Homeowners always get a site visit. Builders send plans and a finishes schedule; those are measured off the drawings, no visit.",
+        "rules": [
+          "Builder work is priced 10% sharper and paid on 30-day terms"
+        ],
+        "source": "Your answer to Q2"
+      }
+    },
+    {
+      "id": "visit",
+      "title": "Site visit and measure",
+      "who": "Owner",
+      "tools": [
+        "Tape",
+        "Notes app",
+        "Photos"
+      ],
+      "minutes": 70,
+      "time": "40 min + 30 min travel",
+      "flag": "slow",
+      "pain": "Travel eats the day",
+      "detail": {
+        "what": "Walks every room, measures walls and ceilings, notes the condition and counts doors, frames and windows. Photos of anything tricky.",
+        "rules": [
+          "Measure wall length × height, less openings over 2 m²",
+          "Note the year built: pre-1980 means extra prep"
+        ],
+        "goes_wrong": [
+          "Measurements in the Notes app are in a different order from the Excel template"
+        ],
+        "odd_cases": [
+          "Occupied house with furniture: allow a day's moving",
+          "Two-storey stairwell: scaffold hire"
+        ],
+        "source": "Your answers to Q8 and Q9"
+      }
+    },
+    {
+      "id": "price",
+      "title": "Work out the price",
+      "who": "Owner",
+      "tools": [
+        "Excel template"
+      ],
+      "minutes": 45,
+      "time": "45 min, at night",
+      "flag": "slow",
+      "pain": "Retyping every measurement",
+      "detail": {
+        "what": "Types each room's measurements into the Excel template, which multiplies by the rates. Then adds prep, rubbish, scaffold and a rounding to the nearest $50.",
+        "rules": [
+          "Walls $14/m² for two coats (example rate)",
+          "Ceilings $12/m², doors and frames $85 each (example rates)",
+          "Prep +15% on pre-1980 houses",
+          "Rubbish $90 flat; scaffold at cost + 15%",
+          "Round the total up to the nearest $50"
+        ],
+        "goes_wrong": [
+          "Rates in the template are from 2024; the newer ones are only in the owner's head",
+          "Forgot scaffold on the Pennant Hills job and wore $600"
+        ],
+        "source": "Your workings for quote Q-1043 and the price list"
+      }
+    },
+    {
+      "id": "writeup",
+      "title": "Write up the quote",
+      "who": "Office (partner)",
+      "tools": [
+        "Word",
+        "Excel"
+      ],
+      "minutes": 20,
+      "time": "20 min",
+      "flag": "copy",
+      "pain": "Copying Excel lines into Word",
+      "detail": {
+        "what": "The partner copies one line per room from Excel into the Word quote template, adds the inclusions and exclusions, and saves it as a PDF with the next quote number.",
+        "rules": [
+          "Customer sees a price per room and one total, inc GST",
+          "Never show rates, prep % or the scaffold mark-up",
+          "Quote valid 30 days, 20% deposit to book"
+        ],
+        "goes_wrong": [
+          "Room names don't match between Excel and Word, so a room gets missed"
+        ],
+        "source": "Your quotes Q-1043 (won) and Q-1051 (lost)"
+      }
+    },
+    {
+      "id": "send",
+      "title": "Check and send",
+      "who": "Owner + office",
+      "tools": [
+        "Outlook",
+        "PDF"
+      ],
+      "minutes": 10,
+      "time": "10 min",
+      "detail": {
+        "what": "The owner reads the PDF on their phone, the partner emails it to the customer from the shared inbox.",
+        "goes_wrong": [
+          "Waits a day or two for the owner to check it"
+        ],
+        "source": "Your answer to Q6"
+      }
+    },
+    {
+      "id": "follow",
+      "title": "Follow up",
+      "who": "Owner",
+      "tools": [
+        "Phone",
+        "Memory"
+      ],
+      "minutes": 5,
+      "time": "5 min, when remembered",
+      "flag": "slow",
+      "pain": "About half never get chased",
+      "detail": {
+        "what": "A call a week or so later, if the owner remembers. There's no list of open quotes.",
+        "goes_wrong": [
+          "Lost Q-1051 to a cheaper quote that came in while nobody had followed up"
+        ],
+        "source": "Your answer to Q20"
+      }
+    },
+    {
+      "id": "outcome",
+      "type": "fork",
+      "title": "Won or lost?",
+      "who": "Owner",
+      "options": [
+        {
+          "label": "Won",
+          "note": "Deposit invoice in Xero, job booked"
+        },
+        {
+          "label": "Lost",
+          "note": "Nothing recorded"
+        }
+      ],
+      "detail": {
+        "what": "Won jobs get a deposit invoice in Xero and a date on the wall calendar. Lost quotes aren't recorded anywhere, so there's no win rate.",
+        "source": "Your answer to Q7"
+      }
+    }
+  ],
+  "first_skill": {
+    "name": "Your quoting assistant",
+    "takes_over": [
+      "price",
+      "writeup"
+    ],
+    "what": "Send it your site notes and photos; it prices them on your rates and lays out the quote the way you send it. You check it and send.",
+    "saves": "About 55 min a quote"
+  },
+  "parking": [
+    {
+      "question": "Current scaffold hire rates",
+      "who": "Supplier A"
+    }
+  ]
+}
