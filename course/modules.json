@@ -1,0 +1,1522 @@
+{
+  "about": "Source for course/<module>/README.md and hub-map.json. Edit this, then run python3 tools/build_course.py. Process maps and hours come from APG audits of real businesses, anonymised; hours are staff estimates.",
+  "updated": "2026-10-22",
+  "modules": [
+    {
+      "n": 1,
+      "key": "lead-gen",
+      "name": "Lead generation",
+      "who": "Owner, or a sales rep in the bigger ones",
+      "promise": "Know where your next jobs are coming from, without the Sunday-night spreadsheet.",
+      "steps": [
+        {
+          "step": "Spot the work",
+          "what": "Tender portals, builders you know, Google, word of mouth",
+          "tools": [
+            "EstimateOne",
+            "Tender portal",
+            "Phone"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Check it's worth it",
+          "what": "Size, location, who's building it",
+          "tools": [
+            "Excel",
+            "LinkedIn"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Find the right person",
+          "what": "Look up the estimator or PM, find a number",
+          "tools": [
+            "LinkedIn",
+            "Phone"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Get it on the list",
+          "what": "Type the lead into the CRM or a spreadsheet",
+          "tools": [
+            "HubSpot",
+            "Excel"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Call and follow up",
+          "what": "Calls, capability statement, ask to be on the tender list",
+          "tools": [
+            "Phone",
+            "Outlook"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Keep in touch",
+          "what": "Check in until the job comes up",
+          "tools": [
+            "HubSpot",
+            "Excel"
+          ],
+          "flag": "slow"
+        }
+      ],
+      "time_goes": [
+        "Follow-ups run weeks late, so the job's specified before anyone rings",
+        "10 h a week calling and 8 h a week updating the CRM, for one rep",
+        "Contacts can't be sorted by area or type, so every email goes to everyone",
+        "Tender alert emails pile up unread"
+      ],
+      "intake": {
+        "skill": null,
+        "what": "Map where your work comes from: the sources, who chases them, and what gets written down."
+      },
+      "skills": [
+        {
+          "name": "Tender watch",
+          "what": "A morning list of new tenders and who's building them, from your portal emails",
+          "mode": "connected"
+        },
+        {
+          "name": "Follow-up list",
+          "what": "Who to ring this week and why, with the message drafted",
+          "mode": "connected"
+        },
+        {
+          "name": "Contact tidy-up",
+          "what": "Sorts your contacts by area and type so a campaign hits the right people",
+          "mode": "drop in a file"
+        }
+      ],
+      "course": {
+        "title": "Lead generation (new course)",
+        "status": "to build",
+        "skool_course_id": null,
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it run on a real job",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "How we do it: map your lead generation",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Set it up on your own data",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Tender watch",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Follow-up list",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Contact tidy-up",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your before and after",
+                "skool_lesson_id": null
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Not built yet"
+    },
+    {
+      "n": 2,
+      "key": "sales",
+      "name": "Sales and follow-up",
+      "who": "Owner or sales rep, office admin",
+      "promise": "Every enquiry answered and every quote followed up, without retyping it all.",
+      "steps": [
+        {
+          "step": "Enquiry lands",
+          "what": "Phone, email, website form",
+          "tools": [
+            "Gmail",
+            "Outlook",
+            "Website form",
+            "Phone"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Sort the inbox",
+          "what": "Work out which emails are real enquiries",
+          "tools": [
+            "Outlook",
+            "Gmail"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Qualify it",
+          "what": "Budget, timing, who decides",
+          "tools": [
+            "Phone"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Write it up",
+          "what": "Call notes typed or dictated into the CRM",
+          "tools": [
+            "HubSpot",
+            "Excel",
+            "Voice note"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Quote and follow up",
+          "what": "Send the quote, chase it, answer questions",
+          "tools": [
+            "Outlook",
+            "Phone"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Won: hand over",
+          "what": "Fill in the handover form for the office or crew",
+          "tools": [
+            "Word",
+            "Outlook",
+            "HubSpot"
+          ],
+          "flag": "copy"
+        }
+      ],
+      "time_goes": [
+        "Sorting the inbox: 1.5 to 2 h a day per salesperson",
+        "Copying emails into the CRM: 20 to 40 min a day per person",
+        "Follow-up emails written the next morning, called the most time-consuming part of the job",
+        "A 20-question handover typed from the CRM into an email"
+      ],
+      "intake": {
+        "skill": "sales-intake",
+        "what": "Map how an enquiry becomes a won job: who answers, where notes go, and when you follow up."
+      },
+      "skills": [
+        {
+          "name": "Inbox sorter",
+          "what": "Flags the real enquiries and drafts the first reply",
+          "mode": "connected"
+        },
+        {
+          "name": "Call note to CRM",
+          "what": "Speak after the call: note, task and follow-up email drafted",
+          "mode": "connected"
+        },
+        {
+          "name": "Handover pack",
+          "what": "The won job's handover questions filled from the quote and emails",
+          "mode": "connected"
+        }
+      ],
+      "course": {
+        "title": "Sales and follow-up (new course)",
+        "status": "to build",
+        "skool_course_id": null,
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it run on a real job",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "How we do it: map your sales and follow-up",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Set it up on your own data",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Inbox sorter",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Call note to CRM",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Handover pack",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your before and after",
+                "skool_lesson_id": null
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "sales-intake built. No member plugin yet"
+    },
+    {
+      "n": 3,
+      "key": "quoting",
+      "name": "Quoting, estimating and proposals",
+      "who": "Owner or estimator, admin types it up",
+      "promise": "A priced quote on your own rates in minutes, from site or the office.",
+      "steps": [
+        {
+          "step": "Request comes in",
+          "what": "Email, plans, a site visit, photos",
+          "tools": [
+            "Outlook",
+            "Gmail",
+            "PDF"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Check it's enough",
+          "what": "Chase anything missing before pricing",
+          "tools": [
+            "Outlook",
+            "Phone"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Measure or take off",
+          "what": "On site or from drawings (module 4)",
+          "tools": [
+            "Paper",
+            "PDF",
+            "Bluebeam"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Price it",
+          "what": "Rates, materials, supplier prices, labour",
+          "tools": [
+            "Excel",
+            "Supplier email"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Write the quote",
+          "what": "Typed into a template or the job system",
+          "tools": [
+            "Word",
+            "ServiceM8",
+            "simPRO",
+            "Xero"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Send and log it",
+          "what": "PDF out, logged with a reminder",
+          "tools": [
+            "Outlook",
+            "HubSpot"
+          ],
+          "flag": "copy"
+        }
+      ],
+      "time_goes": [
+        "6 in 10 enquiries go back for missing information before they can be priced",
+        "Matching products takes 1 to 2 h on a complex quote; the whole quote 3 to 4 h",
+        "The same job written out three times: site notes, Excel, then Word",
+        "Rebuilding quotes after site visits: about 13 h a week across one team"
+      ],
+      "intake": {
+        "skill": "quote-intake",
+        "what": "Walk through your last two quotes: where each number came from, and every step you did by hand."
+      },
+      "skills": [
+        {
+          "name": "Quote builder",
+          "what": "Voice note and photos in, a quote on your prices out. Built and live for clients",
+          "mode": "connected"
+        },
+        {
+          "name": "Missing-info check",
+          "what": "Reads the enquiry and drafts the questions before you price",
+          "mode": "connected"
+        },
+        {
+          "name": "Sheet to skill",
+          "what": "Drop in the spreadsheet you quote from; it becomes the plugin's questions",
+          "mode": "drop in a file"
+        }
+      ],
+      "course": {
+        "title": "Stage 4 · Quoting plugin",
+        "status": "live",
+        "skool_course_id": "c8cc244db12643469059b5ea73f0deb6",
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it quote a real job",
+                "skool_lesson_id": "b48e5d2c676b4d13ad3d03d7b68f7255"
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": "d76201cb360a4f9f880d47b7e8c6ab82"
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "Install the quoting plugin",
+                "skool_lesson_id": "e441248345df472ca3c4204f05bfac4b"
+              },
+              {
+                "title": "Load your rates, margins and quote template",
+                "skool_lesson_id": "376905c5a6af4863a8558280afe07720"
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Your first real quote, and checking the costing",
+                "skool_lesson_id": "e59410bad41648b6bacd2f532086c2dd"
+              },
+              {
+                "title": "Voice note on site, proposal from the office",
+                "skool_lesson_id": "13b712d7eb944289a071c9af1ab3d86c"
+              },
+              {
+                "title": "When it gets a quote wrong: the 2-minute fix",
+                "skool_lesson_id": "23c71e4f986048bb9ca66610a33f0b5d"
+              },
+              {
+                "title": "The handover: PM sheet and pipeline row",
+                "skool_lesson_id": "ccf6a648029b4de0aaf678ca950389d9"
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your first quote",
+                "skool_lesson_id": "e71d5248160149798219ed32ab3f2996"
+              },
+              {
+                "title": "The same skill in ChatGPT and Copilot",
+                "skool_lesson_id": "28ac6b68e779418fb6a1da2a863ea9eb"
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Quoting plugin v0.1 built, to test before filming. Intake: quote-intake"
+    },
+    {
+      "n": 4,
+      "key": "takeoffs",
+      "name": "Takeoffs from drawings",
+      "who": "Estimator, or the owner at night",
+      "promise": "Counts and measurements off the plans, marked up and checked, without tracing every line.",
+      "steps": [
+        {
+          "step": "Get the drawings",
+          "what": "A pack of 10 to 100+ sheets, by email or a portal",
+          "tools": [
+            "Outlook",
+            "EstimateOne",
+            "SharePoint"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Find the right sheets",
+          "what": "The ones your trade actually needs",
+          "tools": [
+            "PDF"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Set the scale",
+          "what": "Check it against a known dimension",
+          "tools": [
+            "Bluebeam",
+            "PDF"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Count and measure",
+          "what": "Trace, click, count, by hand",
+          "tools": [
+            "Bluebeam",
+            "AutoCAD"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Into the costing sheet",
+          "what": "Quantities typed across",
+          "tools": [
+            "Excel"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Redo on revisions",
+          "what": "New drawings: do it again and compare",
+          "tools": [
+            "PDF",
+            "Excel"
+          ],
+          "flag": "slow"
+        }
+      ],
+      "time_goes": [
+        "Takeoff is about 60% of estimating time; data entry another 30%",
+        "Big packages: two people for three weeks",
+        "Every revision means redoing the takeoff and comparing by eye",
+        "After the win, the job team does its own takeoff again"
+      ],
+      "intake": {
+        "skill": "takeoff-intake",
+        "what": "Map how you take off: which drawings, what you count, the scale, and where the numbers go."
+      },
+      "skills": [
+        {
+          "name": "Picture takeoff",
+          "what": "Reads the plan like a person: counts, measures, marks it up. Built for clients",
+          "mode": "connected"
+        },
+        {
+          "name": "Drawing finder",
+          "what": "Finds the sheets you need in a 100-drawing pack",
+          "mode": "connected"
+        },
+        {
+          "name": "Revision compare",
+          "what": "What changed between the tender and construction drawings",
+          "mode": "connected"
+        }
+      ],
+      "course": {
+        "title": "Stage 4 · Takeoff plugin",
+        "status": "live",
+        "skool_course_id": "d4f10017bef4420692d4d8e6856b3eba",
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it read a drawing",
+                "skool_lesson_id": "2563aa0323754e4193560b2d82869069"
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": "54d615b0218c4420837c669d4c28ef37"
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "Install it and set up your symbol key",
+                "skool_lesson_id": "a90689f37ad84ef0a1b47596e6b3dd65"
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Your first drawing: counts and markup",
+                "skool_lesson_id": "146df6c385b645dca76e5950fa552972"
+              },
+              {
+                "title": "Check it against the drawing's own schedule",
+                "skool_lesson_id": "88f0c334b10047e997aebca6c07bd554"
+              },
+              {
+                "title": "Multi-sheet jobs",
+                "skool_lesson_id": "922b25ba7bf04613881cc7ae6d319bf6"
+              },
+              {
+                "title": "Push the counts into costing and quoting",
+                "skool_lesson_id": "33b08e2446f54f5fb9cbd86e00670307"
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your first takeoff",
+                "skool_lesson_id": "a496fddda0764da0be4eb0955aaff088"
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Picture takeoff built. Member version needs the client's OK to film. Intake: takeoff-intake"
+    },
+    {
+      "n": 5,
+      "key": "purchasing",
+      "name": "Purchasing and suppliers",
+      "who": "Owner, office admin or a purchaser",
+      "promise": "Supplier quotes turned into checked orders, and price lists kept current.",
+      "steps": [
+        {
+          "step": "Need for materials",
+          "what": "From a won job or the crew",
+          "tools": [
+            "Phone",
+            "WhatsApp",
+            "Excel"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Ask suppliers",
+          "what": "Send the list to two or three suppliers",
+          "tools": [
+            "Outlook",
+            "Gmail"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Compare the quotes",
+          "what": "Line by line, gaps and substitutes",
+          "tools": [
+            "Excel",
+            "PDF"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Raise the order",
+          "what": "Every line copied into the system",
+          "tools": [
+            "simPRO",
+            "Xero",
+            "ServiceM8"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Confirm and chase",
+          "what": "Check the confirmation, chase back-orders",
+          "tools": [
+            "Outlook",
+            "Phone"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Bill arrives",
+          "what": "Match to the order and delivery docket (module 10)",
+          "tools": [
+            "Xero",
+            "PDF"
+          ],
+          "flag": null
+        }
+      ],
+      "time_goes": [
+        "Copying a supplier quote into an order: 15 to 30 min each, about 15 h a week",
+        "Reviewing each supplier quote line by line: 45 to 60 min",
+        "Chasing the missing job code: about 3 h a week",
+        "Supplier price lists arrive as PDFs and go stale"
+      ],
+      "intake": {
+        "skill": "po-intake",
+        "what": "Map how you buy: who orders, which suppliers, how you compare, and where the order is typed."
+      },
+      "skills": [
+        {
+          "name": "Quote to order",
+          "what": "Reads the supplier quote, matches job and items, asks instead of guessing",
+          "mode": "connected"
+        },
+        {
+          "name": "Three-supplier compare",
+          "what": "Side by side, with gaps and substitutes flagged",
+          "mode": "connected"
+        },
+        {
+          "name": "Price list update",
+          "what": "A supplier's PDF turned into your updated price list",
+          "mode": "drop in a file"
+        }
+      ],
+      "course": {
+        "title": "Purchasing and suppliers (new course)",
+        "status": "to build",
+        "skool_course_id": null,
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it run on a real job",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "How we do it: map your purchasing and suppliers",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Set it up on your own data",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Quote to order",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Three-supplier compare",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Price list update",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your before and after",
+                "skool_lesson_id": null
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "po-intake built; a quote-to-order skill is designed for a client. The order desk course's lessons 'Supplier orders and stock' and 'Match the supplier invoice to the order' already cover part of this"
+    },
+    {
+      "n": 6,
+      "key": "jobs",
+      "name": "Job delivery and scheduling",
+      "who": "Owner, project manager, office admin",
+      "promise": "From won job to handover with the paperwork keeping up, not the other way round.",
+      "steps": [
+        {
+          "step": "Set up the job",
+          "what": "Job in the system, folders, the handover",
+          "tools": [
+            "simPRO",
+            "ServiceM8",
+            "SharePoint"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Book the crew",
+          "what": "Dates, crew and subbies, client told",
+          "tools": [
+            "Field app",
+            "SMS",
+            "Excel"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Paperwork before start",
+          "what": "SWMS, inductions, compliance checks",
+          "tools": [
+            "Word",
+            "PDF"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "On site",
+          "what": "Progress, photos and issues in group chats",
+          "tools": [
+            "WhatsApp",
+            "Phone"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Report and claim",
+          "what": "Weekly client report, variations, progress claim",
+          "tools": [
+            "Excel",
+            "Word",
+            "Outlook"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Finish and hand over",
+          "what": "Defects, photos, close-out (module 9)",
+          "tools": [
+            "Paper",
+            "PDF"
+          ],
+          "flag": "slow"
+        }
+      ],
+      "time_goes": [
+        "Project managers spend up to 80% of their week on admin",
+        "Site updates in WhatsApp turned into data by hand: about 10 h a week per person",
+        "A weekly client report: about 3.5 h per active job",
+        "A progress claim: half a day to a day per job per month"
+      ],
+      "intake": {
+        "skill": null,
+        "what": "Map a job from won to handed over: who sets it up, how the crew is booked, and what gets reported."
+      },
+      "skills": [
+        {
+          "name": "Job setup pack",
+          "what": "Folders, job and checklist made from the won quote",
+          "mode": "connected"
+        },
+        {
+          "name": "Site update to report",
+          "what": "Voice notes and photos become the weekly client report",
+          "mode": "connected"
+        },
+        {
+          "name": "Defects from a site walk",
+          "what": "Record the walk; the defect list is drafted. Being built",
+          "mode": "connected"
+        }
+      ],
+      "course": {
+        "title": "Job delivery and scheduling (new course)",
+        "status": "to build",
+        "skool_course_id": null,
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it run on a real job",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "How we do it: map your job delivery and scheduling",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Set it up on your own data",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Job setup pack",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Site update to report",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Defects from a site walk",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your before and after",
+                "skool_lesson_id": null
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Not built yet"
+    },
+    {
+      "n": 7,
+      "key": "warehouse",
+      "name": "Stock, warehouse and freight",
+      "who": "Warehouse lead, logistics or office admin",
+      "promise": "Know what's in stock, what's going out, and what freight really costs you.",
+      "steps": [
+        {
+          "step": "Goods in",
+          "what": "Check against the docket, put away",
+          "tools": [
+            "Paper",
+            "Excel",
+            "Odoo"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Order to send",
+          "what": "Picked from the list, checked",
+          "tools": [
+            "Paper",
+            "Excel"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Get a freight price",
+          "what": "Sizes and weights, carrier portal or email",
+          "tools": [
+            "Carrier portal",
+            "Outlook"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Plan the loads",
+          "what": "Which truck, which day",
+          "tools": [
+            "Paper",
+            "Excel"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Book and send",
+          "what": "Carrier booked, dockets printed",
+          "tools": [
+            "Carrier portal",
+            "Outlook"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Delivered and charged",
+          "what": "Proof of delivery, freight invoice checked",
+          "tools": [
+            "Carrier portal",
+            "Xero"
+          ],
+          "flag": "slow"
+        }
+      ],
+      "time_goes": [
+        "A freight quote waits on the one person who knows the packed sizes, six times a day",
+        "Freight sheet re-edited every time dates move: about 4 h a week",
+        "The same loads retyped into the carrier email: about 3 h a week",
+        "Waiting-time charges found on the invoice and never passed on"
+      ],
+      "intake": {
+        "skill": null,
+        "what": "Map how stock comes in and goes out: who books freight, how loads are planned, where it's recorded."
+      },
+      "skills": [
+        {
+          "name": "Freight quote helper",
+          "what": "Sizes from the order, carrier request drafted",
+          "mode": "connected"
+        },
+        {
+          "name": "Load planner",
+          "what": "This week's deliveries grouped into loads by site and date",
+          "mode": "connected"
+        },
+        {
+          "name": "Delivery charges log",
+          "what": "Waiting time and failed trips logged so they can be charged on",
+          "mode": "drop in a file"
+        }
+      ],
+      "course": {
+        "title": "Stock, warehouse and freight (new course)",
+        "status": "to build",
+        "skool_course_id": null,
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it run on a real job",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "How we do it: map your stock, warehouse and freight",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Set it up on your own data",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Freight quote helper",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Load planner",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Delivery charges log",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your before and after",
+                "skool_lesson_id": null
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Not built yet"
+    },
+    {
+      "n": 8,
+      "key": "service",
+      "name": "Customer service and orders",
+      "who": "Office admin, customer service",
+      "promise": "Orders entered and questions answered fast, by whoever picks up.",
+      "steps": [
+        {
+          "step": "Message arrives",
+          "what": "Shared inbox, phone, a form",
+          "tools": [
+            "Outlook",
+            "Gmail",
+            "Phone"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Who's it for?",
+          "what": "Sort and forward to the right person",
+          "tools": [
+            "Outlook"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Enter the order",
+          "what": "Line by line from the PDF",
+          "tools": [
+            "PDF",
+            "Xero",
+            "Odoo",
+            "ServiceM8"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Answer the question",
+          "what": "Ask around for the product or job answer",
+          "tools": [
+            "Teams",
+            "SharePoint",
+            "Phone"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Confirm and update",
+          "what": "Order confirmed, delays passed on",
+          "tools": [
+            "Outlook"
+          ],
+          "flag": "slow"
+        }
+      ],
+      "time_goes": [
+        "A two to three page order: 10 to 30 min to key in",
+        "A third of the team's time on enquiries and email",
+        "Answers hunted across six places",
+        "Shared inboxes forwarded by hand: about 5 h a week"
+      ],
+      "intake": {
+        "skill": null,
+        "what": "Map how a customer message gets answered: where it lands, who picks it up, where the answer lives."
+      },
+      "skills": [
+        {
+          "name": "Order reader",
+          "what": "Reads the order PDF and lines it up against your price list",
+          "mode": "connected"
+        },
+        {
+          "name": "Product answers",
+          "what": "One place to ask, showing where each answer came from",
+          "mode": "connected"
+        },
+        {
+          "name": "Where's my order",
+          "what": "Status replies drafted from the job system",
+          "mode": "connected"
+        }
+      ],
+      "course": {
+        "title": "Stage 4 · Order desk plugin",
+        "status": "live",
+        "skool_course_id": "4e59aba4c93e4c13b9d13cad3a385544",
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it check a real order",
+                "skool_lesson_id": "1e74dac9c0944f02af07b9b41896cef2"
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": "6db0fece74954c419f488c6dab0bd80a"
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "Install it: price list, stock and customers",
+                "skool_lesson_id": "3637d4c81254407ca01276fe065f665b"
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Your first real order: check, two questions, go",
+                "skool_lesson_id": "e6ecde4e8409469a9fc6d66098cba483"
+              },
+              {
+                "title": "The paperwork: sales order, confirmation, PO",
+                "skool_lesson_id": "e55c8c3aa6a049619cf96ab2df2fe0cc"
+              },
+              {
+                "title": "Teach it your customers' product codes once",
+                "skool_lesson_id": "16bcff7609434bbf936896e34e83dee2"
+              },
+              {
+                "title": "Batch 10 orders at once",
+                "skool_lesson_id": "e581f1d2c4004d8ca863c7a99f4eb491"
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your first order",
+                "skool_lesson_id": "a7d45c29b8d3487a98257cb425cd5c02"
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Course live in Skool. The member plugin isn't built yet"
+    },
+    {
+      "n": 9,
+      "key": "after-sales",
+      "name": "After-sales, warranty and maintenance",
+      "who": "Owner, service coordinator, techs",
+      "promise": "Every callback starts with the full history, and the close-out writes itself.",
+      "steps": [
+        {
+          "step": "Callback or fault",
+          "what": "Email, phone, a ticket",
+          "tools": [
+            "Outlook",
+            "Phone"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Find the history",
+          "what": "What was supplied, past visits, the drawings",
+          "tools": [
+            "Excel",
+            "SharePoint",
+            "Field app"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Decide: fix by phone or visit",
+          "what": "Most visits are booked without the history",
+          "tools": [
+            "Phone"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Visit and report",
+          "what": "Photos, notes, a report written up later",
+          "tools": [
+            "Field app",
+            "Word",
+            "Voice note"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Close out",
+          "what": "Report sent, invoice, warranty or credit",
+          "tools": [
+            "PDF",
+            "Xero"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Maintenance and renewals",
+          "what": "Service contracts, asset lists, renewals",
+          "tools": [
+            "Excel",
+            "Word"
+          ],
+          "flag": "slow"
+        }
+      ],
+      "time_goes": [
+        "Every callback treated as new; repeat faults go unseen",
+        "In one business, two of three trips in a week could have been avoided",
+        "Close-out paperwork: about 5 h a week, more work than the repair",
+        "Maintenance contracts and renewals: about 26 h a week for one person"
+      ],
+      "intake": {
+        "skill": null,
+        "what": "Map what happens after the job: how callbacks come in, what history you check, how you close out."
+      },
+      "skills": [
+        {
+          "name": "Site history",
+          "what": "Everything supplied and every past visit, before anyone goes",
+          "mode": "connected"
+        },
+        {
+          "name": "Spoken close-out",
+          "what": "One voice debrief becomes the report, photos and invoice notes",
+          "mode": "connected"
+        },
+        {
+          "name": "Renewal builder",
+          "what": "Last year's contract and asset list turned into this year's",
+          "mode": "drop in a file"
+        }
+      ],
+      "course": {
+        "title": "After-sales, warranty and maintenance (new course)",
+        "status": "to build",
+        "skool_course_id": null,
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it run on a real job",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "How we do it: map your after-sales, warranty and maintenance",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Set it up on your own data",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Site history",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Spoken close-out",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Renewal builder",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your before and after",
+                "skool_lesson_id": null
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Not built yet"
+    },
+    {
+      "n": 10,
+      "key": "admin",
+      "name": "Finance, timesheets and admin",
+      "who": "Owner, bookkeeper, office admin",
+      "promise": "Bills checked, debtors chased and payroll right, without the Friday scramble.",
+      "steps": [
+        {
+          "step": "Bills come in",
+          "what": "Match to the order and delivery docket",
+          "tools": [
+            "Xero",
+            "MYOB",
+            "PDF"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Approve and pay",
+          "what": "Approved, paid, filed (often three places)",
+          "tools": [
+            "Xero",
+            "Bank portal",
+            "SharePoint"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Timesheets",
+          "what": "Hours in, checked, approved",
+          "tools": [
+            "Field app",
+            "Excel"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Payroll",
+          "what": "Checked employee by employee",
+          "tools": [
+            "Xero",
+            "Employment Hero"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Invoice and chase",
+          "what": "Invoices out, debtors chased by phone",
+          "tools": [
+            "Xero",
+            "Phone"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Weekly numbers",
+          "what": "The report pulled together by hand",
+          "tools": [
+            "Excel"
+          ],
+          "flag": "copy"
+        }
+      ],
+      "time_goes": [
+        "Each bill saved in three places: about 4 h a week",
+        "Chasing debtors: about 12 h a week for one bookkeeper",
+        "New starters set up in three systems: about 2 h each",
+        "Receipts only on one phone, so the books stop when it's away"
+      ],
+      "intake": {
+        "skill": null,
+        "what": "Map your office week: bills, timesheets, payroll, invoicing, chasing, and who does each."
+      },
+      "skills": [
+        {
+          "name": "Bill checker",
+          "what": "Bill against order and docket; only the mismatches come to you",
+          "mode": "connected"
+        },
+        {
+          "name": "Debtor chase list",
+          "what": "Who to chase today, emails drafted",
+          "mode": "connected"
+        },
+        {
+          "name": "Payroll check",
+          "what": "Hours against pay, exceptions only. Being built",
+          "mode": "connected"
+        }
+      ],
+      "course": {
+        "title": "Finance, timesheets and admin (new course)",
+        "status": "to build",
+        "skool_course_id": null,
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it run on a real job",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "How we do it: map your finance, timesheets and admin",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Set it up on your own data",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Bill checker",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Debtor chase list",
+                "skool_lesson_id": null
+              },
+              {
+                "title": "Payroll check",
+                "skool_lesson_id": null
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your before and after",
+                "skool_lesson_id": null
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Not built yet"
+    }
+  ]
+}

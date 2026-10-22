@@ -1,4 +1,7 @@
-# Trade tools
+# AI Builders Hub
+
+The plugins, lessons and module map for the [AI Builders Hub](https://www.skool.com/ai-builders-hub).
+The plugins install as the **trade-tools** marketplace.
 
 Short question-and-answer setups for trade businesses. Each one asks how you do a job today, then
 builds you your own Claude skill for that job, ready to add to Cowork. You also get one summary file
@@ -29,7 +32,7 @@ You need a paid Claude plan (Pro is enough). The free plan can't add these.
 **On your computer** (this one step needs a computer)
 3. Go to **claude.ai** and log in with the same email.
 4. Click **Customize**, then **Plugins**, then **Add**, then **Add marketplace**.
-5. Paste this and click **Add**: `adamfromAPGsoftware/trade-tools`
+5. Paste this and click **Add**: `adamfromAPGsoftware/ai-builders-hub`
 6. Find **trade-intake** in the list and click **Install**.
 
 Done. It now works on your phone too.
@@ -47,10 +50,22 @@ Done. It now works on your phone too.
 
 That's it.
 
-Using Claude Code instead? `/plugin marketplace add adamfromAPGsoftware/trade-tools`, then
+Using Claude Code instead? `/plugin marketplace add adamfromAPGsoftware/ai-builders-hub`, then
 `/plugin install trade-intake@trade-tools`.
 
 ## What happens to my information?
 
 The questions run in your own Claude account, and your skill stays in your account. Nothing is sent
 to Adam or anyone else unless you share the file yourself. Never put passwords or bank details in the chat.
+
+## What's in this repo
+
+| Path | What it is |
+|---|---|
+| `plugins/trade-intake/` | The plugin members install: `/hub-welcome` and the intakes |
+| `course/` | One folder per Hub module: the typical process, where the time goes, the intake, the skills and the course lessons. [Start here](course/README.md) |
+| `course/modules.json` | The one source for `course/` and `hub-map.json`. Edit this, then run `python3 tools/build_course.py` |
+| `hub-map.json` | What exists in the Hub: stages, modules, lessons (with Skool ids) and skills, so a skill can point a member to the right lesson |
+
+The module process maps come from APG's audits of real businesses, anonymised. Hours are staff
+estimates, not measurements.
