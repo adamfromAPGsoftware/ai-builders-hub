@@ -30,7 +30,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 
 ## Step 1: map how you do it
 
-"How we do it" (planned): Map where your work comes from: the sources, who chases them, and what gets written down.
+`/map-leads`: Map where your work comes from: the sources, who chases them, and what gets written down.
 
 It hands back your own version of the map above, with your tools and your hours, then suggests which skill to build first.
 

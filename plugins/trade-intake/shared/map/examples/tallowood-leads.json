@@ -1,0 +1,64 @@
+{
+  "example": true,
+  "business": "Tallowood Painting",
+  "trade": "Residential and builder repaints, Sydney",
+  "module": { "n": 1, "name": "Lead generation" },
+  "per": "lead",
+  "title": "Where our work comes from today",
+  "summary": "Homeowners find us on Google and through referrals. Builder work is chased by the owner from a Google Sheet and tender emails, on Sunday nights.",
+  "updated": "2026-10-22",
+  "before": [
+    { "value": "35", "label": "leads a month" },
+    { "value": "15", "label": "become a quote" },
+    { "value": "5 h", "label": "a week chasing work" }
+  ],
+  "steps": [
+    {
+      "id": "source", "type": "fork", "title": "Where did it come from?", "who": "Owner",
+      "options": [
+        { "label": "Builder or tender", "note": "Chase it (about half)" },
+        { "label": "Google or referral", "note": "It comes to us" }
+      ],
+      "detail": { "what": "About half the work is homeowners from Google and referrals; the rest is builders the owner knows and EstimateOne tenders.", "source": "Your answer to Q2" }
+    },
+    {
+      "id": "spot", "title": "Spot the tender", "who": "Owner", "tools": ["EstimateOne", "Gmail"],
+      "minutes": 15, "time": "15 min, days late", "flag": "slow", "pain": "40 alerts a week, ten read",
+      "detail": { "what": "Tender alerts land in the owner's inbox and get read on Sunday night, if at all.", "goes_wrong": ["Job 1 was seen three days after the invite"], "source": "Job 1" }
+    },
+    {
+      "id": "worth-it", "type": "fork", "title": "Worth chasing?", "who": "Owner",
+      "options": [
+        { "label": "Yes", "note": "Over $20k, within an hour, builder pays" },
+        { "label": "No", "note": "Skip it" }
+      ],
+      "detail": { "what": "Checked against size, area and the builder.", "rules": ["Over $20,000 ex GST", "Within an hour of Hornsby", "No new-build apartments", "Not for the two slow-paying builders"], "source": "Your answer to Q10" }
+    },
+    {
+      "id": "find-person", "title": "Find the estimator", "who": "Owner", "tools": ["LinkedIn", "Phone"],
+      "minutes": 10, "time": "10 min, sometimes a day", "flag": "slow", "pain": "Phone tag with front desks",
+      "detail": { "what": "Looks the builder up on LinkedIn, rings the front desk for the estimator.", "goes_wrong": ["Builder B changes estimators every year"], "source": "Your answer to Q11" }
+    },
+    {
+      "id": "list", "title": "Add it to the sheet", "who": "Owner", "tools": ["Google Sheet"],
+      "minutes": 5, "time": "5 min", "flag": "copy", "pain": "Typed from the email by hand",
+      "detail": { "what": "A row per lead: builder, project, suburb, size, date, next step.", "goes_wrong": ["No area or type column, so it can't be sorted"], "source": "Your answer to Q12" }
+    },
+    {
+      "id": "follow-up", "title": "Follow up", "who": "Owner", "tools": ["Phone", "Gmail"],
+      "minutes": 10, "time": "When remembered", "flag": "slow", "pain": "Meant to be every 2 weeks",
+      "detail": { "what": "A call, then an email. Meant to be fortnightly; really whenever the owner remembers.", "rules": ["Never more than once a fortnight"], "goes_wrong": ["Missed the Killara townhouses, about $60,000"], "source": "Your answers to Q13 and Q27" }
+    },
+    {
+      "id": "enquiry", "title": "It becomes an enquiry", "who": "Builder or homeowner", "tools": ["Phone", "Website form"],
+      "detail": { "what": "Drawings come out or the homeowner fills in the form. From here it's sales and quoting.", "source": "Jobs 1 and 2" }
+    }
+  ],
+  "first_skill": {
+    "name": "Your follow-up list",
+    "takes_over": ["list", "follow-up"],
+    "what": "Every Monday: who to ring this week and why, with the message drafted. You make the calls.",
+    "saves": "About 2 h a week"
+  },
+  "parking": [ { "question": "Which jobs last year came from Google Ads", "who": "Owner, from Xero" } ]
+}

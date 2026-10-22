@@ -72,7 +72,7 @@
         "Tender alert emails pile up unread"
       ],
       "intake": {
-        "skill": null,
+        "skill": "map-leads",
         "what": "Map where your work comes from: the sources, who chases them, and what gets written down."
       },
       "skills": [
@@ -986,8 +986,8 @@
         "Receipts only on one phone, so the books stop when it's away"
       ],
       "intake": {
-        "skill": null,
-        "what": "Map your office week: bills, timesheets, payroll, invoicing, chasing, and who does each."
+        "skill": "map-admin",
+        "what": "Map your office week: one bill from arrival to paid, the pay run by role, and how money gets chased."
       },
       "skills": [
         {

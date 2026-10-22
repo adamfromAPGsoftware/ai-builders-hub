@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SHARED = ROOT / "plugins" / "trade-intake" / "shared" / "map"
 SKILLS = ROOT / "plugins" / "trade-intake" / "skills"
-USERS = ["map-customer-service"]   # add each mapping skill as it moves to the shared map
+USERS = ["map-leads", "map-customer-service", "map-admin"]   # add each mapping skill as it moves to the shared map
 SKIP = {"examples", "__pycache__"}
 
 

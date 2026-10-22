@@ -1,0 +1,53 @@
+{
+  "example": true,
+  "business": "Tallowood Painting",
+  "trade": "Residential and builder repaints, Sydney",
+  "module": { "n": 7, "name": "Finance and admin" },
+  "per": "bill",
+  "title": "How our office week runs today",
+  "summary": "Bills arrive by email and are paid on the 20th after a text to the owner. Each one is saved in three places. Debtors are chased by phone when someone remembers.",
+  "updated": "2026-10-22",
+  "before": [
+    { "value": "25", "label": "bills a week" },
+    { "value": "3 h", "label": "a week on bills" },
+    { "value": "6", "label": "invoices over 30 days" }
+  ],
+  "steps": [
+    {
+      "id": "bill-in", "title": "Bill arrives", "who": "Supplier", "tools": ["Gmail", "PDF"], "minutes": 1, "time": "1 min",
+      "detail": { "what": "Suppliers email PDFs to the office inbox.", "source": "The bill" }
+    },
+    {
+      "id": "check", "title": "Check it against the order", "who": "Office", "tools": ["Gmail", "Xero"], "minutes": 4, "time": "4 min, if it's found", "flag": "slow", "pain": "Hunting for the order",
+      "detail": { "what": "The office looks for the order in the owner's emails. The docket is usually in the ute.", "rules": ["Within $20 ex GST of the order: pay"], "goes_wrong": ["Freight charged on pickup orders"], "source": "Your answers to Q10 and Q11" }
+    },
+    {
+      "id": "match", "type": "fork", "title": "Does it match?", "who": "Office",
+      "options": [ { "label": "Yes", "note": "Owner approves by text" }, { "label": "No", "note": "Email supplier, hold it" } ],
+      "detail": { "what": "Within tolerance goes to the owner by text; anything else is queried.", "source": "Your answer to Q11" }
+    },
+    {
+      "id": "pay", "title": "Pay on the 20th", "who": "Office", "tools": ["Xero", "Bank app"], "minutes": 2, "time": "2 min each",
+      "detail": { "what": "Entered in Xero, paid in the bank app once a month.", "goes_wrong": ["Paid supplier A's bill twice in July"], "source": "The bill" }
+    },
+    {
+      "id": "file", "title": "Save it", "who": "Office", "tools": ["Google Drive"], "minutes": 2, "time": "2 min", "flag": "copy", "pain": "Saved in three places",
+      "detail": { "what": "PDF saved to a monthly Drive folder, as well as Xero and the bank.", "source": "Your answer to Q13" }
+    },
+    {
+      "id": "pay-run", "title": "Hours in, pay run", "who": "Office → Owner", "tools": ["Texts", "Xero"], "time": "2 h a week", "flag": "slow", "pain": "Typed in from texts",
+      "detail": { "what": "Painters text hours on Friday; Monday the office types them into Xero and checks overtime, the travel allowance and the apprentice's year rate; the owner approves Tuesday.", "odd_cases": ["Christmas shutdown done by hand"], "source": "The pay run" }
+    },
+    {
+      "id": "chase", "title": "Chase who owes us", "who": "Owner", "tools": ["Phone", "Xero"], "time": "When remembered", "flag": "slow", "pain": "6 invoices over 30 days",
+      "detail": { "what": "The owner rings homeowners over 30 days; builders get an email.", "goes_wrong": ["Builder A holds 5% retention that nobody tracks"], "source": "Your answers to Q18 and Q19" }
+    }
+  ],
+  "first_skill": {
+    "name": "Your bill checker",
+    "takes_over": ["check", "match"],
+    "what": "Drop in a bill; it checks it against the order and docket and only brings you the mismatches. You approve and pay.",
+    "saves": "About 2 h a week"
+  },
+  "parking": [ { "question": "Supplier A's credit for the July duplicate", "who": "Supplier A" } ]
+}

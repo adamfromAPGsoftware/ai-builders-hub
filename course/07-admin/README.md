@@ -30,7 +30,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 
 ## Step 1: map how you do it
 
-"How we do it" (planned): Map your office week: bills, timesheets, payroll, invoicing, chasing, and who does each.
+`/map-admin`: Map your office week: one bill from arrival to paid, the pay run by role, and how money gets chased.
 
 It hands back your own version of the map above, with your tools and your hours, then suggests which skill to build first.
 

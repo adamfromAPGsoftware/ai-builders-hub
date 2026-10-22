@@ -5,7 +5,7 @@
   "marketplace": {
     "name": "trade-tools",
     "plugin": "trade-intake",
-    "plugin_version": "0.6.0"
+    "plugin_version": "0.7.0"
   },
   "stages": [
     {
@@ -28,7 +28,7 @@
       "name": "Lead generation",
       "promise": "Know where your next jobs are coming from, without the Sunday-night spreadsheet.",
       "folder": "course/01-lead-gen",
-      "intake_skill": null,
+      "intake_skill": "map-leads",
       "skills": [
         "Tender watch",
         "Follow-up list",
@@ -410,7 +410,7 @@
       "name": "Finance, timesheets and admin",
       "promise": "Bills checked, debtors chased and payroll right, without the Friday scramble.",
       "folder": "course/07-admin",
-      "intake_skill": null,
+      "intake_skill": "map-admin",
       "skills": [
         "Bill checker",
         "Debtor chase list",

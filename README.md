@@ -17,13 +17,15 @@ builds your first assistant from that map:
 | Type this | Module | For |
 |---|---|---|
 | **/hub-welcome** | Stage 1 | Your Hub intro: who you are, how your business runs, your welcome card |
+| **/map-leads** | 1 | Where your work comes from, and following it up |
 | **/map-sales** | 2 | How enquiries come in and become jobs |
 | **/map-quoting** | 3 | How you quote |
 | **/map-takeoffs** | 4 | How you do takeoffs from drawings |
 | **/map-purchasing** | 5 | How you order materials (purchase orders) |
 | **/map-customer-service** | 6 | How customer messages and orders get handled |
+| **/map-admin** | 7 | Bills, the pay run and chasing money |
 
-Lead generation (Module 1) and admin (Module 7) are coming. Every map uses the same clickable page
+Every map uses the same clickable page
 and picture, from `plugins/trade-intake/shared/map/` (run `python3 tools/sync_map.py` after changing
 it).
 

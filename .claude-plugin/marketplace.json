@@ -10,7 +10,7 @@
     {
       "name": "trade-intake",
       "source": "./plugins/trade-intake",
-      "description": "New to the AI Builders Hub? Start with /hub-welcome. Then map each part of your business: /map-sales, /map-quoting, /map-takeoffs, /map-purchasing or /map-customer-service."
+      "description": "New to the AI Builders Hub? Start with /hub-welcome. Then map each part of your business: /map-leads, /map-sales, /map-quoting, /map-takeoffs, /map-purchasing, /map-customer-service and /map-admin."
     }
   ]
 }
