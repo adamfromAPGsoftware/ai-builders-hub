@@ -6,13 +6,13 @@ Each module is a department of a trade, construction or manufacturing business. 
 
 | # | Module | Course | Intake |
 |:-:|---|---|---|
-| 1 | [Lead generation](01-lead-gen/README.md) | to build | planned |
-| 2 | [Sales and follow-up](02-sales/README.md) | to build | `/sales-intake` |
-| 3 | [Quoting, estimating and proposals](03-quoting/README.md) | live | `/quote-intake` |
-| 4 | [Takeoffs from drawings](04-takeoffs/README.md) | live | `/takeoff-intake` |
-| 5 | [Purchasing and suppliers](05-purchasing/README.md) | to build | `/po-intake` |
-| 6 | [Job delivery and scheduling](06-jobs/README.md) | to build | planned |
-| 7 | [Stock, warehouse and freight](07-warehouse/README.md) | to build | planned |
-| 8 | [Customer service and orders](08-service/README.md) | live | planned |
-| 9 | [After-sales, warranty and maintenance](09-after-sales/README.md) | to build | planned |
-| 10 | [Finance, timesheets and admin](10-admin/README.md) | to build | planned |
+| 1 | [Lead generation](01-lead-gen/README.md) | structure in Skool | planned |
+| 2 | [Sales and follow-up](02-sales/README.md) | structure in Skool | `/sales-intake` |
+| 3 | [Quoting, estimating and proposals](03-quoting/README.md) | written | `/quote-intake` |
+| 4 | [Takeoffs from drawings](04-takeoffs/README.md) | placeholders in Skool | `/takeoff-intake` |
+| 5 | [Purchasing and suppliers](05-purchasing/README.md) | structure in Skool | `/po-intake` |
+| 6 | [Job delivery and scheduling](06-jobs/README.md) | structure in Skool | planned |
+| 7 | [Stock, warehouse and freight](07-warehouse/README.md) | structure in Skool | planned |
+| 8 | [Customer service and orders](08-service/README.md) | placeholders in Skool | planned |
+| 9 | [After-sales, warranty and maintenance](09-after-sales/README.md) | structure in Skool | planned |
+| 10 | [Finance, timesheets and admin](10-admin/README.md) | structure in Skool | planned |

@@ -40,26 +40,26 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Three-supplier compare** (connected): Side by side, with gaps and substitutes flagged
 - **Price list update** (drop in a file): A supplier's PDF turned into your updated price list
 
-## The course in the Hub: Purchasing and suppliers (new course) (to build)
+## The course in the Hub: Module 5 · Purchasing and suppliers (structure in Skool)
 
 **Start here**
 
-1. Watch it run on a real job
-2. What you get, and what you need to start
+1. [Watch it run on a real job](https://www.skool.com/ai-builders-hub/classroom/76c2fe697ec44c1fbe86dbd7ddea7484?md=4d723b6ec18e44d6936b6dbdc1c23072)
+2. [What you get, and what you need to start](https://www.skool.com/ai-builders-hub/classroom/76c2fe697ec44c1fbe86dbd7ddea7484?md=64f66ea3617c44c1a24247441c046e3c)
 
 **Set it up**
 
-1. How we do it: map your purchasing and suppliers
-2. Set it up on your own data
+1. [How we do it: map your purchasing](https://www.skool.com/ai-builders-hub/classroom/76c2fe697ec44c1fbe86dbd7ddea7484?md=ca92a271ca8c4b3aab2c803a4151bec6)
+2. [Build your skills from your map](https://www.skool.com/ai-builders-hub/classroom/76c2fe697ec44c1fbe86dbd7ddea7484?md=d8b72e270658486dbf283b6488a56f75)
 
 **Use it on real jobs**
 
-1. Quote to order
-2. Three-supplier compare
-3. Price list update
+1. [Quote to order](https://www.skool.com/ai-builders-hub/classroom/76c2fe697ec44c1fbe86dbd7ddea7484?md=5a4e7223bb494bd79fe33339dfa46c92)
+2. [Three-supplier compare](https://www.skool.com/ai-builders-hub/classroom/76c2fe697ec44c1fbe86dbd7ddea7484?md=a3e2b77cdf1245dd9235d97753532478)
+3. [Price list update](https://www.skool.com/ai-builders-hub/classroom/76c2fe697ec44c1fbe86dbd7ddea7484?md=661f21f02bd24aafbb986eaf969fb062)
 
 **Check in**
 
-1. 7-day check-in: post your before and after
+1. [7-day check-in: post your before and after](https://www.skool.com/ai-builders-hub/classroom/76c2fe697ec44c1fbe86dbd7ddea7484?md=b6418a17ac5442939d49057eb43809f3)
 
 **Plugin:** po-intake built; a quote-to-order skill is designed for a client. The order desk course's lessons 'Supplier orders and stock' and 'Match the supplier invoice to the order' already cover part of this.

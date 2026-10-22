@@ -40,7 +40,7 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Missing-info check** (connected): Reads the enquiry and drafts the questions before you price
 - **Sheet to skill** (drop in a file): Drop in the spreadsheet you quote from; it becomes the plugin's questions
 
-## The course in the Hub: Stage 4 · Quoting plugin (live)
+## The course in the Hub: Stage 4 · Quoting plugin (written)
 
 **Start here**
 
@@ -49,19 +49,19 @@ It hands back your own version of the map above, with your tools and your hours,
 
 **Set it up**
 
-1. [Install the quoting plugin](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=e441248345df472ca3c4204f05bfac4b)
-2. [Load your rates, margins and quote template](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=376905c5a6af4863a8558280afe07720)
+1. [How we do it: map how you quote](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=e441248345df472ca3c4204f05bfac4b)
+2. [Build your quoting skill from your map](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=376905c5a6af4863a8558280afe07720)
 
 **Use it on real jobs**
 
 1. [Your first real quote, and checking the costing](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=e59410bad41648b6bacd2f532086c2dd)
 2. [Voice note on site, proposal from the office](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=13b712d7eb944289a071c9af1ab3d86c)
 3. [When it gets a quote wrong: the 2-minute fix](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=23c71e4f986048bb9ca66610a33f0b5d)
-4. [The handover: PM sheet and pipeline row](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=ccf6a648029b4de0aaf678ca950389d9)
+4. [Next skills, from the same map](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=ccf6a648029b4de0aaf678ca950389d9)
 
 **Check in**
 
 1. [7-day check-in: post your first quote](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=e71d5248160149798219ed32ab3f2996)
-2. [The same skill in ChatGPT and Copilot](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=28ac6b68e779418fb6a1da2a863ea9eb)
+2. [Day 14: your before and after](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=28ac6b68e779418fb6a1da2a863ea9eb)
 
 **Plugin:** Quoting plugin v0.1 built, to test before filming. Intake: quote-intake.

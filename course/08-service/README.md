@@ -39,7 +39,7 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Product answers** (connected): One place to ask, showing where each answer came from
 - **Where's my order** (connected): Status replies drafted from the job system
 
-## The course in the Hub: Stage 4 · Order desk plugin (live)
+## The course in the Hub: Stage 4 · Order desk plugin (placeholders in Skool)
 
 **Start here**
 

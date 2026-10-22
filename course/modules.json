@@ -93,20 +93,20 @@
         }
       ],
       "course": {
-        "title": "Lead generation (new course)",
-        "status": "to build",
-        "skool_course_id": null,
+        "title": "Module 1 · Lead generation",
+        "status": "structure in Skool",
+        "skool_course_id": "235377e2c6b24613ba98962551456929",
         "parts": [
           {
             "part": "Start here",
             "lessons": [
               {
                 "title": "Watch it run on a real job",
-                "skool_lesson_id": null
+                "skool_lesson_id": "a68f75a33e6b4a379cab0408af78ead7"
               },
               {
                 "title": "What you get, and what you need to start",
-                "skool_lesson_id": null
+                "skool_lesson_id": "04e78535754545ecab22b8d93a755de3"
               }
             ]
           },
@@ -115,11 +115,11 @@
             "lessons": [
               {
                 "title": "How we do it: map your lead generation",
-                "skool_lesson_id": null
+                "skool_lesson_id": "4a468a74bdd045f98cdd99d66b74271d"
               },
               {
-                "title": "Set it up on your own data",
-                "skool_lesson_id": null
+                "title": "Build your skills from your map",
+                "skool_lesson_id": "c6b54dc328fb426e8d9177beb70a546f"
               }
             ]
           },
@@ -128,15 +128,15 @@
             "lessons": [
               {
                 "title": "Tender watch",
-                "skool_lesson_id": null
+                "skool_lesson_id": "948e7f978c044e53ab146cbdbb5097b6"
               },
               {
                 "title": "Follow-up list",
-                "skool_lesson_id": null
+                "skool_lesson_id": "35829699eda441449d2520fb8d75da76"
               },
               {
                 "title": "Contact tidy-up",
-                "skool_lesson_id": null
+                "skool_lesson_id": "8b231147d9ed49ffbb0bed8061d8eb2f"
               }
             ]
           },
@@ -145,7 +145,7 @@
             "lessons": [
               {
                 "title": "7-day check-in: post your before and after",
-                "skool_lesson_id": null
+                "skool_lesson_id": "349fe8dd87fc43ea8ca1756da8397e46"
               }
             ]
           }
@@ -246,20 +246,20 @@
         }
       ],
       "course": {
-        "title": "Sales and follow-up (new course)",
-        "status": "to build",
-        "skool_course_id": null,
+        "title": "Module 2 · Sales and follow-up",
+        "status": "structure in Skool",
+        "skool_course_id": "5dd32079e13a43fe85a6f95f33d30ae8",
         "parts": [
           {
             "part": "Start here",
             "lessons": [
               {
                 "title": "Watch it run on a real job",
-                "skool_lesson_id": null
+                "skool_lesson_id": "4309b81a0c9a4a47a607d8790fc63e0b"
               },
               {
                 "title": "What you get, and what you need to start",
-                "skool_lesson_id": null
+                "skool_lesson_id": "654991c913a34885a802ee76aac17576"
               }
             ]
           },
@@ -268,11 +268,11 @@
             "lessons": [
               {
                 "title": "How we do it: map your sales and follow-up",
-                "skool_lesson_id": null
+                "skool_lesson_id": "eec335e0920a4a6aa070da276d1937cc"
               },
               {
-                "title": "Set it up on your own data",
-                "skool_lesson_id": null
+                "title": "Build your skills from your map",
+                "skool_lesson_id": "5575cc910e234d7da388544214edb14c"
               }
             ]
           },
@@ -281,15 +281,15 @@
             "lessons": [
               {
                 "title": "Inbox sorter",
-                "skool_lesson_id": null
+                "skool_lesson_id": "0af5ca30d2354c838fe51833603003e7"
               },
               {
                 "title": "Call note to CRM",
-                "skool_lesson_id": null
+                "skool_lesson_id": "61f366c975b54586a59a63f0873a8612"
               },
               {
                 "title": "Handover pack",
-                "skool_lesson_id": null
+                "skool_lesson_id": "e17ea060cb2540f1ae559688e6244197"
               }
             ]
           },
@@ -298,7 +298,7 @@
             "lessons": [
               {
                 "title": "7-day check-in: post your before and after",
-                "skool_lesson_id": null
+                "skool_lesson_id": "c609066634c64b0c9354d2fd8cf863e5"
               }
             ]
           }
@@ -401,7 +401,7 @@
       ],
       "course": {
         "title": "Stage 4 · Quoting plugin",
-        "status": "live",
+        "status": "written",
         "skool_course_id": "c8cc244db12643469059b5ea73f0deb6",
         "parts": [
           {
@@ -421,11 +421,11 @@
             "part": "Set it up",
             "lessons": [
               {
-                "title": "Install the quoting plugin",
+                "title": "How we do it: map how you quote",
                 "skool_lesson_id": "e441248345df472ca3c4204f05bfac4b"
               },
               {
-                "title": "Load your rates, margins and quote template",
+                "title": "Build your quoting skill from your map",
                 "skool_lesson_id": "376905c5a6af4863a8558280afe07720"
               }
             ]
@@ -446,7 +446,7 @@
                 "skool_lesson_id": "23c71e4f986048bb9ca66610a33f0b5d"
               },
               {
-                "title": "The handover: PM sheet and pipeline row",
+                "title": "Next skills, from the same map",
                 "skool_lesson_id": "ccf6a648029b4de0aaf678ca950389d9"
               }
             ]
@@ -459,7 +459,7 @@
                 "skool_lesson_id": "e71d5248160149798219ed32ab3f2996"
               },
               {
-                "title": "The same skill in ChatGPT and Copilot",
+                "title": "Day 14: your before and after",
                 "skool_lesson_id": "28ac6b68e779418fb6a1da2a863ea9eb"
               }
             ]
@@ -558,7 +558,7 @@
       ],
       "course": {
         "title": "Stage 4 · Takeoff plugin",
-        "status": "live",
+        "status": "placeholders in Skool",
         "skool_course_id": "d4f10017bef4420692d4d8e6856b3eba",
         "parts": [
           {
@@ -709,20 +709,20 @@
         }
       ],
       "course": {
-        "title": "Purchasing and suppliers (new course)",
-        "status": "to build",
-        "skool_course_id": null,
+        "title": "Module 5 · Purchasing and suppliers",
+        "status": "structure in Skool",
+        "skool_course_id": "76c2fe697ec44c1fbe86dbd7ddea7484",
         "parts": [
           {
             "part": "Start here",
             "lessons": [
               {
                 "title": "Watch it run on a real job",
-                "skool_lesson_id": null
+                "skool_lesson_id": "4d723b6ec18e44d6936b6dbdc1c23072"
               },
               {
                 "title": "What you get, and what you need to start",
-                "skool_lesson_id": null
+                "skool_lesson_id": "64f66ea3617c44c1a24247441c046e3c"
               }
             ]
           },
@@ -730,12 +730,12 @@
             "part": "Set it up",
             "lessons": [
               {
-                "title": "How we do it: map your purchasing and suppliers",
-                "skool_lesson_id": null
+                "title": "How we do it: map your purchasing",
+                "skool_lesson_id": "ca92a271ca8c4b3aab2c803a4151bec6"
               },
               {
-                "title": "Set it up on your own data",
-                "skool_lesson_id": null
+                "title": "Build your skills from your map",
+                "skool_lesson_id": "d8b72e270658486dbf283b6488a56f75"
               }
             ]
           },
@@ -744,15 +744,15 @@
             "lessons": [
               {
                 "title": "Quote to order",
-                "skool_lesson_id": null
+                "skool_lesson_id": "5a4e7223bb494bd79fe33339dfa46c92"
               },
               {
                 "title": "Three-supplier compare",
-                "skool_lesson_id": null
+                "skool_lesson_id": "a3e2b77cdf1245dd9235d97753532478"
               },
               {
                 "title": "Price list update",
-                "skool_lesson_id": null
+                "skool_lesson_id": "661f21f02bd24aafbb986eaf969fb062"
               }
             ]
           },
@@ -761,7 +761,7 @@
             "lessons": [
               {
                 "title": "7-day check-in: post your before and after",
-                "skool_lesson_id": null
+                "skool_lesson_id": "b6418a17ac5442939d49057eb43809f3"
               }
             ]
           }
@@ -862,20 +862,20 @@
         }
       ],
       "course": {
-        "title": "Job delivery and scheduling (new course)",
-        "status": "to build",
-        "skool_course_id": null,
+        "title": "Module 6 · Job delivery and scheduling",
+        "status": "structure in Skool",
+        "skool_course_id": "38f636d201d94f5fa4943ab162ba463c",
         "parts": [
           {
             "part": "Start here",
             "lessons": [
               {
                 "title": "Watch it run on a real job",
-                "skool_lesson_id": null
+                "skool_lesson_id": "62eece95744e421c80c846c027ea5aa3"
               },
               {
                 "title": "What you get, and what you need to start",
-                "skool_lesson_id": null
+                "skool_lesson_id": "e7b6a102aef94aae82f1a5d26f1e2dac"
               }
             ]
           },
@@ -883,12 +883,12 @@
             "part": "Set it up",
             "lessons": [
               {
-                "title": "How we do it: map your job delivery and scheduling",
-                "skool_lesson_id": null
+                "title": "How we do it: map your job delivery",
+                "skool_lesson_id": "58a3819fc5a4429f964fd5dc9917c8c1"
               },
               {
-                "title": "Set it up on your own data",
-                "skool_lesson_id": null
+                "title": "Build your skills from your map",
+                "skool_lesson_id": "749cea0d17b34ae7a244ea07a755f679"
               }
             ]
           },
@@ -897,15 +897,15 @@
             "lessons": [
               {
                 "title": "Job setup pack",
-                "skool_lesson_id": null
+                "skool_lesson_id": "c9d6e18b8fec49b2ac1319122a11a3f8"
               },
               {
                 "title": "Site update to report",
-                "skool_lesson_id": null
+                "skool_lesson_id": "f8977e76a8824a21b8fae13b5bb7ea59"
               },
               {
                 "title": "Defects from a site walk",
-                "skool_lesson_id": null
+                "skool_lesson_id": "8b87d9bdd4db4625acd9cdad3e9011ad"
               }
             ]
           },
@@ -914,7 +914,7 @@
             "lessons": [
               {
                 "title": "7-day check-in: post your before and after",
-                "skool_lesson_id": null
+                "skool_lesson_id": "83b12cb8fc234edf96391f5a904746b2"
               }
             ]
           }
@@ -1013,20 +1013,20 @@
         }
       ],
       "course": {
-        "title": "Stock, warehouse and freight (new course)",
-        "status": "to build",
-        "skool_course_id": null,
+        "title": "Module 7 · Stock, warehouse and freight",
+        "status": "structure in Skool",
+        "skool_course_id": "4c98f3030aff485a9b0a921de6b6e56e",
         "parts": [
           {
             "part": "Start here",
             "lessons": [
               {
                 "title": "Watch it run on a real job",
-                "skool_lesson_id": null
+                "skool_lesson_id": "02639f7d33df4054979d983209b09a9b"
               },
               {
                 "title": "What you get, and what you need to start",
-                "skool_lesson_id": null
+                "skool_lesson_id": "a6d42d255922460882dfcf31f867879e"
               }
             ]
           },
@@ -1034,12 +1034,12 @@
             "part": "Set it up",
             "lessons": [
               {
-                "title": "How we do it: map your stock, warehouse and freight",
-                "skool_lesson_id": null
+                "title": "How we do it: map your stock and freight",
+                "skool_lesson_id": "5560d69fcfcd4606abcf5064c9f05ba9"
               },
               {
-                "title": "Set it up on your own data",
-                "skool_lesson_id": null
+                "title": "Build your skills from your map",
+                "skool_lesson_id": "aef4019f7b464d69b6bc1b869e1f122f"
               }
             ]
           },
@@ -1048,15 +1048,15 @@
             "lessons": [
               {
                 "title": "Freight quote helper",
-                "skool_lesson_id": null
+                "skool_lesson_id": "5f8645b7098742baad11bc2bdaa3b786"
               },
               {
                 "title": "Load planner",
-                "skool_lesson_id": null
+                "skool_lesson_id": "579e31e66f154f8caa5c8d408cae728d"
               },
               {
                 "title": "Delivery charges log",
-                "skool_lesson_id": null
+                "skool_lesson_id": "c9c9eae70e4b4570b741a2abb0fb3077"
               }
             ]
           },
@@ -1065,7 +1065,7 @@
             "lessons": [
               {
                 "title": "7-day check-in: post your before and after",
-                "skool_lesson_id": null
+                "skool_lesson_id": "9ab364082a264af1b5cb565ef423bcd0"
               }
             ]
           }
@@ -1157,7 +1157,7 @@
       ],
       "course": {
         "title": "Stage 4 · Order desk plugin",
-        "status": "live",
+        "status": "placeholders in Skool",
         "skool_course_id": "4e59aba4c93e4c13b9d13cad3a385544",
         "parts": [
           {
@@ -1307,20 +1307,20 @@
         }
       ],
       "course": {
-        "title": "After-sales, warranty and maintenance (new course)",
-        "status": "to build",
-        "skool_course_id": null,
+        "title": "Module 9 · After-sales and maintenance",
+        "status": "structure in Skool",
+        "skool_course_id": "bed46a69409445fa8404468124f546e2",
         "parts": [
           {
             "part": "Start here",
             "lessons": [
               {
                 "title": "Watch it run on a real job",
-                "skool_lesson_id": null
+                "skool_lesson_id": "bb6498fff7444e7ea8ce45fb777e9263"
               },
               {
                 "title": "What you get, and what you need to start",
-                "skool_lesson_id": null
+                "skool_lesson_id": "8353f091fe4147109fb9e0afcdfb51f2"
               }
             ]
           },
@@ -1328,12 +1328,12 @@
             "part": "Set it up",
             "lessons": [
               {
-                "title": "How we do it: map your after-sales, warranty and maintenance",
-                "skool_lesson_id": null
+                "title": "How we do it: map your after-sales",
+                "skool_lesson_id": "3b7fffce75d54fcc89069704d2f4e302"
               },
               {
-                "title": "Set it up on your own data",
-                "skool_lesson_id": null
+                "title": "Build your skills from your map",
+                "skool_lesson_id": "39bf8310574c4b53bcf3bcedc551b6c2"
               }
             ]
           },
@@ -1342,15 +1342,15 @@
             "lessons": [
               {
                 "title": "Site history",
-                "skool_lesson_id": null
+                "skool_lesson_id": "2fdb2444313e4ca5ac43815eb6b4dc86"
               },
               {
                 "title": "Spoken close-out",
-                "skool_lesson_id": null
+                "skool_lesson_id": "335bc0487dd04aecafffd7f931cd644a"
               },
               {
                 "title": "Renewal builder",
-                "skool_lesson_id": null
+                "skool_lesson_id": "14c2f20482934495b6af6c864035dc98"
               }
             ]
           },
@@ -1359,7 +1359,7 @@
             "lessons": [
               {
                 "title": "7-day check-in: post your before and after",
-                "skool_lesson_id": null
+                "skool_lesson_id": "38d1394e5f4245cea35d9ec201291ad2"
               }
             ]
           }
@@ -1458,20 +1458,20 @@
         }
       ],
       "course": {
-        "title": "Finance, timesheets and admin (new course)",
-        "status": "to build",
-        "skool_course_id": null,
+        "title": "Module 10 · Finance, timesheets and admin",
+        "status": "structure in Skool",
+        "skool_course_id": "2d93e0a31433423a861e89113057658f",
         "parts": [
           {
             "part": "Start here",
             "lessons": [
               {
                 "title": "Watch it run on a real job",
-                "skool_lesson_id": null
+                "skool_lesson_id": "2ac2856923d5464a9412bae97894b1d0"
               },
               {
                 "title": "What you get, and what you need to start",
-                "skool_lesson_id": null
+                "skool_lesson_id": "e47ca80a9d46475095388f2468de5ad3"
               }
             ]
           },
@@ -1479,12 +1479,12 @@
             "part": "Set it up",
             "lessons": [
               {
-                "title": "How we do it: map your finance, timesheets and admin",
-                "skool_lesson_id": null
+                "title": "How we do it: map your office week",
+                "skool_lesson_id": "946a8cce976241f8b254492f13cdfe51"
               },
               {
-                "title": "Set it up on your own data",
-                "skool_lesson_id": null
+                "title": "Build your skills from your map",
+                "skool_lesson_id": "767f57233130434cbd049c284a3861d5"
               }
             ]
           },
@@ -1493,15 +1493,15 @@
             "lessons": [
               {
                 "title": "Bill checker",
-                "skool_lesson_id": null
+                "skool_lesson_id": "15617d9752584b348f3de9144cb13b4e"
               },
               {
                 "title": "Debtor chase list",
-                "skool_lesson_id": null
+                "skool_lesson_id": "72a71c378acb4ce3949474e2705607b1"
               },
               {
                 "title": "Payroll check",
-                "skool_lesson_id": null
+                "skool_lesson_id": "7d5f511d375846c5990bcdeb4a6e0221"
               }
             ]
           },
@@ -1510,7 +1510,7 @@
             "lessons": [
               {
                 "title": "7-day check-in: post your before and after",
-                "skool_lesson_id": null
+                "skool_lesson_id": "9ec6c187bd214e35be087f5537d6c0b2"
               }
             ]
           }

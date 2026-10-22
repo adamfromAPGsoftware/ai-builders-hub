@@ -40,26 +40,26 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Spoken close-out** (connected): One voice debrief becomes the report, photos and invoice notes
 - **Renewal builder** (drop in a file): Last year's contract and asset list turned into this year's
 
-## The course in the Hub: After-sales, warranty and maintenance (new course) (to build)
+## The course in the Hub: Module 9 · After-sales and maintenance (structure in Skool)
 
 **Start here**
 
-1. Watch it run on a real job
-2. What you get, and what you need to start
+1. [Watch it run on a real job](https://www.skool.com/ai-builders-hub/classroom/bed46a69409445fa8404468124f546e2?md=bb6498fff7444e7ea8ce45fb777e9263)
+2. [What you get, and what you need to start](https://www.skool.com/ai-builders-hub/classroom/bed46a69409445fa8404468124f546e2?md=8353f091fe4147109fb9e0afcdfb51f2)
 
 **Set it up**
 
-1. How we do it: map your after-sales, warranty and maintenance
-2. Set it up on your own data
+1. [How we do it: map your after-sales](https://www.skool.com/ai-builders-hub/classroom/bed46a69409445fa8404468124f546e2?md=3b7fffce75d54fcc89069704d2f4e302)
+2. [Build your skills from your map](https://www.skool.com/ai-builders-hub/classroom/bed46a69409445fa8404468124f546e2?md=39bf8310574c4b53bcf3bcedc551b6c2)
 
 **Use it on real jobs**
 
-1. Site history
-2. Spoken close-out
-3. Renewal builder
+1. [Site history](https://www.skool.com/ai-builders-hub/classroom/bed46a69409445fa8404468124f546e2?md=2fdb2444313e4ca5ac43815eb6b4dc86)
+2. [Spoken close-out](https://www.skool.com/ai-builders-hub/classroom/bed46a69409445fa8404468124f546e2?md=335bc0487dd04aecafffd7f931cd644a)
+3. [Renewal builder](https://www.skool.com/ai-builders-hub/classroom/bed46a69409445fa8404468124f546e2?md=14c2f20482934495b6af6c864035dc98)
 
 **Check in**
 
-1. 7-day check-in: post your before and after
+1. [7-day check-in: post your before and after](https://www.skool.com/ai-builders-hub/classroom/bed46a69409445fa8404468124f546e2?md=38d1394e5f4245cea35d9ec201291ad2)
 
 **Plugin:** Not built yet.

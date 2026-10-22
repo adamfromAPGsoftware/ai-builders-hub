@@ -40,26 +40,26 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Load planner** (connected): This week's deliveries grouped into loads by site and date
 - **Delivery charges log** (drop in a file): Waiting time and failed trips logged so they can be charged on
 
-## The course in the Hub: Stock, warehouse and freight (new course) (to build)
+## The course in the Hub: Module 7 · Stock, warehouse and freight (structure in Skool)
 
 **Start here**
 
-1. Watch it run on a real job
-2. What you get, and what you need to start
+1. [Watch it run on a real job](https://www.skool.com/ai-builders-hub/classroom/4c98f3030aff485a9b0a921de6b6e56e?md=02639f7d33df4054979d983209b09a9b)
+2. [What you get, and what you need to start](https://www.skool.com/ai-builders-hub/classroom/4c98f3030aff485a9b0a921de6b6e56e?md=a6d42d255922460882dfcf31f867879e)
 
 **Set it up**
 
-1. How we do it: map your stock, warehouse and freight
-2. Set it up on your own data
+1. [How we do it: map your stock and freight](https://www.skool.com/ai-builders-hub/classroom/4c98f3030aff485a9b0a921de6b6e56e?md=5560d69fcfcd4606abcf5064c9f05ba9)
+2. [Build your skills from your map](https://www.skool.com/ai-builders-hub/classroom/4c98f3030aff485a9b0a921de6b6e56e?md=aef4019f7b464d69b6bc1b869e1f122f)
 
 **Use it on real jobs**
 
-1. Freight quote helper
-2. Load planner
-3. Delivery charges log
+1. [Freight quote helper](https://www.skool.com/ai-builders-hub/classroom/4c98f3030aff485a9b0a921de6b6e56e?md=5f8645b7098742baad11bc2bdaa3b786)
+2. [Load planner](https://www.skool.com/ai-builders-hub/classroom/4c98f3030aff485a9b0a921de6b6e56e?md=579e31e66f154f8caa5c8d408cae728d)
+3. [Delivery charges log](https://www.skool.com/ai-builders-hub/classroom/4c98f3030aff485a9b0a921de6b6e56e?md=c9c9eae70e4b4570b741a2abb0fb3077)
 
 **Check in**
 
-1. 7-day check-in: post your before and after
+1. [7-day check-in: post your before and after](https://www.skool.com/ai-builders-hub/classroom/4c98f3030aff485a9b0a921de6b6e56e?md=9ab364082a264af1b5cb565ef423bcd0)
 
 **Plugin:** Not built yet.

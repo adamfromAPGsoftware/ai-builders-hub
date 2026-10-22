@@ -40,26 +40,26 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Site update to report** (connected): Voice notes and photos become the weekly client report
 - **Defects from a site walk** (connected): Record the walk; the defect list is drafted. Being built
 
-## The course in the Hub: Job delivery and scheduling (new course) (to build)
+## The course in the Hub: Module 6 · Job delivery and scheduling (structure in Skool)
 
 **Start here**
 
-1. Watch it run on a real job
-2. What you get, and what you need to start
+1. [Watch it run on a real job](https://www.skool.com/ai-builders-hub/classroom/38f636d201d94f5fa4943ab162ba463c?md=62eece95744e421c80c846c027ea5aa3)
+2. [What you get, and what you need to start](https://www.skool.com/ai-builders-hub/classroom/38f636d201d94f5fa4943ab162ba463c?md=e7b6a102aef94aae82f1a5d26f1e2dac)
 
 **Set it up**
 
-1. How we do it: map your job delivery and scheduling
-2. Set it up on your own data
+1. [How we do it: map your job delivery](https://www.skool.com/ai-builders-hub/classroom/38f636d201d94f5fa4943ab162ba463c?md=58a3819fc5a4429f964fd5dc9917c8c1)
+2. [Build your skills from your map](https://www.skool.com/ai-builders-hub/classroom/38f636d201d94f5fa4943ab162ba463c?md=749cea0d17b34ae7a244ea07a755f679)
 
 **Use it on real jobs**
 
-1. Job setup pack
-2. Site update to report
-3. Defects from a site walk
+1. [Job setup pack](https://www.skool.com/ai-builders-hub/classroom/38f636d201d94f5fa4943ab162ba463c?md=c9d6e18b8fec49b2ac1319122a11a3f8)
+2. [Site update to report](https://www.skool.com/ai-builders-hub/classroom/38f636d201d94f5fa4943ab162ba463c?md=f8977e76a8824a21b8fae13b5bb7ea59)
+3. [Defects from a site walk](https://www.skool.com/ai-builders-hub/classroom/38f636d201d94f5fa4943ab162ba463c?md=8b87d9bdd4db4625acd9cdad3e9011ad)
 
 **Check in**
 
-1. 7-day check-in: post your before and after
+1. [7-day check-in: post your before and after](https://www.skool.com/ai-builders-hub/classroom/38f636d201d94f5fa4943ab162ba463c?md=83b12cb8fc234edf96391f5a904746b2)
 
 **Plugin:** Not built yet.

@@ -40,26 +40,26 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Call note to CRM** (connected): Speak after the call: note, task and follow-up email drafted
 - **Handover pack** (connected): The won job's handover questions filled from the quote and emails
 
-## The course in the Hub: Sales and follow-up (new course) (to build)
+## The course in the Hub: Module 2 · Sales and follow-up (structure in Skool)
 
 **Start here**
 
-1. Watch it run on a real job
-2. What you get, and what you need to start
+1. [Watch it run on a real job](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=4309b81a0c9a4a47a607d8790fc63e0b)
+2. [What you get, and what you need to start](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=654991c913a34885a802ee76aac17576)
 
 **Set it up**
 
-1. How we do it: map your sales and follow-up
-2. Set it up on your own data
+1. [How we do it: map your sales and follow-up](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=eec335e0920a4a6aa070da276d1937cc)
+2. [Build your skills from your map](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=5575cc910e234d7da388544214edb14c)
 
 **Use it on real jobs**
 
-1. Inbox sorter
-2. Call note to CRM
-3. Handover pack
+1. [Inbox sorter](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=0af5ca30d2354c838fe51833603003e7)
+2. [Call note to CRM](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=61f366c975b54586a59a63f0873a8612)
+3. [Handover pack](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=e17ea060cb2540f1ae559688e6244197)
 
 **Check in**
 
-1. 7-day check-in: post your before and after
+1. [7-day check-in: post your before and after](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=c609066634c64b0c9354d2fd8cf863e5)
 
 **Plugin:** sales-intake built. No member plugin yet.

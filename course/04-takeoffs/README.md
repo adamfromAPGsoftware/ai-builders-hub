@@ -40,7 +40,7 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Drawing finder** (connected): Finds the sheets you need in a 100-drawing pack
 - **Revision compare** (connected): What changed between the tender and construction drawings
 
-## The course in the Hub: Stage 4 · Takeoff plugin (live)
+## The course in the Hub: Stage 4 · Takeoff plugin (placeholders in Skool)
 
 **Start here**
 

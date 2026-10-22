@@ -40,26 +40,26 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Follow-up list** (connected): Who to ring this week and why, with the message drafted
 - **Contact tidy-up** (drop in a file): Sorts your contacts by area and type so a campaign hits the right people
 
-## The course in the Hub: Lead generation (new course) (to build)
+## The course in the Hub: Module 1 · Lead generation (structure in Skool)
 
 **Start here**
 
-1. Watch it run on a real job
-2. What you get, and what you need to start
+1. [Watch it run on a real job](https://www.skool.com/ai-builders-hub/classroom/235377e2c6b24613ba98962551456929?md=a68f75a33e6b4a379cab0408af78ead7)
+2. [What you get, and what you need to start](https://www.skool.com/ai-builders-hub/classroom/235377e2c6b24613ba98962551456929?md=04e78535754545ecab22b8d93a755de3)
 
 **Set it up**
 
-1. How we do it: map your lead generation
-2. Set it up on your own data
+1. [How we do it: map your lead generation](https://www.skool.com/ai-builders-hub/classroom/235377e2c6b24613ba98962551456929?md=4a468a74bdd045f98cdd99d66b74271d)
+2. [Build your skills from your map](https://www.skool.com/ai-builders-hub/classroom/235377e2c6b24613ba98962551456929?md=c6b54dc328fb426e8d9177beb70a546f)
 
 **Use it on real jobs**
 
-1. Tender watch
-2. Follow-up list
-3. Contact tidy-up
+1. [Tender watch](https://www.skool.com/ai-builders-hub/classroom/235377e2c6b24613ba98962551456929?md=948e7f978c044e53ab146cbdbb5097b6)
+2. [Follow-up list](https://www.skool.com/ai-builders-hub/classroom/235377e2c6b24613ba98962551456929?md=35829699eda441449d2520fb8d75da76)
+3. [Contact tidy-up](https://www.skool.com/ai-builders-hub/classroom/235377e2c6b24613ba98962551456929?md=8b231147d9ed49ffbb0bed8061d8eb2f)
 
 **Check in**
 
-1. 7-day check-in: post your before and after
+1. [7-day check-in: post your before and after](https://www.skool.com/ai-builders-hub/classroom/235377e2c6b24613ba98962551456929?md=349fe8dd87fc43ea8ca1756da8397e46)
 
 **Plugin:** Not built yet.

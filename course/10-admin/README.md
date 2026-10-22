@@ -40,26 +40,26 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Debtor chase list** (connected): Who to chase today, emails drafted
 - **Payroll check** (connected): Hours against pay, exceptions only. Being built
 
-## The course in the Hub: Finance, timesheets and admin (new course) (to build)
+## The course in the Hub: Module 10 · Finance, timesheets and admin (structure in Skool)
 
 **Start here**
 
-1. Watch it run on a real job
-2. What you get, and what you need to start
+1. [Watch it run on a real job](https://www.skool.com/ai-builders-hub/classroom/2d93e0a31433423a861e89113057658f?md=2ac2856923d5464a9412bae97894b1d0)
+2. [What you get, and what you need to start](https://www.skool.com/ai-builders-hub/classroom/2d93e0a31433423a861e89113057658f?md=e47ca80a9d46475095388f2468de5ad3)
 
 **Set it up**
 
-1. How we do it: map your finance, timesheets and admin
-2. Set it up on your own data
+1. [How we do it: map your office week](https://www.skool.com/ai-builders-hub/classroom/2d93e0a31433423a861e89113057658f?md=946a8cce976241f8b254492f13cdfe51)
+2. [Build your skills from your map](https://www.skool.com/ai-builders-hub/classroom/2d93e0a31433423a861e89113057658f?md=767f57233130434cbd049c284a3861d5)
 
 **Use it on real jobs**
 
-1. Bill checker
-2. Debtor chase list
-3. Payroll check
+1. [Bill checker](https://www.skool.com/ai-builders-hub/classroom/2d93e0a31433423a861e89113057658f?md=15617d9752584b348f3de9144cb13b4e)
+2. [Debtor chase list](https://www.skool.com/ai-builders-hub/classroom/2d93e0a31433423a861e89113057658f?md=72a71c378acb4ce3949474e2705607b1)
+3. [Payroll check](https://www.skool.com/ai-builders-hub/classroom/2d93e0a31433423a861e89113057658f?md=7d5f511d375846c5990bcdeb4a6e0221)
 
 **Check in**
 
-1. 7-day check-in: post your before and after
+1. [7-day check-in: post your before and after](https://www.skool.com/ai-builders-hub/classroom/2d93e0a31433423a861e89113057658f?md=9ec6c187bd214e35be087f5537d6c0b2)
 
 **Plugin:** Not built yet.
