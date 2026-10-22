@@ -62,4 +62,6 @@ It hands back your own version of the map above, with your tools and your hours,
 
 1. [7-day check-in: post your first takeoff](https://www.skool.com/ai-builders-hub/classroom/d4f10017bef4420692d4d8e6856b3eba?md=a496fddda0764da0be4eb0955aaff088)
 
+**Post your map:** [Takeoffs from drawings map thread](https://www.skool.com/ai-builders-hub/module-4-takeoffs-post-your-map-here), pinned to the module.
+
 **Plugin:** Picture takeoff built. Member version needs the client's OK to film. Intake: map-takeoffs.

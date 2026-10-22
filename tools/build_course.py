@@ -62,6 +62,8 @@ def module_readme(m):
         L.append("")
         L += [f"{i}. {lesson_link(m, l)}" for i, l in enumerate(p["lessons"], 1)]
         L.append("")
+    if m.get("map_thread"):
+        L += [f"**Post your map:** [{m['name']} map thread]({m['map_thread']}), pinned to the module.", ""]
     L += [f"**Plugin:** {m['plugin_status']}.", ""]
     return "\n".join(L)
 
@@ -105,6 +107,7 @@ def main():
                     ],
                 },
                 "plugin_status": m["plugin_status"],
+                "map_thread": m.get("map_thread"),
             }
             for m in mods
         ],

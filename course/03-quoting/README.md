@@ -64,4 +64,6 @@ It hands back your own version of the map above, with your tools and your hours,
 1. [7-day check-in: post your first quote](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=e71d5248160149798219ed32ab3f2996)
 2. [Day 14: your before and after](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=28ac6b68e779418fb6a1da2a863ea9eb)
 
+**Post your map:** [Quoting, estimating and proposals map thread](https://www.skool.com/ai-builders-hub/module-3-quoting-post-your-map-here), pinned to the module.
+
 **Plugin:** Quoting plugin v0.1 built, to test before filming. Intake: map-quoting.

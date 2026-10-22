@@ -81,7 +81,8 @@
           }
         ]
       },
-      "plugin_status": "Not built yet"
+      "plugin_status": "Not built yet",
+      "map_thread": null
     },
     {
       "n": 2,
@@ -142,7 +143,8 @@
           }
         ]
       },
-      "plugin_status": "map-sales built. No member plugin yet"
+      "plugin_status": "map-sales built. No member plugin yet",
+      "map_thread": "https://www.skool.com/ai-builders-hub/module-2-sales-post-your-map-here"
     },
     {
       "n": 3,
@@ -213,7 +215,8 @@
           }
         ]
       },
-      "plugin_status": "Quoting plugin v0.1 built, to test before filming. Intake: map-quoting"
+      "plugin_status": "Quoting plugin v0.1 built, to test before filming. Intake: map-quoting",
+      "map_thread": "https://www.skool.com/ai-builders-hub/module-3-quoting-post-your-map-here"
     },
     {
       "n": 4,
@@ -274,7 +277,8 @@
           }
         ]
       },
-      "plugin_status": "Picture takeoff built. Member version needs the client's OK to film. Intake: map-takeoffs"
+      "plugin_status": "Picture takeoff built. Member version needs the client's OK to film. Intake: map-takeoffs",
+      "map_thread": "https://www.skool.com/ai-builders-hub/module-4-takeoffs-post-your-map-here"
     },
     {
       "n": 5,
@@ -335,7 +339,8 @@
           }
         ]
       },
-      "plugin_status": "map-purchasing built; a quote-to-order skill is designed for a client. The order desk course's lessons 'Supplier orders and stock' and 'Match the supplier invoice to the order' already cover part of this"
+      "plugin_status": "map-purchasing built; a quote-to-order skill is designed for a client. The order desk course's lessons 'Supplier orders and stock' and 'Match the supplier invoice to the order' already cover part of this",
+      "map_thread": null
     },
     {
       "n": 6,
@@ -396,7 +401,8 @@
           }
         ]
       },
-      "plugin_status": "Course live in Skool. The member plugin isn't built yet"
+      "plugin_status": "Course live in Skool. The member plugin isn't built yet",
+      "map_thread": "https://www.skool.com/ai-builders-hub/module-6-customer-service-post-your-map-here"
     },
     {
       "n": 7,
@@ -457,7 +463,8 @@
           }
         ]
       },
-      "plugin_status": "Not built yet"
+      "plugin_status": "Not built yet",
+      "map_thread": null
     }
   ]
 }

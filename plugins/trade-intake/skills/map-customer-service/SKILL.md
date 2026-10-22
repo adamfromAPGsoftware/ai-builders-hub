@@ -424,7 +424,7 @@ Send this, with their numbers and assistant filled in:
 - **customer-service-map.png**: the picture of it.
 - **customer-service-map.md**: everything we worked out. Your next module reads this.
 
-**2. Post it.** In the Hub, open **Module 6 · Customer service: post your map here** (the link is in the module's Check in lesson). Comment with the picture and paste this:
+**2. Post it.** In the Hub, open **Module 6 · Customer service: post your map here** (it's pinned to the module's check-in lesson, or go to skool.com/ai-builders-hub/module-6-customer-service-post-your-map-here). Comment with the picture and paste this:
 
 > My customer service map 👇 [15 to 20 messages a day · 10 min to enter a work order · about a day a week]. Building first: my order reader.
 

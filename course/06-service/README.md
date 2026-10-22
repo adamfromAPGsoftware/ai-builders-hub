@@ -61,4 +61,6 @@ It hands back your own version of the map above, with your tools and your hours,
 
 1. [7-day check-in: post your first order](https://www.skool.com/ai-builders-hub/classroom/4e59aba4c93e4c13b9d13cad3a385544?md=a7d45c29b8d3487a98257cb425cd5c02)
 
+**Post your map:** [Customer service and orders map thread](https://www.skool.com/ai-builders-hub/module-6-customer-service-post-your-map-here), pinned to the module.
+
 **Plugin:** Course live in Skool. The member plugin isn't built yet.

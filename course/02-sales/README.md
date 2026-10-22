@@ -62,4 +62,6 @@ It hands back your own version of the map above, with your tools and your hours,
 
 1. [7-day check-in: post your before and after](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=c609066634c64b0c9354d2fd8cf863e5)
 
+**Post your map:** [Sales and follow-up map thread](https://www.skool.com/ai-builders-hub/module-2-sales-post-your-map-here), pinned to the module.
+
 **Plugin:** map-sales built. No member plugin yet.
