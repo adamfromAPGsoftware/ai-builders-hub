@@ -11,8 +11,7 @@ Each module is a department of a trade, construction or manufacturing business. 
 | 3 | [Quoting, estimating and proposals](03-quoting/README.md) | written | `/quote-intake` |
 | 4 | [Takeoffs from drawings](04-takeoffs/README.md) | placeholders in Skool | `/takeoff-intake` |
 | 5 | [Purchasing and suppliers](05-purchasing/README.md) | structure in Skool | `/po-intake` |
-| 6 | [Job delivery and scheduling](06-jobs/README.md) | structure in Skool | planned |
-| 7 | [Stock, warehouse and freight](07-warehouse/README.md) | structure in Skool | planned |
-| 8 | [Customer service and orders](08-service/README.md) | placeholders in Skool | planned |
-| 9 | [After-sales, warranty and maintenance](09-after-sales/README.md) | structure in Skool | planned |
-| 10 | [Finance, timesheets and admin](10-admin/README.md) | structure in Skool | planned |
+| 6 | [Customer service and orders](06-service/README.md) | placeholders in Skool | planned |
+| 7 | [Finance, timesheets and admin](07-admin/README.md) | structure in Skool | planned |
+
+**Parked for now** (outlines kept in `modules.json`): Job delivery and scheduling, Stock, warehouse and freight, After-sales, warranty and maintenance.

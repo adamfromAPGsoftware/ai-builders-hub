@@ -157,7 +157,7 @@
         "Sheet to skill"
       ],
       "course": {
-        "title": "Stage 4 · Quoting plugin",
+        "title": "Module 3 · Quoting and proposals",
         "status": "written",
         "skool_course_id": "c8cc244db12643469059b5ea73f0deb6",
         "lessons": [
@@ -228,7 +228,7 @@
         "Revision compare"
       ],
       "course": {
-        "title": "Stage 4 · Takeoff plugin",
+        "title": "Module 4 · Takeoffs from drawings",
         "status": "placeholders in Skool",
         "skool_course_id": "d4f10017bef4420692d4d8e6856b3eba",
         "lessons": [
@@ -339,132 +339,10 @@
     },
     {
       "n": 6,
-      "key": "jobs",
-      "name": "Job delivery and scheduling",
-      "promise": "From won job to handover with the paperwork keeping up, not the other way round.",
-      "folder": "course/06-jobs",
-      "intake_skill": null,
-      "skills": [
-        "Job setup pack",
-        "Site update to report",
-        "Defects from a site walk"
-      ],
-      "course": {
-        "title": "Module 6 · Job delivery and scheduling",
-        "status": "structure in Skool",
-        "skool_course_id": "38f636d201d94f5fa4943ab162ba463c",
-        "lessons": [
-          {
-            "part": "Start here",
-            "title": "Watch it run on a real job",
-            "skool_lesson_id": "62eece95744e421c80c846c027ea5aa3"
-          },
-          {
-            "part": "Start here",
-            "title": "What you get, and what you need to start",
-            "skool_lesson_id": "e7b6a102aef94aae82f1a5d26f1e2dac"
-          },
-          {
-            "part": "Set it up",
-            "title": "How we do it: map your job delivery",
-            "skool_lesson_id": "58a3819fc5a4429f964fd5dc9917c8c1"
-          },
-          {
-            "part": "Set it up",
-            "title": "Build your skills from your map",
-            "skool_lesson_id": "749cea0d17b34ae7a244ea07a755f679"
-          },
-          {
-            "part": "Use it on real jobs",
-            "title": "Job setup pack",
-            "skool_lesson_id": "c9d6e18b8fec49b2ac1319122a11a3f8"
-          },
-          {
-            "part": "Use it on real jobs",
-            "title": "Site update to report",
-            "skool_lesson_id": "f8977e76a8824a21b8fae13b5bb7ea59"
-          },
-          {
-            "part": "Use it on real jobs",
-            "title": "Defects from a site walk",
-            "skool_lesson_id": "8b87d9bdd4db4625acd9cdad3e9011ad"
-          },
-          {
-            "part": "Check in",
-            "title": "7-day check-in: post your before and after",
-            "skool_lesson_id": "83b12cb8fc234edf96391f5a904746b2"
-          }
-        ]
-      },
-      "plugin_status": "Not built yet"
-    },
-    {
-      "n": 7,
-      "key": "warehouse",
-      "name": "Stock, warehouse and freight",
-      "promise": "Know what's in stock, what's going out, and what freight really costs you.",
-      "folder": "course/07-warehouse",
-      "intake_skill": null,
-      "skills": [
-        "Freight quote helper",
-        "Load planner",
-        "Delivery charges log"
-      ],
-      "course": {
-        "title": "Module 7 · Stock, warehouse and freight",
-        "status": "structure in Skool",
-        "skool_course_id": "4c98f3030aff485a9b0a921de6b6e56e",
-        "lessons": [
-          {
-            "part": "Start here",
-            "title": "Watch it run on a real job",
-            "skool_lesson_id": "02639f7d33df4054979d983209b09a9b"
-          },
-          {
-            "part": "Start here",
-            "title": "What you get, and what you need to start",
-            "skool_lesson_id": "a6d42d255922460882dfcf31f867879e"
-          },
-          {
-            "part": "Set it up",
-            "title": "How we do it: map your stock and freight",
-            "skool_lesson_id": "5560d69fcfcd4606abcf5064c9f05ba9"
-          },
-          {
-            "part": "Set it up",
-            "title": "Build your skills from your map",
-            "skool_lesson_id": "aef4019f7b464d69b6bc1b869e1f122f"
-          },
-          {
-            "part": "Use it on real jobs",
-            "title": "Freight quote helper",
-            "skool_lesson_id": "5f8645b7098742baad11bc2bdaa3b786"
-          },
-          {
-            "part": "Use it on real jobs",
-            "title": "Load planner",
-            "skool_lesson_id": "579e31e66f154f8caa5c8d408cae728d"
-          },
-          {
-            "part": "Use it on real jobs",
-            "title": "Delivery charges log",
-            "skool_lesson_id": "c9c9eae70e4b4570b741a2abb0fb3077"
-          },
-          {
-            "part": "Check in",
-            "title": "7-day check-in: post your before and after",
-            "skool_lesson_id": "9ab364082a264af1b5cb565ef423bcd0"
-          }
-        ]
-      },
-      "plugin_status": "Not built yet"
-    },
-    {
-      "n": 8,
       "key": "service",
       "name": "Customer service and orders",
       "promise": "Orders entered and questions answered fast, by whoever picks up.",
-      "folder": "course/08-service",
+      "folder": "course/06-service",
       "intake_skill": null,
       "skills": [
         "Order reader",
@@ -472,7 +350,7 @@
         "Where's my order"
       ],
       "course": {
-        "title": "Stage 4 · Order desk plugin",
+        "title": "Module 6 · Customer service and orders",
         "status": "placeholders in Skool",
         "skool_course_id": "4e59aba4c93e4c13b9d13cad3a385544",
         "lessons": [
@@ -521,72 +399,11 @@
       "plugin_status": "Course live in Skool. The member plugin isn't built yet"
     },
     {
-      "n": 9,
-      "key": "after-sales",
-      "name": "After-sales, warranty and maintenance",
-      "promise": "Every callback starts with the full history, and the close-out writes itself.",
-      "folder": "course/09-after-sales",
-      "intake_skill": null,
-      "skills": [
-        "Site history",
-        "Spoken close-out",
-        "Renewal builder"
-      ],
-      "course": {
-        "title": "Module 9 · After-sales and maintenance",
-        "status": "structure in Skool",
-        "skool_course_id": "bed46a69409445fa8404468124f546e2",
-        "lessons": [
-          {
-            "part": "Start here",
-            "title": "Watch it run on a real job",
-            "skool_lesson_id": "bb6498fff7444e7ea8ce45fb777e9263"
-          },
-          {
-            "part": "Start here",
-            "title": "What you get, and what you need to start",
-            "skool_lesson_id": "8353f091fe4147109fb9e0afcdfb51f2"
-          },
-          {
-            "part": "Set it up",
-            "title": "How we do it: map your after-sales",
-            "skool_lesson_id": "3b7fffce75d54fcc89069704d2f4e302"
-          },
-          {
-            "part": "Set it up",
-            "title": "Build your skills from your map",
-            "skool_lesson_id": "39bf8310574c4b53bcf3bcedc551b6c2"
-          },
-          {
-            "part": "Use it on real jobs",
-            "title": "Site history",
-            "skool_lesson_id": "2fdb2444313e4ca5ac43815eb6b4dc86"
-          },
-          {
-            "part": "Use it on real jobs",
-            "title": "Spoken close-out",
-            "skool_lesson_id": "335bc0487dd04aecafffd7f931cd644a"
-          },
-          {
-            "part": "Use it on real jobs",
-            "title": "Renewal builder",
-            "skool_lesson_id": "14c2f20482934495b6af6c864035dc98"
-          },
-          {
-            "part": "Check in",
-            "title": "7-day check-in: post your before and after",
-            "skool_lesson_id": "38d1394e5f4245cea35d9ec201291ad2"
-          }
-        ]
-      },
-      "plugin_status": "Not built yet"
-    },
-    {
-      "n": 10,
+      "n": 7,
       "key": "admin",
       "name": "Finance, timesheets and admin",
       "promise": "Bills checked, debtors chased and payroll right, without the Friday scramble.",
-      "folder": "course/10-admin",
+      "folder": "course/07-admin",
       "intake_skill": null,
       "skills": [
         "Bill checker",
@@ -594,7 +411,7 @@
         "Payroll check"
       ],
       "course": {
-        "title": "Module 10 · Finance, timesheets and admin",
+        "title": "Module 7 · Finance, timesheets and admin",
         "status": "structure in Skool",
         "skool_course_id": "2d93e0a31433423a861e89113057658f",
         "lessons": [

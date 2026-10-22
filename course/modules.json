@@ -400,7 +400,7 @@
         }
       ],
       "course": {
-        "title": "Stage 4 · Quoting plugin",
+        "title": "Module 3 · Quoting and proposals",
         "status": "written",
         "skool_course_id": "c8cc244db12643469059b5ea73f0deb6",
         "parts": [
@@ -557,7 +557,7 @@
         }
       ],
       "course": {
-        "title": "Stage 4 · Takeoff plugin",
+        "title": "Module 4 · Takeoffs from drawings",
         "status": "placeholders in Skool",
         "skool_course_id": "d4f10017bef4420692d4d8e6856b3eba",
         "parts": [
@@ -771,6 +771,300 @@
     },
     {
       "n": 6,
+      "key": "service",
+      "name": "Customer service and orders",
+      "who": "Office admin, customer service",
+      "promise": "Orders entered and questions answered fast, by whoever picks up.",
+      "steps": [
+        {
+          "step": "Message arrives",
+          "what": "Shared inbox, phone, a form",
+          "tools": [
+            "Outlook",
+            "Gmail",
+            "Phone"
+          ],
+          "flag": null
+        },
+        {
+          "step": "Who's it for?",
+          "what": "Sort and forward to the right person",
+          "tools": [
+            "Outlook"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Enter the order",
+          "what": "Line by line from the PDF",
+          "tools": [
+            "PDF",
+            "Xero",
+            "Odoo",
+            "ServiceM8"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Answer the question",
+          "what": "Ask around for the product or job answer",
+          "tools": [
+            "Teams",
+            "SharePoint",
+            "Phone"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Confirm and update",
+          "what": "Order confirmed, delays passed on",
+          "tools": [
+            "Outlook"
+          ],
+          "flag": "slow"
+        }
+      ],
+      "time_goes": [
+        "A two to three page order: 10 to 30 min to key in",
+        "A third of the team's time on enquiries and email",
+        "Answers hunted across six places",
+        "Shared inboxes forwarded by hand: about 5 h a week"
+      ],
+      "intake": {
+        "skill": null,
+        "what": "Map how a customer message gets answered: where it lands, who picks it up, where the answer lives."
+      },
+      "skills": [
+        {
+          "name": "Order reader",
+          "what": "Reads the order PDF and lines it up against your price list",
+          "mode": "connected"
+        },
+        {
+          "name": "Product answers",
+          "what": "One place to ask, showing where each answer came from",
+          "mode": "connected"
+        },
+        {
+          "name": "Where's my order",
+          "what": "Status replies drafted from the job system",
+          "mode": "connected"
+        }
+      ],
+      "course": {
+        "title": "Module 6 · Customer service and orders",
+        "status": "placeholders in Skool",
+        "skool_course_id": "4e59aba4c93e4c13b9d13cad3a385544",
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it check a real order",
+                "skool_lesson_id": "1e74dac9c0944f02af07b9b41896cef2"
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": "6db0fece74954c419f488c6dab0bd80a"
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "Install it: price list, stock and customers",
+                "skool_lesson_id": "3637d4c81254407ca01276fe065f665b"
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Your first real order: check, two questions, go",
+                "skool_lesson_id": "e6ecde4e8409469a9fc6d66098cba483"
+              },
+              {
+                "title": "The paperwork: sales order, confirmation, PO",
+                "skool_lesson_id": "e55c8c3aa6a049619cf96ab2df2fe0cc"
+              },
+              {
+                "title": "Teach it your customers' product codes once",
+                "skool_lesson_id": "16bcff7609434bbf936896e34e83dee2"
+              },
+              {
+                "title": "Batch 10 orders at once",
+                "skool_lesson_id": "e581f1d2c4004d8ca863c7a99f4eb491"
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your first order",
+                "skool_lesson_id": "a7d45c29b8d3487a98257cb425cd5c02"
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Course live in Skool. The member plugin isn't built yet"
+    },
+    {
+      "n": 7,
+      "key": "admin",
+      "name": "Finance, timesheets and admin",
+      "who": "Owner, bookkeeper, office admin",
+      "promise": "Bills checked, debtors chased and payroll right, without the Friday scramble.",
+      "steps": [
+        {
+          "step": "Bills come in",
+          "what": "Match to the order and delivery docket",
+          "tools": [
+            "Xero",
+            "MYOB",
+            "PDF"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Approve and pay",
+          "what": "Approved, paid, filed (often three places)",
+          "tools": [
+            "Xero",
+            "Bank portal",
+            "SharePoint"
+          ],
+          "flag": "copy"
+        },
+        {
+          "step": "Timesheets",
+          "what": "Hours in, checked, approved",
+          "tools": [
+            "Field app",
+            "Excel"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Payroll",
+          "what": "Checked employee by employee",
+          "tools": [
+            "Xero",
+            "Employment Hero"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Invoice and chase",
+          "what": "Invoices out, debtors chased by phone",
+          "tools": [
+            "Xero",
+            "Phone"
+          ],
+          "flag": "slow"
+        },
+        {
+          "step": "Weekly numbers",
+          "what": "The report pulled together by hand",
+          "tools": [
+            "Excel"
+          ],
+          "flag": "copy"
+        }
+      ],
+      "time_goes": [
+        "Each bill saved in three places: about 4 h a week",
+        "Chasing debtors: about 12 h a week for one bookkeeper",
+        "New starters set up in three systems: about 2 h each",
+        "Receipts only on one phone, so the books stop when it's away"
+      ],
+      "intake": {
+        "skill": null,
+        "what": "Map your office week: bills, timesheets, payroll, invoicing, chasing, and who does each."
+      },
+      "skills": [
+        {
+          "name": "Bill checker",
+          "what": "Bill against order and docket; only the mismatches come to you",
+          "mode": "connected"
+        },
+        {
+          "name": "Debtor chase list",
+          "what": "Who to chase today, emails drafted",
+          "mode": "connected"
+        },
+        {
+          "name": "Payroll check",
+          "what": "Hours against pay, exceptions only. Being built",
+          "mode": "connected"
+        }
+      ],
+      "course": {
+        "title": "Module 7 · Finance, timesheets and admin",
+        "status": "structure in Skool",
+        "skool_course_id": "2d93e0a31433423a861e89113057658f",
+        "parts": [
+          {
+            "part": "Start here",
+            "lessons": [
+              {
+                "title": "Watch it run on a real job",
+                "skool_lesson_id": "2ac2856923d5464a9412bae97894b1d0"
+              },
+              {
+                "title": "What you get, and what you need to start",
+                "skool_lesson_id": "e47ca80a9d46475095388f2468de5ad3"
+              }
+            ]
+          },
+          {
+            "part": "Set it up",
+            "lessons": [
+              {
+                "title": "How we do it: map your office week",
+                "skool_lesson_id": "946a8cce976241f8b254492f13cdfe51"
+              },
+              {
+                "title": "Build your skills from your map",
+                "skool_lesson_id": "767f57233130434cbd049c284a3861d5"
+              }
+            ]
+          },
+          {
+            "part": "Use it on real jobs",
+            "lessons": [
+              {
+                "title": "Bill checker",
+                "skool_lesson_id": "15617d9752584b348f3de9144cb13b4e"
+              },
+              {
+                "title": "Debtor chase list",
+                "skool_lesson_id": "72a71c378acb4ce3949474e2705607b1"
+              },
+              {
+                "title": "Payroll check",
+                "skool_lesson_id": "7d5f511d375846c5990bcdeb4a6e0221"
+              }
+            ]
+          },
+          {
+            "part": "Check in",
+            "lessons": [
+              {
+                "title": "7-day check-in: post your before and after",
+                "skool_lesson_id": "9ec6c187bd214e35be087f5537d6c0b2"
+              }
+            ]
+          }
+        ]
+      },
+      "plugin_status": "Not built yet"
+    },
+    {
+      "n": 8,
       "key": "jobs",
       "name": "Job delivery and scheduling",
       "who": "Owner, project manager, office admin",
@@ -920,10 +1214,12 @@
           }
         ]
       },
-      "plugin_status": "Not built yet"
+      "plugin_status": "Not built yet",
+      "parked": true,
+      "parked_note": "Parked 22 Oct 2026 (Adam): more enterprise than the Hub needs for now. Its Skool course is to be deleted."
     },
     {
-      "n": 7,
+      "n": 9,
       "key": "warehouse",
       "name": "Stock, warehouse and freight",
       "who": "Warehouse lead, logistics or office admin",
@@ -1071,153 +1367,12 @@
           }
         ]
       },
-      "plugin_status": "Not built yet"
+      "plugin_status": "Not built yet",
+      "parked": true,
+      "parked_note": "Parked 22 Oct 2026 (Adam): more enterprise than the Hub needs for now. Its Skool course is to be deleted."
     },
     {
-      "n": 8,
-      "key": "service",
-      "name": "Customer service and orders",
-      "who": "Office admin, customer service",
-      "promise": "Orders entered and questions answered fast, by whoever picks up.",
-      "steps": [
-        {
-          "step": "Message arrives",
-          "what": "Shared inbox, phone, a form",
-          "tools": [
-            "Outlook",
-            "Gmail",
-            "Phone"
-          ],
-          "flag": null
-        },
-        {
-          "step": "Who's it for?",
-          "what": "Sort and forward to the right person",
-          "tools": [
-            "Outlook"
-          ],
-          "flag": "slow"
-        },
-        {
-          "step": "Enter the order",
-          "what": "Line by line from the PDF",
-          "tools": [
-            "PDF",
-            "Xero",
-            "Odoo",
-            "ServiceM8"
-          ],
-          "flag": "copy"
-        },
-        {
-          "step": "Answer the question",
-          "what": "Ask around for the product or job answer",
-          "tools": [
-            "Teams",
-            "SharePoint",
-            "Phone"
-          ],
-          "flag": "slow"
-        },
-        {
-          "step": "Confirm and update",
-          "what": "Order confirmed, delays passed on",
-          "tools": [
-            "Outlook"
-          ],
-          "flag": "slow"
-        }
-      ],
-      "time_goes": [
-        "A two to three page order: 10 to 30 min to key in",
-        "A third of the team's time on enquiries and email",
-        "Answers hunted across six places",
-        "Shared inboxes forwarded by hand: about 5 h a week"
-      ],
-      "intake": {
-        "skill": null,
-        "what": "Map how a customer message gets answered: where it lands, who picks it up, where the answer lives."
-      },
-      "skills": [
-        {
-          "name": "Order reader",
-          "what": "Reads the order PDF and lines it up against your price list",
-          "mode": "connected"
-        },
-        {
-          "name": "Product answers",
-          "what": "One place to ask, showing where each answer came from",
-          "mode": "connected"
-        },
-        {
-          "name": "Where's my order",
-          "what": "Status replies drafted from the job system",
-          "mode": "connected"
-        }
-      ],
-      "course": {
-        "title": "Stage 4 · Order desk plugin",
-        "status": "placeholders in Skool",
-        "skool_course_id": "4e59aba4c93e4c13b9d13cad3a385544",
-        "parts": [
-          {
-            "part": "Start here",
-            "lessons": [
-              {
-                "title": "Watch it check a real order",
-                "skool_lesson_id": "1e74dac9c0944f02af07b9b41896cef2"
-              },
-              {
-                "title": "What you get, and what you need to start",
-                "skool_lesson_id": "6db0fece74954c419f488c6dab0bd80a"
-              }
-            ]
-          },
-          {
-            "part": "Set it up",
-            "lessons": [
-              {
-                "title": "Install it: price list, stock and customers",
-                "skool_lesson_id": "3637d4c81254407ca01276fe065f665b"
-              }
-            ]
-          },
-          {
-            "part": "Use it on real jobs",
-            "lessons": [
-              {
-                "title": "Your first real order: check, two questions, go",
-                "skool_lesson_id": "e6ecde4e8409469a9fc6d66098cba483"
-              },
-              {
-                "title": "The paperwork: sales order, confirmation, PO",
-                "skool_lesson_id": "e55c8c3aa6a049619cf96ab2df2fe0cc"
-              },
-              {
-                "title": "Teach it your customers' product codes once",
-                "skool_lesson_id": "16bcff7609434bbf936896e34e83dee2"
-              },
-              {
-                "title": "Batch 10 orders at once",
-                "skool_lesson_id": "e581f1d2c4004d8ca863c7a99f4eb491"
-              }
-            ]
-          },
-          {
-            "part": "Check in",
-            "lessons": [
-              {
-                "title": "7-day check-in: post your first order",
-                "skool_lesson_id": "a7d45c29b8d3487a98257cb425cd5c02"
-              }
-            ]
-          }
-        ]
-      },
-      "plugin_status": "Course live in Skool. The member plugin isn't built yet"
-    },
-    {
-      "n": 9,
+      "n": 10,
       "key": "after-sales",
       "name": "After-sales, warranty and maintenance",
       "who": "Owner, service coordinator, techs",
@@ -1365,158 +1520,9 @@
           }
         ]
       },
-      "plugin_status": "Not built yet"
-    },
-    {
-      "n": 10,
-      "key": "admin",
-      "name": "Finance, timesheets and admin",
-      "who": "Owner, bookkeeper, office admin",
-      "promise": "Bills checked, debtors chased and payroll right, without the Friday scramble.",
-      "steps": [
-        {
-          "step": "Bills come in",
-          "what": "Match to the order and delivery docket",
-          "tools": [
-            "Xero",
-            "MYOB",
-            "PDF"
-          ],
-          "flag": "slow"
-        },
-        {
-          "step": "Approve and pay",
-          "what": "Approved, paid, filed (often three places)",
-          "tools": [
-            "Xero",
-            "Bank portal",
-            "SharePoint"
-          ],
-          "flag": "copy"
-        },
-        {
-          "step": "Timesheets",
-          "what": "Hours in, checked, approved",
-          "tools": [
-            "Field app",
-            "Excel"
-          ],
-          "flag": "slow"
-        },
-        {
-          "step": "Payroll",
-          "what": "Checked employee by employee",
-          "tools": [
-            "Xero",
-            "Employment Hero"
-          ],
-          "flag": "slow"
-        },
-        {
-          "step": "Invoice and chase",
-          "what": "Invoices out, debtors chased by phone",
-          "tools": [
-            "Xero",
-            "Phone"
-          ],
-          "flag": "slow"
-        },
-        {
-          "step": "Weekly numbers",
-          "what": "The report pulled together by hand",
-          "tools": [
-            "Excel"
-          ],
-          "flag": "copy"
-        }
-      ],
-      "time_goes": [
-        "Each bill saved in three places: about 4 h a week",
-        "Chasing debtors: about 12 h a week for one bookkeeper",
-        "New starters set up in three systems: about 2 h each",
-        "Receipts only on one phone, so the books stop when it's away"
-      ],
-      "intake": {
-        "skill": null,
-        "what": "Map your office week: bills, timesheets, payroll, invoicing, chasing, and who does each."
-      },
-      "skills": [
-        {
-          "name": "Bill checker",
-          "what": "Bill against order and docket; only the mismatches come to you",
-          "mode": "connected"
-        },
-        {
-          "name": "Debtor chase list",
-          "what": "Who to chase today, emails drafted",
-          "mode": "connected"
-        },
-        {
-          "name": "Payroll check",
-          "what": "Hours against pay, exceptions only. Being built",
-          "mode": "connected"
-        }
-      ],
-      "course": {
-        "title": "Module 10 · Finance, timesheets and admin",
-        "status": "structure in Skool",
-        "skool_course_id": "2d93e0a31433423a861e89113057658f",
-        "parts": [
-          {
-            "part": "Start here",
-            "lessons": [
-              {
-                "title": "Watch it run on a real job",
-                "skool_lesson_id": "2ac2856923d5464a9412bae97894b1d0"
-              },
-              {
-                "title": "What you get, and what you need to start",
-                "skool_lesson_id": "e47ca80a9d46475095388f2468de5ad3"
-              }
-            ]
-          },
-          {
-            "part": "Set it up",
-            "lessons": [
-              {
-                "title": "How we do it: map your office week",
-                "skool_lesson_id": "946a8cce976241f8b254492f13cdfe51"
-              },
-              {
-                "title": "Build your skills from your map",
-                "skool_lesson_id": "767f57233130434cbd049c284a3861d5"
-              }
-            ]
-          },
-          {
-            "part": "Use it on real jobs",
-            "lessons": [
-              {
-                "title": "Bill checker",
-                "skool_lesson_id": "15617d9752584b348f3de9144cb13b4e"
-              },
-              {
-                "title": "Debtor chase list",
-                "skool_lesson_id": "72a71c378acb4ce3949474e2705607b1"
-              },
-              {
-                "title": "Payroll check",
-                "skool_lesson_id": "7d5f511d375846c5990bcdeb4a6e0221"
-              }
-            ]
-          },
-          {
-            "part": "Check in",
-            "lessons": [
-              {
-                "title": "7-day check-in: post your before and after",
-                "skool_lesson_id": "9ec6c187bd214e35be087f5537d6c0b2"
-              }
-            ]
-          }
-        ]
-      },
-      "plugin_status": "Not built yet"
+      "plugin_status": "Not built yet",
+      "parked": true,
+      "parked_note": "Parked 22 Oct 2026 (Adam): more enterprise than the Hub needs for now. Its Skool course is to be deleted."
     }
   ]
 }

@@ -68,7 +68,8 @@ def module_readme(m):
 
 def main():
     data = json.loads(SRC.read_text())
-    mods = data["modules"]
+    mods = [m for m in data["modules"] if not m.get("parked")]
+    parked = [m for m in data["modules"] if m.get("parked")]
     index = [GENERATED, "", "# AI Builders Hub modules", "",
              "Each module is a department of a trade, construction or manufacturing business. "
              "Every member starts with Stage 1 and Stage 2, then any module on the paid plan.", "",
@@ -79,6 +80,8 @@ def main():
         (d / "README.md").write_text(module_readme(m))
         intake = f"`/{m['intake']['skill']}`" if m["intake"]["skill"] else "planned"
         index.append(f"| {m['n']} | [{m['name']}]({folder(m)}/README.md) | {m['course']['status']} | {intake} |")
+    if parked:
+        index += ["", "**Parked for now** (outlines kept in `modules.json`): " + ", ".join(m["name"] for m in parked) + "."]
     (ROOT / "course" / "README.md").write_text("\n".join(index) + "\n")
 
     hub_map = {

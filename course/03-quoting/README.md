@@ -40,7 +40,7 @@ It hands back your own version of the map above, with your tools and your hours,
 - **Missing-info check** (connected): Reads the enquiry and drafts the questions before you price
 - **Sheet to skill** (drop in a file): Drop in the spreadsheet you quote from; it becomes the plugin's questions
 
-## The course in the Hub: Stage 4 · Quoting plugin (written)
+## The course in the Hub: Module 3 · Quoting and proposals (written)
 
 **Start here**
 
