@@ -60,7 +60,7 @@ My Business/
 
 | File | What it's for |
 |---|---|
-| welcome-card/ | Your card picture and intro post words, to comment on the Hub's pinned Introductions post |
+| welcome-card/ | Your card picture and intro post words, to comment on the Hub's pinned Stage 1 thread |
 | how-we-run.html | Your business, drawn out. Open it in a browser |
 | bottlenecks.md | Where your hours go, and what to fix first |
 | instructions-for-claude.md | Paste into Claude's settings so it knows you |

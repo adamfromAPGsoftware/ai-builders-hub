@@ -8,8 +8,8 @@ builds you your own Claude skill for that job, ready to add to Cowork. You also 
 you can send to Adam if you'd like his help taking it further.
 
 **New to the AI Builders Hub? Start with /hub-welcome.** About 15 minutes of quick questions about
-you, your goals and how your business runs. You get a welcome card picture to post in the Hub's
-Introductions, your intro post words, and a starter pack. Posting the card finishes the Hub's intro.
+you, your goals and how your business runs. You get a welcome card picture to post on the Hub's
+pinned Stage 1 thread, your intro post words, and a starter pack. Posting the card finishes the Hub's intro.
 
 Then map each part of your business, one module at a time. Each one maps how you do it today and
 builds your first assistant from that map:

@@ -18,7 +18,7 @@ PLUGIN = json.loads((ROOT / "plugins" / "trade-intake" / ".claude-plugin" / "plu
 # The steps every member takes before any module (Skool course ids, read 22 Oct 2026).
 STAGES = [
     {"stage": 1, "name": "Start here", "skool_course_id": "53665fe139b748c882788790adf360bf",
-     "what": "Set up Claude, run /hub-welcome, post your welcome card on the Introductions pin."},
+     "what": "Set up Claude, run /hub-welcome, post your welcome card on the pinned Stage 1 thread."},
     {"stage": 2, "name": "Connect your tools", "skool_course_id": "eacf2bdfd0294a17905dcd490fb2acf7",
      "what": "Look up each tool from your welcome card in Claude's connectors; add what's there, note what isn't."},
 ]

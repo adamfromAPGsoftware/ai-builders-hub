@@ -360,7 +360,7 @@ Ask them to say "saved" or "later". Then one table on how to post the card:
 | # | Post your intro in the Hub (this finishes the intro module) |
 |:-:|---|
 | 1 | Download your welcome card (tap it, then Download or Save) |
-| 2 | Open the AI Builders Hub → **Community** → the pinned **Introductions** post at the top |
+| 2 | Open the AI Builders Hub → **Community** → the pinned **Stage 1: post your welcome card here** post, second from the top (skool.com/ai-builders-hub/stage-1-post-your-welcome-card-here) |
 | 3 | **Comment** on it: paste your intro text, attach the card picture, post the comment |
 | 4 | Reply g'day to two other new members' comments on the same post |
 | 5 | Mark the intro lesson complete in the Classroom |
