@@ -1,6 +1,6 @@
 # The quoting intake file
 
-One Markdown file, named `quote-intake-<business-name>-<YYYY-MM-DD>.md`. The block at the top is
+One Markdown file, named `map-quoting-<business-name>-<YYYY-MM-DD>.md`. The block at the top is
 for Adam's build; the sections below it are for a person. Write every section, in this order.
 
 - Anything not given: `not given`.

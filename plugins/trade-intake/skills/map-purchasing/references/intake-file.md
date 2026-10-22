@@ -1,6 +1,6 @@
 # The PO intake file
 
-One Markdown file, named `po-intake-<business-name>-<YYYY-MM-DD>.md`. The block at the top is for
+One Markdown file, named `map-purchasing-<business-name>-<YYYY-MM-DD>.md`. The block at the top is for
 Adam's build (and for whatever reads it later); the sections below it are for a person. Write
 every section, in this order.
 

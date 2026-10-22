@@ -16,10 +16,10 @@ Then there are four tool setups. Do the one Adam asks for, or the one your welco
 | Type this | For |
 |---|---|
 | **/hub-welcome** | Your Hub intro: who you are, how your business runs, your welcome card |
-| **/quote-intake** | How you quote |
-| **/takeoff-intake** | How you do takeoffs from drawings |
-| **/po-intake** | How you order materials (purchase orders) |
-| **/sales-intake** | How enquiries come in and become jobs |
+| **/map-quoting** | How you quote |
+| **/map-takeoffs** | How you do takeoffs from drawings |
+| **/map-purchasing** | How you order materials (purchase orders) |
+| **/map-sales** | How enquiries come in and become jobs |
 
 ## Setup (once, about 5 minutes)
 
@@ -40,7 +40,7 @@ Done. It now works on your phone too.
 ## Do the questions (about 30 minutes)
 
 1. Open Claude (phone or computer) and start a **new chat**.
-2. Type the one Adam asked for, e.g. **/quote-intake**, and send it.
+2. Type the one Adam asked for, e.g. **/map-quoting**, and send it.
 3. Drop in your last two examples (quotes, drawings, orders or enquiries), then answer the questions. Talk or type; rough is fine.
 4. Claude draws your process out. Check it step by step and say what's wrong.
 5. Claude builds **your own skill** (a .zip), tries it on one of your examples, and walks you through

@@ -30,7 +30,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 
 ## Step 1: the intake
 
-`/sales-intake`: Map how an enquiry becomes a won job: who answers, where notes go, and when you follow up.
+`/map-sales`: Map how an enquiry becomes a won job: who answers, where notes go, and when you follow up.
 
 It hands back your own version of the map above, with your tools and your hours, then suggests which skill to build first.
 
@@ -62,4 +62,4 @@ It hands back your own version of the map above, with your tools and your hours,
 
 1. [7-day check-in: post your before and after](https://www.skool.com/ai-builders-hub/classroom/5dd32079e13a43fe85a6f95f33d30ae8?md=c609066634c64b0c9354d2fd8cf863e5)
 
-**Plugin:** sales-intake built. No member plugin yet.
+**Plugin:** map-sales built. No member plugin yet.

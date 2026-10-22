@@ -30,7 +30,7 @@ From businesses APG has audited, anonymised. Hours are staff estimates, not meas
 
 ## Step 1: the intake
 
-`/quote-intake`: Walk through your last two quotes: where each number came from, and every step you did by hand.
+`/map-quoting`: Walk through your last two quotes: where each number came from, and every step you did by hand.
 
 It hands back your own version of the map above, with your tools and your hours, then suggests which skill to build first.
 
@@ -64,4 +64,4 @@ It hands back your own version of the map above, with your tools and your hours,
 1. [7-day check-in: post your first quote](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=e71d5248160149798219ed32ab3f2996)
 2. [Day 14: your before and after](https://www.skool.com/ai-builders-hub/classroom/c8cc244db12643469059b5ea73f0deb6?md=28ac6b68e779418fb6a1da2a863ea9eb)
 
-**Plugin:** Quoting plugin v0.1 built, to test before filming. Intake: quote-intake.
+**Plugin:** Quoting plugin v0.1 built, to test before filming. Intake: map-quoting.

@@ -102,7 +102,7 @@ diagram_confirmed: true
 card_made: true
 card_posted: yes             # yes | later | unknown
 card_shows: { name: first name, business: true, area: region, hours: true }
-next_step: /quote-intake
+next_step: /map-quoting
 consent_to_send: not asked    # yes | no | not asked
 sent_via: not sent            # submit_intake | owner (posted card only) | not sent
 ---
@@ -176,10 +176,10 @@ plugin they already installed.
 
 | If the #1 bottleneck is… | Next step |
 |---|---|
-| Quoting or estimating | Type **/quote-intake**: builds your own quoting assistant |
-| Measuring up from drawings | Type **/takeoff-intake**: builds your takeoff assistant |
-| Ordering materials | Type **/po-intake**: builds your ordering assistant |
-| Enquiries, missed calls, follow-up | Type **/sales-intake**: builds your enquiry assistant |
+| Quoting or estimating | Type **/map-quoting**: builds your own quoting assistant |
+| Measuring up from drawings | Type **/map-takeoffs**: builds your takeoff assistant |
+| Ordering materials | Type **/map-purchasing**: builds your ordering assistant |
+| Enquiries, missed calls, follow-up | Type **/map-sales**: builds your enquiry assistant |
 | Paperwork, certs, reminders, invoices | Post your card and ask in the Hub's Community tab who has built this; tag Adam |
 | Building AI tools for clients | Open the Hub's Classroom and start the next unlocked course |
 | On the Free plan | Move to Claude Pro first: the add-ons need it |

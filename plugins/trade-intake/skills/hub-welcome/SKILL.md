@@ -129,7 +129,7 @@ Rules for tables:
 6. **Nothing is made until the drawing is confirmed and the summary is all yeses**, unless they stop
    early.
 7. **Nothing is sent to Adam without a clear yes** (step 11), and then only the profile file.
-8. If they already did one of Adam's trade intakes in this chat (/quote-intake and the rest), reuse
+8. If they already did one of the map skills in this chat (/map-quoting and the rest), reuse
    the business details and say so.
 
 ## 0. Open (send this first, before any tool)
@@ -374,8 +374,8 @@ intro isn't finished until the card is posted, and that the card and intro text 
 
 **Next step.** The next module in the Hub covers the tools themselves. Match their #1 bottleneck to
 one table row from `references/starter-pack.md` ("Your next step") and show only that row plus one
-backup, as "When you get to the tools, start with this": e.g. quoting → `/quote-intake`, takeoffs →
-`/takeoff-intake`, ordering → `/po-intake`, enquiries and follow-up → `/sales-intake`, building for
+backup, as "When you get to the tools, start with this": e.g. quoting → `/map-quoting`, takeoffs →
+`/map-takeoffs`, ordering → `/map-purchasing`, enquiries and follow-up → `/map-sales`, building for
 clients → the builder track lessons. On the Free plan, the next step is "move to Pro first".
 
 **Sending.** Check whether a tool named `submit_intake` is available. Don't mention it either way.

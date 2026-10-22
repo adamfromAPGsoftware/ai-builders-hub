@@ -1,6 +1,6 @@
 ---
-name: quote-intake
-description: Interviews a trade business owner about how they quote, from the first enquiry to the sent quote, the follow-up and the win, then builds them their own quoting assistant to add to Claude and use in Cowork. Starts by asking for the last two quotes they sent (plus price list, workings and terms) and reads those and their website first. Works edges first, then the normal way on their two real jobs as test cases, then the odd jobs, judgement calls and what has gone wrong. Draws their process and confirms it step by step, checks a summary point by point, and makes one file for Adam. Then turns it into their own skill (a zip), tries it on their first job, and walks them through adding it to Cowork. Sends the file to Adam only if a send tool is available and they say yes. Use whenever someone types /quote-intake, says "quoting setup", "quoting questions", "estimating questions", "build me a quoting tool", or installs the trade intake plugin and asks what to do first.
+name: map-quoting
+description: Interviews a trade business owner about how they quote, from the first enquiry to the sent quote, the follow-up and the win, then builds them their own quoting assistant to add to Claude and use in Cowork. Starts by asking for the last two quotes they sent (plus price list, workings and terms) and reads those and their website first. Works edges first, then the normal way on their two real jobs as test cases, then the odd jobs, judgement calls and what has gone wrong. Draws their process and confirms it step by step, checks a summary point by point, and makes one file for Adam. Then turns it into their own skill (a zip), tries it on their first job, and walks them through adding it to Cowork. Sends the file to Adam only if a send tool is available and they say yes. Use whenever someone types /map-quoting, says "quoting setup", "quoting questions", "estimating questions", "build me a quoting tool", or installs the trade intake plugin and asks what to do first.
 metadata:
   version: 0.4.0
 ---
@@ -424,7 +424,7 @@ step, redraw the drawing too.
 
 ## 9. Make the file
 
-Write one file named `quote-intake-<business-name>-<YYYY-MM-DD>.md` (business name in lowercase with
+Write one file named `map-quoting-<business-name>-<YYYY-MM-DD>.md` (business name in lowercase with
 hyphens, today's date), following `references/intake-file.md` exactly: every rule as a numbered entry
 marked confirmed, from file, assumed or UNCONFIRMED; the exceptions; the process map; the parking
 list; and the questions log. Write `consent_to_send: not asked`, `sent_via: not sent`,

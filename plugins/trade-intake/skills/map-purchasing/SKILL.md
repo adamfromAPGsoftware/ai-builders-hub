@@ -1,6 +1,6 @@
 ---
-name: po-intake
-description: Interviews a trade business owner or office manager about how they buy materials for jobs (from the job or takeoff to the purchase order sent, confirmed, delivered, matched to the supplier's bill and coded to the job), so Adam can build their ordering tool. Reads their last two orders and the bills that came back first, then works edges first, the two orders as test cases, the odd ones, the judgement calls and what has gone wrong. Draws their process to check step by step, confirms a summary point by point and makes one file for Adam. Then builds their own ordering assistant (a skill zip), tries it on their first order and walks them through adding it to Cowork. Sends the file to Adam only with a send tool and their clear yes, otherwise they download and share it. Use for /po-intake, "purchase order setup", "ordering setup", "start my ordering questions", "build me a PO tool", or automating supplier orders, deliveries or matching bills.
+name: map-purchasing
+description: Interviews a trade business owner or office manager about how they buy materials for jobs (from the job or takeoff to the purchase order sent, confirmed, delivered, matched to the supplier's bill and coded to the job), so Adam can build their ordering tool. Reads their last two orders and the bills that came back first, then works edges first, the two orders as test cases, the odd ones, the judgement calls and what has gone wrong. Draws their process to check step by step, confirms a summary point by point and makes one file for Adam. Then builds their own ordering assistant (a skill zip), tries it on their first order and walks them through adding it to Cowork. Sends the file to Adam only with a send tool and their clear yes, otherwise they download and share it. Use for /map-purchasing, "purchase order setup", "ordering setup", "start my ordering questions", "build me a PO tool", or automating supplier orders, deliveries or matching bills.
 metadata:
   version: 0.4.0
 ---
@@ -443,7 +443,7 @@ step, redraw the drawing too.
 
 ## 9. Make the file
 
-Write one file named `po-intake-<business-name>-<YYYY-MM-DD>.md` (business name in lowercase with
+Write one file named `map-purchasing-<business-name>-<YYYY-MM-DD>.md` (business name in lowercase with
 hyphens, today's date), following `references/intake-file.md` exactly: the process map, the
 exceptions, the judgement calls, the test cases, the parking list and the questions log. Write
 `consent_to_send: not asked`, `sent_via: not sent`, `skill_exported: false`, `skill_name: not made`

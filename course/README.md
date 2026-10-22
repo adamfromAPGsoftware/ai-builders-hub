@@ -7,10 +7,10 @@ Each module is a department of a trade, construction or manufacturing business. 
 | # | Module | Course | Intake |
 |:-:|---|---|---|
 | 1 | [Lead generation](01-lead-gen/README.md) | structure in Skool | planned |
-| 2 | [Sales and follow-up](02-sales/README.md) | structure in Skool | `/sales-intake` |
-| 3 | [Quoting, estimating and proposals](03-quoting/README.md) | written | `/quote-intake` |
-| 4 | [Takeoffs from drawings](04-takeoffs/README.md) | placeholders in Skool | `/takeoff-intake` |
-| 5 | [Purchasing and suppliers](05-purchasing/README.md) | structure in Skool | `/po-intake` |
+| 2 | [Sales and follow-up](02-sales/README.md) | structure in Skool | `/map-sales` |
+| 3 | [Quoting, estimating and proposals](03-quoting/README.md) | written | `/map-quoting` |
+| 4 | [Takeoffs from drawings](04-takeoffs/README.md) | placeholders in Skool | `/map-takeoffs` |
+| 5 | [Purchasing and suppliers](05-purchasing/README.md) | structure in Skool | `/map-purchasing` |
 | 6 | [Customer service and orders](06-service/README.md) | placeholders in Skool | planned |
 | 7 | [Finance, timesheets and admin](07-admin/README.md) | structure in Skool | planned |
 

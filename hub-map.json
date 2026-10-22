@@ -89,7 +89,7 @@
       "name": "Sales and follow-up",
       "promise": "Every enquiry answered and every quote followed up, without retyping it all.",
       "folder": "course/02-sales",
-      "intake_skill": "sales-intake",
+      "intake_skill": "map-sales",
       "skills": [
         "Inbox sorter",
         "Call note to CRM",
@@ -142,7 +142,7 @@
           }
         ]
       },
-      "plugin_status": "sales-intake built. No member plugin yet"
+      "plugin_status": "map-sales built. No member plugin yet"
     },
     {
       "n": 3,
@@ -150,7 +150,7 @@
       "name": "Quoting, estimating and proposals",
       "promise": "A priced quote on your own rates in minutes, from site or the office.",
       "folder": "course/03-quoting",
-      "intake_skill": "quote-intake",
+      "intake_skill": "map-quoting",
       "skills": [
         "Quote builder",
         "Missing-info check",
@@ -213,7 +213,7 @@
           }
         ]
       },
-      "plugin_status": "Quoting plugin v0.1 built, to test before filming. Intake: quote-intake"
+      "plugin_status": "Quoting plugin v0.1 built, to test before filming. Intake: map-quoting"
     },
     {
       "n": 4,
@@ -221,7 +221,7 @@
       "name": "Takeoffs from drawings",
       "promise": "Counts and measurements off the plans, marked up and checked, without tracing every line.",
       "folder": "course/04-takeoffs",
-      "intake_skill": "takeoff-intake",
+      "intake_skill": "map-takeoffs",
       "skills": [
         "Picture takeoff",
         "Drawing finder",
@@ -274,7 +274,7 @@
           }
         ]
       },
-      "plugin_status": "Picture takeoff built. Member version needs the client's OK to film. Intake: takeoff-intake"
+      "plugin_status": "Picture takeoff built. Member version needs the client's OK to film. Intake: map-takeoffs"
     },
     {
       "n": 5,
@@ -282,7 +282,7 @@
       "name": "Purchasing and suppliers",
       "promise": "Supplier quotes turned into checked orders, and price lists kept current.",
       "folder": "course/05-purchasing",
-      "intake_skill": "po-intake",
+      "intake_skill": "map-purchasing",
       "skills": [
         "Quote to order",
         "Three-supplier compare",
@@ -335,7 +335,7 @@
           }
         ]
       },
-      "plugin_status": "po-intake built; a quote-to-order skill is designed for a client. The order desk course's lessons 'Supplier orders and stock' and 'Match the supplier invoice to the order' already cover part of this"
+      "plugin_status": "map-purchasing built; a quote-to-order skill is designed for a client. The order desk course's lessons 'Supplier orders and stock' and 'Match the supplier invoice to the order' already cover part of this"
     },
     {
       "n": 6,

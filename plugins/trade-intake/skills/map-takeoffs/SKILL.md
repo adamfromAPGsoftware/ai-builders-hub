@@ -1,6 +1,6 @@
 ---
-name: takeoff-intake
-description: Interviews a trade business owner or estimator, in plain words, about how they do takeoffs (drawings in, counts and lengths out, into a costing). Reads their last two jobs (drawings plus their takeoff or costing) and any price list, maps the job end to end, walks both jobs as tests, sweeps the odd cases, draws their process for them to check step by step and confirms a summary point by point. Then makes one file for Adam, builds them their own takeoff skill from what it learned (a zip, tested once on their first job), walks them through adding it to Cowork, and sends the file to Adam only with their clear yes if a send tool exists, otherwise they download and share it. Use whenever someone types /takeoff-intake, says "takeoff setup", "start my takeoff questions", "build me a takeoff tool", "help me count off plans faster", or asks about automating measuring and counting from drawings.
+name: map-takeoffs
+description: Interviews a trade business owner or estimator, in plain words, about how they do takeoffs (drawings in, counts and lengths out, into a costing). Reads their last two jobs (drawings plus their takeoff or costing) and any price list, maps the job end to end, walks both jobs as tests, sweeps the odd cases, draws their process for them to check step by step and confirms a summary point by point. Then makes one file for Adam, builds them their own takeoff skill from what it learned (a zip, tested once on their first job), walks them through adding it to Cowork, and sends the file to Adam only with their clear yes if a send tool exists, otherwise they download and share it. Use whenever someone types /map-takeoffs, says "takeoff setup", "start my takeoff questions", "build me a takeoff tool", "help me count off plans faster", or asks about automating measuring and counting from drawings.
 metadata:
   version: 0.4.0
 ---
@@ -337,7 +337,7 @@ Change it). Fix and re-show anything changed. Nothing goes in the file until eve
 
 ## 12. Make the file
 
-Write one file named `takeoff-intake-<business-name>-<YYYY-MM-DD>.md` (business name lowercase with
+Write one file named `map-takeoffs-<business-name>-<YYYY-MM-DD>.md` (business name lowercase with
 hyphens, today's date), following `references/intake-file.md` exactly, including the **Process map**,
 **Odd ones and exceptions** and **Open items** sections. Write `consent_to_send: not asked`,
 `sent_via: not sent`, `skill_exported: false`, `skill_name: not made` and `skill_added_to_cowork: unknown`

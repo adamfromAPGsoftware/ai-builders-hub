@@ -1,6 +1,6 @@
 # The sales intake file
 
-One Markdown file, named `sales-intake-<business-name>-<YYYY-MM-DD>.md`. The block at the top is
+One Markdown file, named `map-sales-<business-name>-<YYYY-MM-DD>.md`. The block at the top is
 for Adam's build; the sections below it are for a person. Write every section, in this order.
 
 - Anything not given: `not given`.
@@ -96,7 +96,7 @@ pricing:
   by: owner
   visit_to_quote_days: "2 to 3"
   hold_ups: ["supplier price for colour-matched sheets"]
-  note: "pricing detail is for /quote-intake"
+  note: "pricing detail is for /map-quoting"
 quote_number: "next number in Tradify; tool never invents one"
 versions: "copy and add rev A, rev B"
 review_rule: "owner approves by name (assumed)"

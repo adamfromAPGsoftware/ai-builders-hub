@@ -1,6 +1,6 @@
 ---
-name: sales-intake
-description: Interviews a trade business owner about how they handle new work, from the enquiry landing to the first reply, sorting good jobs from bad, the site visit, getting the quote out, following up, winning or losing, and handing the job to the crew, in enough detail for Adam to build their enquiries and follow-up tool. Reads their last two enquiries and their website first, then works edges first, the two enquiries as test cases, the odd ones, the judgement calls and what has gone wrong. Draws their process to confirm step by step, checks a summary point by point and makes one file for Adam. Then builds their own enquiries assistant (a skill zip), tries it on their first enquiry and walks them through adding it to Cowork. Sends the file to Adam only with a send tool and their yes. Use for /sales-intake, "sales setup", "enquiry questions", "follow-up setup", "build me something to chase quotes", "I lose track of enquiries", or automating enquiries, follow-ups or their pipeline.
+name: map-sales
+description: Interviews a trade business owner about how they handle new work, from the enquiry landing to the first reply, sorting good jobs from bad, the site visit, getting the quote out, following up, winning or losing, and handing the job to the crew, in enough detail for Adam to build their enquiries and follow-up tool. Reads their last two enquiries and their website first, then works edges first, the two enquiries as test cases, the odd ones, the judgement calls and what has gone wrong. Draws their process to confirm step by step, checks a summary point by point and makes one file for Adam. Then builds their own enquiries assistant (a skill zip), tries it on their first enquiry and walks them through adding it to Cowork. Sends the file to Adam only with a send tool and their yes. Use for /map-sales, "sales setup", "enquiry questions", "follow-up setup", "build me something to chase quotes", "I lose track of enquiries", or automating enquiries, follow-ups or their pipeline.
 metadata:
   version: 0.4.0
 ---
@@ -23,7 +23,7 @@ what happened at each step and when, and how it ended. The finished tool is acce
 have handled both the way the owner wants.
 
 Pricing itself is not covered here. If they want help working out prices, say Adam has separate
-quoting questions (`/quote-intake`) and only capture here who prices and how long it takes.
+quoting questions (`/map-quoting`) and only capture here who prices and how long it takes.
 
 ## The order, and why
 
@@ -444,7 +444,7 @@ changes a step, redraw the drawing too.
 
 ## 9. Make the file
 
-Write `sales-intake-<business-name>-<YYYY-MM-DD>.md` (name lowercase with hyphens, today's date)
+Write `map-sales-<business-name>-<YYYY-MM-DD>.md` (name lowercase with hyphens, today's date)
 following `references/intake-file.md` exactly: rules numbered and marked, exceptions, process map,
 parking list, questions log, with `consent_to_send: not asked`, `sent_via: not sent`,
 `skill_exported: false`, `skill_name: not made` and `skill_added_to_cowork: unknown` for now.

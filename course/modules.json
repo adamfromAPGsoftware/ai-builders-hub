@@ -225,7 +225,7 @@
         "A 20-question handover typed from the CRM into an email"
       ],
       "intake": {
-        "skill": "sales-intake",
+        "skill": "map-sales",
         "what": "Map how an enquiry becomes a won job: who answers, where notes go, and when you follow up."
       },
       "skills": [
@@ -304,7 +304,7 @@
           }
         ]
       },
-      "plugin_status": "sales-intake built. No member plugin yet"
+      "plugin_status": "map-sales built. No member plugin yet"
     },
     {
       "n": 3,
@@ -379,7 +379,7 @@
         "Rebuilding quotes after site visits: about 13 h a week across one team"
       ],
       "intake": {
-        "skill": "quote-intake",
+        "skill": "map-quoting",
         "what": "Walk through your last two quotes: where each number came from, and every step you did by hand."
       },
       "skills": [
@@ -466,7 +466,7 @@
           }
         ]
       },
-      "plugin_status": "Quoting plugin v0.1 built, to test before filming. Intake: quote-intake"
+      "plugin_status": "Quoting plugin v0.1 built, to test before filming. Intake: map-quoting"
     },
     {
       "n": 4,
@@ -536,7 +536,7 @@
         "After the win, the job team does its own takeoff again"
       ],
       "intake": {
-        "skill": "takeoff-intake",
+        "skill": "map-takeoffs",
         "what": "Map how you take off: which drawings, what you count, the scale, and where the numbers go."
       },
       "skills": [
@@ -615,7 +615,7 @@
           }
         ]
       },
-      "plugin_status": "Picture takeoff built. Member version needs the client's OK to film. Intake: takeoff-intake"
+      "plugin_status": "Picture takeoff built. Member version needs the client's OK to film. Intake: map-takeoffs"
     },
     {
       "n": 5,
@@ -688,7 +688,7 @@
         "Supplier price lists arrive as PDFs and go stale"
       ],
       "intake": {
-        "skill": "po-intake",
+        "skill": "map-purchasing",
         "what": "Map how you buy: who orders, which suppliers, how you compare, and where the order is typed."
       },
       "skills": [
@@ -767,7 +767,7 @@
           }
         ]
       },
-      "plugin_status": "po-intake built; a quote-to-order skill is designed for a client. The order desk course's lessons 'Supplier orders and stock' and 'Match the supplier invoice to the order' already cover part of this"
+      "plugin_status": "map-purchasing built; a quote-to-order skill is designed for a client. The order desk course's lessons 'Supplier orders and stock' and 'Match the supplier invoice to the order' already cover part of this"
     },
     {
       "n": 6,
