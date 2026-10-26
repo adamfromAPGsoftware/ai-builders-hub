@@ -6,7 +6,7 @@ when they tap it.
 
 The layout belongs to `map/map-template.html` and the two scripts in `map/scripts/`. **You only
 write `map.json`.** Never draw your own layout, restyle it, or hand-write HTML. The look is the AI
-Builders Hub's: lime on black, DM Sans.
+Builders Hub's: hi-vis yellow on ink, Barlow (the AI Trade Office design system).
 
 ## 1. Write map.json
 
@@ -77,7 +77,7 @@ python3 <skill folder>/map/scripts/fill_map.py map.json customer-service-map.htm
 Show `customer-service-map.html` as an artifact if you can make one; otherwise offer it as a
 download and say "open it in your browser". Then say:
 
-"**Here's your map.** The lime steps are where your time goes. Tap any step for the detail. On your
+"**Here's your map.** The yellow steps are where your time goes. Tap any step for the detail. On your
 phone it's in the Artifacts tab."
 
 ## 3. Confirm it step by step
@@ -87,7 +87,7 @@ Never "looks good?". Go through it in order:
 - "Is step 1 right: who, what and the software?" (Yes · Change it)
 - "Anything missing between 2 and 3?"
 - At each decision: "Are those the only ways it goes?"
-- At each lime step: "Is this really where the time goes?"
+- At each yellow step: "Is this really where the time goes?"
 
 Change `map.json` and remake the page after every fix. Nothing is final until they say the map is
 right. Then set `map_confirmed: true` in the map file header.
@@ -99,13 +99,13 @@ python3 <skill folder>/map/scripts/map_card.py map.json customer-service-map.png
 ```
 
 It needs only Pillow (code execution has it) and the font in `map/assets/fonts/`. It draws the
-first layer only: the before numbers, the steps, the lime steps, the decisions, and what they're
+first layer only: the before numbers, the steps, the yellow steps, the decisions, and what they're
 building first. Look at it before you offer it; if a title is cut off with "…", shorten that step's
 `title` and run it again.
 
 ## 5. Can't run code here
 
-Send the steps as a numbered list grouped by who does them, with every decision and the lime steps
+Send the steps as a numbered list grouped by who does them, with every decision and the yellow steps
 marked, and confirm it the same way. Put `map.json` in the map file so the page and picture can be
 made later, and say: "Turn on **Settings → Capabilities → Code execution and file creation** and say
 **make my map** to get the page and the picture."

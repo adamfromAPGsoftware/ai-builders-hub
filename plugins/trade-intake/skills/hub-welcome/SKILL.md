@@ -303,7 +303,7 @@ and the unasked questions under **Still to ask**. Make the card only if Parts 1,
 ## 3. See it and confirm it: the drawing
 
 Follow `references/process-map.md`. Short version: draw their steps as a self-contained HTML page
-(one card per step, who and tool on each, lime ! on the bottleneck steps with hours, clock on slow
+(one card per step, who and tool on each, yellow ! on the bottleneck steps with hours, clock on slow
 waits), publish it as an artifact and say "Here's how your business runs, drawn out. On your phone
 it's in the Artifacts tab." Confirm it **two or three steps at a time** with a table:
 

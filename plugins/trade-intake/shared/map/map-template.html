@@ -6,76 +6,78 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <title>Process Map</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
 <!--
   AI Builders Hub process map. One template for every module intake.
   Fill it with scripts/fill_map.py (map JSON -> this file); never edit the layout per business.
   The data lives in the <script id="map-data"> block at the bottom. Fields: README.md.
-  Deliberately one dark look (the Hub's lime on black), so colours are set once on :root.
+  Deliberately one dark look (the AI Trade Office design: hi-vis yellow on ink), so colours are set once on :root.
 -->
 <style>
 :root{
-  --bg:#0d0d0d; --surface:#121212; --surface2:#191919; --border:#2a2a2a;
-  --lime:#90f23c; --lime-ink:#0d0d0d; --lime-soft:rgba(144,242,60,.10);
-  --text:#ffffff; --body:#a6a6a6; --faint:#6e6e6e;
-  --r:16px; --font:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --bg:#17181a; --surface:#1f2023; --surface2:#26282c; --border:#36383c;
+  --yellow:#ffc20e; --on-yellow:#17181a; --yellow-soft:rgba(255,194,14,.10); --orange:#f26b1d;
+  --text:#ffffff; --body:#c8c8c9; --faint:#8a8c91;
+  --r:10px; --font:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --display:'Barlow Condensed','Arial Narrow',sans-serif;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--text)}
 body{font:16px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+.hazard{height:10px;background:repeating-linear-gradient(-45deg,var(--yellow) 0 18px,var(--on-yellow) 18px 36px)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
 .wrap{max-width:1180px;margin:0 auto;padding-block:28px 64px;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.eyebrow{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime)}
-h1{font-weight:900;font-size:clamp(30px,5vw,52px);line-height:1.04;letter-spacing:-.01em;margin:8px 0 0;text-transform:uppercase;text-wrap:balance}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,5.6vw,60px);line-height:1.02;letter-spacing:.01em;margin:8px 0 0;text-transform:uppercase;text-wrap:balance}
 h2{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--body);margin:0 0 14px}
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.14em;font-size:13px}
-.mark{width:38px;height:38px;border-radius:10px;background:var(--lime);color:var(--lime-ink);display:grid;place-items:center;font-weight:900;font-size:15px;letter-spacing:0}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:800;letter-spacing:.04em;font-size:22px}
+.mark{width:40px;height:40px;flex:none;display:block}
 .chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--body);white-space:nowrap}
-.chip.lime{border-color:var(--lime);color:var(--lime)}
-.chip.solid{background:var(--lime);border-color:var(--lime);color:var(--lime-ink);font-weight:700}
+.chip.yellow{border-color:var(--yellow);color:var(--yellow)}
+.chip.solid{background:var(--yellow);border-color:var(--yellow);color:var(--on-yellow);font-weight:700}
 .sub{color:var(--body);max-width:68ch;margin:14px 0 0;font-size:17px}
 .biz{margin-top:6px;color:var(--body);font-size:15px}
 .biz b{color:var(--text);font-weight:700}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px 0 36px}
 .stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;min-width:0}
-.stat b{display:block;font-weight:900;font-size:clamp(24px,3.4vw,36px);line-height:1.1;color:var(--lime)}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(24px,3.4vw,36px);line-height:1.1;color:var(--yellow)}
 .stat span{color:var(--body);font-size:14px}
 @media (max-width:560px){.stats{grid-template-columns:1fr}}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 .bar h2{margin:0}
 button{font:inherit;cursor:pointer}
-.btn{border:1px solid var(--border);background:var(--surface2);color:var(--text);border-radius:999px;padding:9px 16px;font-weight:700;font-size:14px}
+.btn{border:1px solid var(--border);background:var(--surface2);color:var(--text);border-radius:6px;padding:9px 16px;font-weight:700;font-size:14px}
 .btn:hover{border-color:var(--faint)}
-.btn.primary{background:var(--lime);border-color:var(--lime);color:var(--lime-ink)}
+.btn.primary{background:var(--yellow);border-color:var(--yellow);color:var(--on-yellow)}
 .btn:disabled{opacity:.35;cursor:default}
-.btn:focus-visible,.node:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.btn:focus-visible,.node:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
 .legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--body);font-size:13px}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;border:1px solid var(--border);background:var(--surface2)}
-.legend i.l{border-color:var(--lime);background:var(--lime-soft)}
-.legend i.a{background:var(--lime);border-color:var(--lime)}
+.legend i.l{border-color:var(--yellow);background:var(--yellow-soft)}
+.legend i.a{background:var(--yellow);border-color:var(--yellow)}
 
 .flow-box{overflow-x:auto;margin:0 -4px;padding:4px}
 .flow{position:relative;display:grid;gap:72px 64px;justify-content:start;padding:8px 4px 8px}
 .flow > svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
 .node{position:relative;z-index:1;text-align:left;background:var(--surface);color:var(--text);border:1.5px solid var(--border);border-radius:var(--r);padding:14px 14px 12px;display:flex;flex-direction:column;gap:8px;min-height:150px;transition:border-color .15s,transform .15s}
 .node:hover{border-color:var(--faint);transform:translateY(-2px)}
-.node.flag{border-color:var(--lime);background:linear-gradient(var(--lime-soft),var(--lime-soft)),var(--surface)}
-.node.active{box-shadow:0 0 0 3px var(--lime)}
+.node.flag{border-color:var(--yellow);background:linear-gradient(var(--yellow-soft),var(--yellow-soft)),var(--surface)}
+.node.active{box-shadow:0 0 0 3px var(--yellow)}
 .node .n{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .num{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--faint);display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--body);flex:none}
-.flag .num{border-color:var(--lime);color:var(--lime)}
-.bang{width:22px;height:22px;border-radius:50%;background:var(--lime);color:var(--lime-ink);display:grid;place-items:center;font-weight:900;font-size:14px}
-.node h3{margin:0;font-size:17px;line-height:1.2;font-weight:700;text-wrap:balance}
+.flag .num{border-color:var(--yellow);color:var(--yellow)}
+.bang{width:22px;height:22px;border-radius:50%;background:var(--yellow);color:var(--on-yellow);display:grid;place-items:center;font-weight:900;font-size:14px}
+.node h3{margin:0;font-family:var(--display);font-size:20px;line-height:1.15;font-weight:700;text-wrap:balance}
 .who{font-size:13px;color:var(--body)}
 .tools{display:flex;flex-wrap:wrap;gap:5px}
 .tools .chip{font-size:11.5px;padding:2px 8px}
 .clk{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;flex:none;align-self:center}
 .chip .clk{width:12px;height:12px}
 .time{margin-top:auto;font-size:13px;color:var(--body);display:flex;gap:6px;align-items:baseline}
-.flag .time{color:var(--lime);font-weight:700}
+.flag .time{color:var(--yellow);font-weight:700}
 .pain{font-size:13px;color:var(--text)}
 .takes{position:absolute;top:-12px;right:12px;font-size:11px;padding:2px 9px}
 .node.fork{border-style:dashed;background:var(--bg)}
@@ -85,19 +87,19 @@ button{font:inherit;cursor:pointer}
 .opt b{display:block;font-size:13px}
 .opt span{color:var(--body);font-size:12px}
 .more{font-size:12px;color:var(--faint)}
-.node:hover .more{color:var(--lime)}
+.node:hover .more{color:var(--yellow)}
 
 .time-bar{margin-top:44px}
 .tbar{display:flex;height:34px;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
 .tbar div{min-width:2px;border-right:2px solid var(--bg);background:var(--surface2)}
-.tbar div.l{background:var(--lime)}
+.tbar div.l{background:var(--yellow)}
 .tkeys{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:13px;color:var(--body)}
 .tkeys b{color:var(--text)}
-.first{margin-top:44px;border:1.5px solid var(--lime);border-radius:var(--r);padding:22px;background:linear-gradient(var(--lime-soft),var(--lime-soft)),var(--surface);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 24px;align-items:center}
-.first h3{margin:6px 0 6px;font-size:24px;font-weight:900;text-transform:uppercase}
+.first{margin-top:44px;border:1.5px solid var(--yellow);border-radius:var(--r);padding:22px;background:linear-gradient(var(--yellow-soft),var(--yellow-soft)),var(--surface);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 24px;align-items:center}
+.first h3{margin:6px 0 6px;font-family:var(--display);font-size:28px;font-weight:800;text-transform:uppercase}
 .first p{margin:0;color:var(--body);max-width:62ch}
 .first .save{text-align:right}
-.first .save b{display:block;font-size:30px;font-weight:900;color:var(--lime);line-height:1.1}
+.first .save b{display:block;font-family:var(--display);font-size:36px;font-weight:800;color:var(--yellow);line-height:1.1}
 @media (max-width:640px){.first{grid-template-columns:1fr}.first .save{text-align:left}}
 .park{margin-top:36px}
 .park ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -114,14 +116,14 @@ footer{margin-top:48px;color:var(--faint);font-size:13px;display:flex;justify-co
 .ph{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid var(--border)}
 .x{background:none;border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:50%;font-size:18px;line-height:1}
 .pb{overflow-y:auto;padding:20px;flex:1}
-.pb h3{margin:4px 0 10px;font-size:26px;line-height:1.15;font-weight:900;text-transform:uppercase;text-wrap:balance}
+.pb h3{margin:4px 0 10px;font-family:var(--display);font-size:30px;line-height:1.1;font-weight:800;text-transform:uppercase;text-wrap:balance}
 .meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
 .sec{margin-top:18px}
 .sec h4{margin:0 0 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--body)}
 .sec p{margin:0}
 .sec ul{margin:0;padding-left:18px}
 .sec li{margin:3px 0}
-.sec.bad li::marker{color:var(--lime)}
+.sec.bad li::marker{color:var(--yellow)}
 .src{margin-top:22px;font-size:13px;color:var(--faint);border-top:1px solid var(--border);padding-top:12px}
 .pf{display:flex;justify-content:space-between;gap:10px;padding:14px 20px;border-top:1px solid var(--border)}
 </style>
@@ -141,8 +143,8 @@ document.addEventListener('DOMContentLoaded',function(){
   document.title = (M.business ? M.business+' · ' : '') + (M.module ? M.module.name+' map' : 'Process map');
 
   var h = '';
-  h += '<div class="top"><div class="brand"><div class="mark">AIB</div>AI BUILDERS HUB</div>';
-  if (M.module) h += '<span class="chip lime">Module '+esc(M.module.n)+' · '+esc(M.module.name)+'</span>';
+  h += '<div class="top"><div class="brand"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><polygon points="61.5,32 46.75,57.55 17.25,57.55 2.5,32 17.25,6.45 46.75,6.45" fill="#ffc20e" stroke="#ffc20e" stroke-width="3.5" stroke-linejoin="round"/><circle cx="32" cy="32" r="16.5" fill="#17181a"/><text x="32" y="38.5" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="19" fill="#ffc20e">AI</text></svg>AI BUILDERS HUB</div>';
+  if (M.module) h += '<span class="chip yellow">Module '+esc(M.module.n)+' · '+esc(M.module.name)+'</span>';
   h += '</div>';
   if (M.example) h += '<div class="ribbon">Example map. '+esc(M.business||'This business')+' is made up, and its rates are examples.</div>';
   h += '<div class="eyebrow">'+esc(M.module ? M.module.name+' map' : 'Process map')+'</div>';
@@ -208,7 +210,7 @@ document.addEventListener('DOMContentLoaded',function(){
     var fr = flow.getBoundingClientRect();
     var R = nodes.map(function(n){var r=n.getBoundingClientRect();return {x:r.left-fr.left,y:r.top-fr.top,w:r.width,h:r.height}});
     svg.setAttribute('viewBox','0 0 '+fr.width+' '+fr.height);
-    var p = '<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90f23c"/></marker></defs>';
+    var p = '<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffc20e"/></marker></defs>';
     for (var i=0;i<R.length-1;i++){
       var a=R[i], b=R[i+1], d;
       if (Math.abs(a.y-b.y)<4){
@@ -220,7 +222,7 @@ document.addEventListener('DOMContentLoaded',function(){
         var midY = a.y + a.h + (b.y - a.y - a.h)/2;
         d = 'M'+(a.x+a.w/2)+','+(a.y+a.h+4)+' L'+(a.x+a.w/2)+','+midY+' L'+(b.x+b.w/2)+','+midY+' L'+(b.x+b.w/2)+','+(b.y-6);
       }
-      p += '<path d="'+d+'" fill="none" stroke="#90f23c" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah)" opacity=".85"/>';
+      p += '<path d="'+d+'" fill="none" stroke="#ffc20e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah)" opacity=".85"/>';
     }
     svg.innerHTML = p;
   }
@@ -249,7 +251,7 @@ document.addEventListener('DOMContentLoaded',function(){
     var meta = '';
     if (s.who) meta += '<span class="chip">'+esc(s.who)+'</span>';
     (s.tools||[]).forEach(function(t){meta += '<span class="chip">'+esc(t)+'</span>'});
-    if (s.time) meta += '<span class="chip'+(s.flag?' lime':'')+'"><svg class="clk" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>'+esc(s.time)+'</span>';
+    if (s.time) meta += '<span class="chip'+(s.flag?' yellow':'')+'"><svg class="clk" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>'+esc(s.time)+'</span>';
     if (takes.indexOf(s.id)>-1) meta += '<span class="chip solid">Assistant takes this</span>';
     var b = '<div class="eyebrow">Step '+(i+1)+' of '+steps.length+(s.type==='fork'?' · a decision':'')+'</div><h3>'+esc(s.title)+'</h3><div class="meta">'+meta+'</div>';
     if (s.pain) b += '<div class="sec"><h4>Where the time goes</h4><p>'+esc(s.pain)+'</p></div>';
@@ -259,7 +261,7 @@ document.addEventListener('DOMContentLoaded',function(){
     if (d.goes_wrong && d.goes_wrong.length) b += '<div class="sec bad"><h4>What goes wrong</h4>'+list(d.goes_wrong)+'</div>';
     if (d.odd_cases && d.odd_cases.length) b += '<div class="sec"><h4>The odd ones</h4>'+list(d.odd_cases)+'</div>';
     if (d.source) b += '<div class="src">Where this came from: '+esc(d.source)+'</div>';
-    panel.innerHTML = '<div class="ph"><span class="chip lime">'+esc(M.module?M.module.name+' map':'Process map')+'</span><button class="x" aria-label="Close">×</button></div>'
+    panel.innerHTML = '<div class="ph"><span class="chip yellow">'+esc(M.module?M.module.name+' map':'Process map')+'</span><button class="x" aria-label="Close">×</button></div>'
       + '<div class="pb">'+b+'</div>'
       + '<div class="pf"><button class="btn" id="pv"'+(i===0?' disabled':'')+'>← Back</button><button class="btn primary" id="nx"'+(i===steps.length-1?' disabled':'')+'>Next step →</button></div>';
     panel.querySelector('.x').onclick = close;

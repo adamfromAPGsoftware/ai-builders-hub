@@ -71,12 +71,12 @@ python3 <skill folder>/map/scripts/fill_map.py map.json lead-generation-map.html
 ```
 
 Show it as an artifact if you can; otherwise offer it as a download. Then say: "**Here's your map.**
-The lime steps are where your time goes. Tap any step for the detail."
+The yellow steps are where your time goes. Tap any step for the detail."
 
 ## 3. Confirm it step by step
 
 Never "looks good?". "Is step 1 right: who, what and the software?" · "Anything missing between 2
-and 3?" · at each decision "Are those the only ways it goes?" · at each lime step "Is this really
+and 3?" · at each decision "Are those the only ways it goes?" · at each yellow step "Is this really
 where the time goes?" Change `map.json` and remake the page after every fix. Then set
 `map_confirmed: true` in the map file header.
 

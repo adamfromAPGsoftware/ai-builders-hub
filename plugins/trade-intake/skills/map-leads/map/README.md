@@ -9,8 +9,8 @@ JSON file:
 | `<module>-map.png`: the picture of the flowchart (1200 px wide) | `scripts/map_card.py map.json <module>-map.png` | Posted on the module's map thread in the Hub |
 
 The layout belongs to `map-template.html` and the two scripts. Intakes only write the JSON; they
-never draw their own layout. Look: the AI Builders Hub system, lime `#90F23C` on `#0D0D0D`, DM Sans
-(`assets/fonts/`, SIL Open Font Licence), never red. Example: `examples/tallowood-quoting.json`.
+never draw their own layout. Look: the AI Trade Office design system, hi-vis yellow `#FFC20E` on ink `#17181A`, Barlow and
+Barlow Condensed (`assets/fonts/`, SIL Open Font Licence), never red. Example: `examples/tallowood-quoting.json`.
 
 ## map.json
 

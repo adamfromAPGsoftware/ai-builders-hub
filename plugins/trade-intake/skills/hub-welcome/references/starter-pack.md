@@ -143,7 +143,7 @@ flowchart TD
   S1["1 Enquiry comes in"] --> S2["2 Site visit and quote"] --> S3["3 Yes and deposit"]
   S3 --> S4["4 Order the unit"] --> S5["5 Book the install"] --> S6["6 Install and commission"]
   S6 --> S7["7 Invoice and chase"] --> S8["8 Yearly service reminder"]
-  classDef pain stroke:#90F23C,stroke-width:3px
+  classDef pain stroke:#FFC20E,stroke-width:3px
   class S1,S2,S6,S7,S8 pain
 ```
 

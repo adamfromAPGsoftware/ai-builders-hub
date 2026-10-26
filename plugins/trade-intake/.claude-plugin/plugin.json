@@ -1,6 +1,6 @@
 {
   "name": "trade-intake",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Plain-words setups for trade business owners. New to the AI Builders Hub? Start with /hub-welcome: a quick visual Q&A about you, your goals and how your business runs, which makes your welcome card and a My Business folder to keep for later lessons. Then map each part of your business, one module at a time: /map-leads (where work comes from), /map-sales (enquiries and follow-up), /map-quoting (quoting), /map-takeoffs (takeoffs from drawings), /map-purchasing (ordering materials), /map-customer-service (customer messages and orders) and /map-admin (bills, the pay run and chasing money). Each reads two real examples, draws how you do it today for you to check, then builds your own first assistant from that map and walks you through adding it to Claude.",
   "author": {
     "name": "Adam Goodyer"

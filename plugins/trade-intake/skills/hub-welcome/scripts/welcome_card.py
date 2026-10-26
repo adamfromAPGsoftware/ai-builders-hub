@@ -3,12 +3,13 @@
 
     python3 welcome_card.py card.json welcome-card.png
 
-Needs only Pillow, which Claude's code execution already has. The font (DM Sans, SIL Open Font
-Licence) ships in ../assets/fonts. The JSON fields are described in references/welcome-card.md.
+Needs only Pillow, which Claude's code execution already has. The fonts (Barlow and Barlow
+Condensed, SIL Open Font Licence) ship in ../assets/fonts. The JSON fields are described in
+references/welcome-card.md.
 Missing optional fields are left off the card, never made up.
 
-Look: the AI Builders Hub system, lime on black (#90F23C on #0D0D0D), DM Sans, ALL CAPS
-headlines, no red.
+Look: the AI Trade Office design system, hi-vis yellow on ink (#FFC20E on #17181A), Barlow
+Condensed ALL CAPS headlines, a hazard band along the top, no red.
 """
 import json
 import sys
@@ -20,23 +21,18 @@ W = 1600
 PAD = 80
 INNER = W - 2 * PAD
 
-BG = (13, 13, 13)          # module cover near-black
-SURFACE = (17, 17, 17)     # cards
-SURFACE_2 = (24, 24, 24)   # step boxes
-BORDER = (36, 36, 36)      # a touch lighter than #1A1A1A so it reads on a phone
-LIME = (144, 242, 60)      # brand green
-LIME_DIM = (144, 242, 60, 26)
+BG = (23, 24, 26)          # ink #17181A
+SURFACE = (31, 32, 35)     # cards
+SURFACE_2 = (38, 40, 44)   # step boxes, #26282C
+BORDER = (54, 56, 60)      # reads on a phone
+YELLOW = (255, 194, 14)    # hi-vis #FFC20E
+YELLOW_DIM = (255, 194, 14, 26)
 WHITE = (255, 255, 255)
-BODY = (153, 153, 153)     # muted grey
-FAINT = (102, 102, 102)
-BLACK = (0, 0, 0)
+BODY = (200, 200, 201)     # body text on ink
+FAINT = (130, 132, 137)
+BLACK = (23, 24, 26)       # text on yellow is ink
 
 HERE = Path(__file__).resolve().parent
-FONT_PATHS = [
-    HERE.parent / "assets" / "fonts" / "DMSans.ttf",
-    Path("assets/fonts/DMSans.ttf"),
-    Path("DMSans.ttf"),
-]
 FALLBACK = {
     400: ["/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"],
     500: ["/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"],
@@ -46,10 +42,35 @@ FALLBACK = {
 _cache = {}
 
 
+FONT_DIR = [HERE.parent / "assets" / "fonts", Path("assets/fonts"), Path(".")]
+
+
+def _face(weight, size):
+    """Barlow Condensed for headlines and big numbers, Barlow for everything else."""
+    if weight >= 900:
+        return "BarlowCondensed-ExtraBold.ttf"
+    if weight >= 700 and size >= 30:
+        return "BarlowCondensed-Bold.ttf"
+    if weight >= 700:
+        return "Barlow-Bold.ttf"
+    return "Barlow-Medium.ttf" if weight >= 500 else "Barlow-Regular.ttf"
+
+
 def font(weight, size):
     key = (weight, size)
     if key in _cache:
         return _cache[key]
+    name = _face(weight, size)
+    for d in FONT_DIR:
+        if (d / name).exists():
+            _cache[key] = ImageFont.truetype(str(d / name), size)
+            return _cache[key]
+    for p in FALLBACK.get(weight, FALLBACK[400]) if isinstance(FALLBACK, dict) else FALLBACK:
+        if Path(p).exists():
+            _cache[key] = ImageFont.truetype(p, size)
+            return _cache[key]
+    _cache[key] = ImageFont.load_default(size=size)
+    return _cache[key]
     for p in FONT_PATHS:
         if p.exists():
             f = ImageFont.truetype(str(p), size)
@@ -67,6 +88,29 @@ def font(weight, size):
     return _cache[key]
 
 
+def hub_mark(d, x, y, s, nut, hole, text_f):
+    """The AI Builders Hub mark: a yellow hex nut with AI in the hole, s px wide."""
+    import math
+    cx, cy, r = x + s / 2, y + s / 2, s / 2 * 0.94
+    d.polygon([(cx + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a))) for a in range(0, 360, 60)], fill=nut)
+    h = r * 0.56
+    d.ellipse((cx - h, cy - h, cx + h, cy + h), fill=hole)
+    tw = d.textlength("AI", font=text_f)
+    a, _ = text_f.getmetrics()
+    bb = d.textbbox((0, 0), "AI", font=text_f)
+    d.text((cx - tw / 2, cy - (bb[1] + bb[3]) / 2), "AI", font=text_f, fill=nut)
+
+
+def hazard(img, y, h, w, pitch, a, b):
+    """A band of diagonal hi-vis stripes across the full width."""
+    d = ImageDraw.Draw(img)
+    d.rectangle((0, y, w, y + h), fill=a)
+    x = -h
+    while x < w + h:
+        d.polygon([(x, y + h), (x + h, y), (x + h + pitch / 2, y), (x + pitch / 2, y + h)], fill=b)
+        x += pitch
+
+
 def line_h(f):
     a, d = f.getmetrics()
     return int((a + d) * 1.16)
@@ -76,9 +120,7 @@ class Card:
     def __init__(self):
         h = 7000
         self.base = Image.new("RGBA", (W, h), BG + (255,))
-        glow = Image.new("RGBA", (W, h), (0, 0, 0, 0))
-        ImageDraw.Draw(glow).ellipse((W - 760, -520, W + 360, 560), fill=LIME_DIM)
-        self.base = Image.alpha_composite(self.base, glow.filter(ImageFilter.GaussianBlur(160)))
+        hazard(self.base, 0, 16, W, 48, YELLOW + (255,), BLACK + (255,))
         self.bd = ImageDraw.Draw(self.base)
         self.ov = Image.new("RGBA", (W, h), (0, 0, 0, 0))
         self.d = ImageDraw.Draw(self.ov)
@@ -136,10 +178,10 @@ class Card:
         return cy + row_h
 
     def label(self, x, y, s):
-        """Lime ALL CAPS section label with a 4px accent bar on the left."""
+        """Yellow ALL CAPS section label with a 4px accent bar on the left."""
         f = font(700, 24)
-        self.d.rectangle((x, y + 2, x + 4, y + 28), fill=LIME)
-        self.text(x + 20, y, s.upper(), f, LIME, track=3)
+        self.d.rectangle((x, y + 2, x + 4, y + 28), fill=YELLOW)
+        self.text(x + 20, y, s.upper(), f, YELLOW, track=3)
         return y + 56
 
     def panel(self, top, bottom, fill=SURFACE, outline=BORDER):
@@ -149,17 +191,13 @@ class Card:
     def topbar(self, c):
         y = self.y
         s = 92
-        self.d.rounded_rectangle((PAD, y, PAD + s, y + s), radius=20, fill=BLACK, outline=BORDER, width=2)
-        fm = font(900, 34)
-        tw = self.tw("AIB", fm)
-        self.text(PAD + (s - tw) / 2, y + 18, "AIB", fm, WHITE)
-        self.d.rectangle((PAD + (s - tw) / 2, y + 64, PAD + (s + tw) / 2, y + 70), fill=LIME)
-        self.text(PAD + s + 24, y + 18, "AI BUILDERS HUB", font(700, 30), WHITE, track=4)
+        hub_mark(self.d, PAD, y, s, YELLOW, BLACK, font(900, 32))
+        self.text(PAD + s + 24, y + 12, "AI BUILDERS HUB", font(900, 40), WHITE, track=2)
         self.text(PAD + s + 24, y + 56, "Member intro", font(400, 24), BODY)
         if c.get("joined"):
             f = font(700, 22)
             w = self.tw(c["joined"].upper(), f, 2) + 44
-            self.pill(W - PAD - w, y + 22, c["joined"].upper(), f, LIME, border=LIME, track=2)
+            self.pill(W - PAD - w, y + 22, c["joined"].upper(), f, YELLOW, border=YELLOW, track=2)
         self.y = y + s + 72
 
     def hero(self, c):
@@ -170,7 +208,7 @@ class Card:
             fh = font(900, fh.size - 6)
         self.text(PAD - 4, y, head, fh, WHITE)
         y += line_h(fh) + 2
-        self.d.rectangle((PAD, y, PAD + 160, y + 8), fill=LIME)
+        self.d.rectangle((PAD, y, PAD + 160, y + 8), fill=YELLOW)
         y += 40
         biz = " · ".join(v for v in [c.get("business"), c.get("trade")] if v)
         if biz:
@@ -179,7 +217,7 @@ class Card:
         if meta:
             y = self.para(PAD, y + 4, meta, font(400, 30), INNER, BODY, max_lines=2)
         if c.get("role"):
-            _, y = self.pill(PAD, y + 28, c["role"].upper(), font(700, 24), BLACK, bg=LIME, track=2)
+            _, y = self.pill(PAD, y + 28, c["role"].upper(), font(700, 24), BLACK, bg=YELLOW, track=2)
         if c.get("what_i_do"):
             y = self.para(PAD, y + 28, c["what_i_do"], font(400, 32), INNER, BODY, max_lines=3)
         self.y = y + 56
@@ -194,7 +232,7 @@ class Card:
         bottoms = []
         for i, g in enumerate(items):
             x = PAD + 44 + i * (col_w + 32)
-            self.text(x, y, f"0{i + 1}", font(900, 60), LIME)
+            self.text(x, y, f"0{i + 1}", font(900, 60), YELLOW)
             bottoms.append(self.para(x, y + 82, g, font(500, 30), col_w, WHITE, max_lines=4))
         bottom = max(bottoms) + 44
         self.panel(top, bottom)
@@ -219,15 +257,15 @@ class Card:
                 x = PAD + 44 + i * (bw + gap)
                 hot = bool(s.get("pain"))
                 self.d.rounded_rectangle((x, ry, x + bw, ry + bh), radius=12, fill=SURFACE_2,
-                                          outline=LIME if hot else BORDER, width=3 if hot else 2)
-                self.text(x + 20, ry + 18, f"{idx + 1:02d}", font(700, 26), LIME if hot else FAINT, track=2)
+                                          outline=YELLOW if hot else BORDER, width=3 if hot else 2)
+                self.text(x + 20, ry + 18, f"{idx + 1:02d}", font(700, 26), YELLOW if hot else FAINT, track=2)
                 ty = self.para(x + 20, ry + 64, s["step"], font(700, 29), bw - 40, WHITE, max_lines=2)
                 who = " · ".join(v for v in [s.get("who"), s.get("tool")] if v)
                 if who:
                     self.para(x + 20, ty + 6, who, font(400, 23), bw - 40, BODY, max_lines=2)
                 if hot:
                     cx, cy = x + bw - 36, ry + 34
-                    self.d.ellipse((cx - 18, cy - 18, cx + 18, cy + 18), fill=LIME)
+                    self.d.ellipse((cx - 18, cy - 18, cx + 18, cy + 18), fill=YELLOW)
                     fb = font(900, 26)
                     self.text(cx - self.tw("!", fb) / 2, cy - 17, "!", fb, BLACK)
                 if i < len(row) - 1:
@@ -243,7 +281,7 @@ class Card:
                     self.d.line(seg, fill=FAINT, width=3)
                 self.d.polygon([(fx, y2 - 2), (fx - 9, y2 - 14), (fx + 9, y2 - 14)], fill=FAINT)
         bottom = y + len(rows) * bh + (len(rows) - 1) * 72 + 28
-        self.d.ellipse((PAD + 44, bottom + 2, PAD + 72, bottom + 30), fill=LIME)
+        self.d.ellipse((PAD + 44, bottom + 2, PAD + 72, bottom + 30), fill=YELLOW)
         self.text(PAD + 53, bottom + 1, "!", font(900, 22), BLACK)
         self.text(PAD + 86, bottom + 1, "Where it slows down or still runs by hand", font(400, 24), BODY)
         bottom += 74
@@ -261,10 +299,10 @@ class Card:
             hrs = b.get("hours")
             hrs_s = f"{hrs}h/wk" if hrs not in (None, "", "not given") else ""
             hw = self.tw(hrs_s, fh) if hrs_s else 0
-            self.d.rectangle((PAD + 44, y + 10, PAD + 58, y + 24), fill=LIME)
+            self.d.rectangle((PAD + 44, y + 10, PAD + 58, y + 24), fill=YELLOW)
             yb = self.para(PAD + 82, y, b["what"], font(700, 32), INNER - 170 - hw, WHITE, max_lines=2)
             if hrs_s:
-                self.text(W - PAD - 44 - hw, y - 8, hrs_s, fh, LIME)
+                self.text(W - PAD - 44 - hw, y - 8, hrs_s, fh, YELLOW)
             if b.get("why"):
                 yb = self.para(PAD + 82, yb + 2, b["why"], font(400, 26), INNER - 170 - hw, BODY, max_lines=2)
             y = yb + 28
@@ -273,7 +311,7 @@ class Card:
             y += 24
             big = f"{c['hours_lost_total']} HOURS"
             fb = font(900, 52)
-            self.text(PAD + 44, y, big, fb, LIME)
+            self.text(PAD + 44, y, big, fb, YELLOW)
             self.para(PAD + 44 + self.tw(big, fb) + 24, y + 16, "a week on work a computer could help with",
                       font(400, 28), INNER - 140 - self.tw(big, fb), BODY, max_lines=2)
             y += line_h(fb) + 4
@@ -291,7 +329,7 @@ class Card:
         yl = yr = top + 40
         if manual:
             yl = self.label(PAD + 44, yl, "Still done by hand")
-            yl = self.pills(PAD + 44, yl, manual, f, half, fg=WHITE, border=LIME)
+            yl = self.pills(PAD + 44, yl, manual, f, half, fg=WHITE, border=YELLOW)
         if tools:
             x = PAD + 44 + half + 48
             yr = self.label(x, yr, "Tools I use")
@@ -317,14 +355,14 @@ class Card:
             self.text(PAD + 48, y, lab.upper(), font(700, 22), BLACK, track=3)
             y = self.para(PAD + 48, y + 38, val, font(900, 38), INNER - 96, BLACK, max_lines=3) + 30
         bottom = y + 12
-        self.panel(top, bottom, fill=LIME, outline=LIME)
+        self.panel(top, bottom, fill=YELLOW, outline=YELLOW)
         self.y = bottom + 44
 
     def footer(self, c):
         f = font(700, 24)
         self.text(PAD, self.y, "AI BUILDERS HUB", f, WHITE, track=4)
         x = PAD + self.tw("AI BUILDERS HUB", f, 4) + 14
-        self.d.rectangle((x, self.y + 10, x + 10, self.y + 20), fill=LIME)
+        self.d.rectangle((x, self.y + 10, x + 10, self.y + 20), fill=YELLOW)
         url = "skool.com/ai-builders-hub"
         fu = font(400, 24)
         self.text(W - PAD - self.tw(url, fu), self.y, url, fu, FAINT)

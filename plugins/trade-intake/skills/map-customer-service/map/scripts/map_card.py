@@ -4,11 +4,12 @@
     python3 map_card.py map.json quoting-map.png
 
 The same map JSON as fill_map.py. A Skool comment shows a picture, not a page, so this draws the
-first layer only: the three before numbers, the steps in order (time sinks in lime, decisions as
+first layer only: the three before numbers, the steps in order (time sinks in yellow, decisions as
 forks) and what's being built first. The detail stays in the HTML map.
 
-Needs only Pillow. Font: DM Sans (SIL Open Font Licence) in ../assets/fonts. Look: the AI Builders
-Hub system, lime on black (#90F23C on #0D0D0D), ALL CAPS headlines, never red.
+Needs only Pillow. Fonts: Barlow and Barlow Condensed (SIL Open Font Licence) in ../assets/fonts.
+Look: the AI Trade Office design system, hi-vis yellow on ink (#FFC20E on #17181A), condensed ALL CAPS
+headlines, a hazard band along the top, never red.
 """
 import json
 import sys
@@ -20,43 +21,74 @@ W = 1200
 PAD = 64
 INNER = W - 2 * PAD
 
-BG = (13, 13, 13)
-SURFACE = (18, 18, 18)
-SURFACE_2 = (25, 25, 25)
-BORDER = (42, 42, 42)
-LIME = (144, 242, 60)
-LIME_SOFT = (144, 242, 60, 22)
+BG = (23, 24, 26)          # ink #17181A
+SURFACE = (31, 32, 35)
+SURFACE_2 = (38, 40, 44)   # #26282C
+BORDER = (54, 56, 60)
+YELLOW = (255, 194, 14)    # hi-vis #FFC20E
+YELLOW_SOFT = (255, 194, 14, 22)
 WHITE = (255, 255, 255)
-BODY = (166, 166, 166)
-FAINT = (110, 110, 110)
-INK = (13, 13, 13)
+BODY = (200, 200, 201)
+FAINT = (130, 132, 137)
+INK = (23, 24, 26)
 
 HERE = Path(__file__).resolve().parent
-FONT_PATHS = [HERE.parent / "assets" / "fonts" / "DMSans.ttf", Path("assets/fonts/DMSans.ttf"), Path("DMSans.ttf")]
 FALLBACK = ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"]
 _cache = {}
 
 
+FONT_DIR = [HERE.parent / "assets" / "fonts", Path("assets/fonts"), Path(".")]
+
+
+def _face(weight, size):
+    """Barlow Condensed for headlines and big numbers, Barlow for everything else."""
+    if weight >= 900:
+        return "BarlowCondensed-ExtraBold.ttf"
+    if weight >= 700 and size >= 30:
+        return "BarlowCondensed-Bold.ttf"
+    if weight >= 700:
+        return "Barlow-Bold.ttf"
+    return "Barlow-Medium.ttf" if weight >= 500 else "Barlow-Regular.ttf"
+
+
 def font(weight, size):
     key = (weight, size)
-    if key not in _cache:
-        for p in FONT_PATHS:
-            if p.exists():
-                f = ImageFont.truetype(str(p), size)
-                try:
-                    f.set_variation_by_axes([min(max(size / 2, 9), 40), weight])
-                except Exception:
-                    pass
-                _cache[key] = f
-                break
-        else:
-            for p in FALLBACK:
-                if Path(p).exists():
-                    _cache[key] = ImageFont.truetype(p, size)
-                    break
-            else:
-                _cache[key] = ImageFont.load_default(size=size)
+    if key in _cache:
+        return _cache[key]
+    name = _face(weight, size)
+    for d in FONT_DIR:
+        if (d / name).exists():
+            _cache[key] = ImageFont.truetype(str(d / name), size)
+            return _cache[key]
+    for p in FALLBACK.get(weight, FALLBACK[400]) if isinstance(FALLBACK, dict) else FALLBACK:
+        if Path(p).exists():
+            _cache[key] = ImageFont.truetype(p, size)
+            return _cache[key]
+    _cache[key] = ImageFont.load_default(size=size)
     return _cache[key]
+
+
+def hub_mark(d, x, y, s, nut, hole, text_f):
+    """The AI Builders Hub mark: a yellow hex nut with AI in the hole, s px wide."""
+    import math
+    cx, cy, r = x + s / 2, y + s / 2, s / 2 * 0.94
+    d.polygon([(cx + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a))) for a in range(0, 360, 60)], fill=nut)
+    h = r * 0.56
+    d.ellipse((cx - h, cy - h, cx + h, cy + h), fill=hole)
+    tw = d.textlength("AI", font=text_f)
+    a, _ = text_f.getmetrics()
+    bb = d.textbbox((0, 0), "AI", font=text_f)
+    d.text((cx - tw / 2, cy - (bb[1] + bb[3]) / 2), "AI", font=text_f, fill=nut)
+
+
+def hazard(img, y, h, w, pitch, a, b):
+    """A band of diagonal hi-vis stripes across the full width."""
+    d = ImageDraw.Draw(img)
+    d.rectangle((0, y, w, y + h), fill=a)
+    x = -h
+    while x < w + h:
+        d.polygon([(x, y + h), (x + h, y), (x + h + pitch / 2, y), (x + pitch / 2, y + h)], fill=b)
+        x += pitch
 
 
 def nice_date(s):
@@ -72,9 +104,7 @@ class Card:
     def __init__(self, height):
         self.h = height
         self.base = Image.new("RGBA", (W, height), BG + (255,))
-        glow = Image.new("RGBA", (W, height), (0, 0, 0, 0))
-        ImageDraw.Draw(glow).ellipse((W - 620, -460, W + 300, 460), fill=LIME_SOFT)
-        self.base = Image.alpha_composite(self.base, glow.filter(ImageFilter.GaussianBlur(140)))
+        hazard(self.base, 0, 14, W, 40, YELLOW + (255,), INK + (255,))
         self.d = ImageDraw.Draw(self.base)
 
     def tw(self, s, f, track=0):
@@ -137,8 +167,8 @@ class Card:
             self.d.arc((cx - r, cy - r, cx + r, cy + r), a0, a0 + 90, fill=color, width=width)
 
     def arrow(self, x, y0, y1):
-        self.d.line((x, y0, x, y1 - 10), fill=LIME, width=3)
-        self.d.polygon([(x - 9, y1 - 12), (x + 9, y1 - 12), (x, y1)], fill=LIME)
+        self.d.line((x, y0, x, y1 - 10), fill=YELLOW, width=3)
+        self.d.polygon([(x - 9, y1 - 12), (x + 9, y1 - 12), (x, y1)], fill=YELLOW)
 
 
 def step_height(c, s, takes):
@@ -176,17 +206,15 @@ def draw(m, out):
 
     # top bar
     y = PAD
-    c.d.rounded_rectangle((PAD, y, PAD + 64, y + 64), radius=16, fill=LIME)
-    mf = font(900, 24)
-    c.text(PAD + (64 - c.tw("AIB", mf)) / 2, y + 17, "AIB", mf, INK)
-    c.text(PAD + 84, y + 4, "AI BUILDERS HUB", font(700, 26), WHITE, track=3)
+    hub_mark(c.d, PAD, y, 64, YELLOW, INK, font(900, 22))
+    c.text(PAD + 84, y + 2, "AI BUILDERS HUB", font(900, 32), WHITE, track=2)
     mod = m.get("module") or {}
     sub = f"Module {mod.get('n')} · {mod.get('name')} map" if mod else "Process map"
     c.text(PAD + 84, y + 38, sub, font(400, 21), BODY)
     if m.get("updated"):
         pf = font(700, 19)
         label = "MAPPED " + nice_date(m["updated"]).upper()
-        c.pill(W - PAD - c.tw(label, pf, 1) - 32, y + 12, label, pf, LIME, border=LIME, track=1)
+        c.pill(W - PAD - c.tw(label, pf, 1) - 32, y + 12, label, pf, YELLOW, border=YELLOW, track=1)
     y += 64 + 40
 
     if m.get("example"):
@@ -195,7 +223,7 @@ def draw(m, out):
         y += 52
 
     eyebrow = (f"{mod.get('name')} map" if mod else "Process map").upper()
-    c.text(PAD, y, eyebrow, font(700, 21), LIME, track=3)
+    c.text(PAD, y, eyebrow, font(700, 21), YELLOW, track=3)
     y += 34
     for ln in title_lines:
         c.text(PAD, y, ln, title_f, WHITE)
@@ -224,22 +252,22 @@ def draw(m, out):
             v = str(b.get("value", ""))
             while c.tw(v, vf) > tw_ - 40 and vf.size > 26:
                 vf = font(900, vf.size - 2)
-            c.text(x + 22, y + 18, v, vf, LIME)
+            c.text(x + 22, y + 18, v, vf, YELLOW)
             c.para(x + 22, y + 80, b.get("label", ""), font(400, 21), tw_ - 40, BODY, max_lines=1)
         y += 150
 
     c.text(PAD, y + 14, "THE STEPS, IN ORDER", font(700, 21), BODY, track=3)
     lf = font(400, 19)
     lx = W - PAD
-    for label, kind in [("Assistant takes this", "solid"), ("Where the time goes", "lime")]:
+    for label, kind in [("Assistant takes this", "solid"), ("Where the time goes", "outline")]:
         w = c.tw(label, lf)
         lx -= w
         c.text(lx, y + 15, label, lf, BODY)
         lx -= 30
         if kind == "solid":
-            c.d.rounded_rectangle((lx, y + 17, lx + 20, y + 37), radius=5, fill=LIME)
+            c.d.rounded_rectangle((lx, y + 17, lx + 20, y + 37), radius=5, fill=YELLOW)
         else:
-            c.d.rounded_rectangle((lx, y + 17, lx + 20, y + 37), radius=5, outline=LIME, width=2)
+            c.d.rounded_rectangle((lx, y + 17, lx + 20, y + 37), radius=5, outline=YELLOW, width=2)
         lx -= 26
     y += 70
 
@@ -251,13 +279,13 @@ def draw(m, out):
         if fork:
             c.dashed_box(box, 20, FAINT)
         else:
-            c.d.rounded_rectangle(box, radius=20, fill=SURFACE, outline=LIME if flag else BORDER, width=3 if flag else 2)
+            c.d.rounded_rectangle(box, radius=20, fill=SURFACE, outline=YELLOW if flag else BORDER, width=3 if flag else 2)
             if flag:
                 tint = Image.new("RGBA", (W, c.h), (0, 0, 0, 0))
-                ImageDraw.Draw(tint).rounded_rectangle(box, radius=20, fill=LIME_SOFT)
+                ImageDraw.Draw(tint).rounded_rectangle(box, radius=20, fill=YELLOW_SOFT)
                 c.base = Image.alpha_composite(c.base, tint)
                 c.d = ImageDraw.Draw(c.base)
-                c.d.rounded_rectangle(box, radius=20, outline=LIME, width=3)
+                c.d.rounded_rectangle(box, radius=20, outline=YELLOW, width=3)
         # number, or a diamond for a decision
         cx, cy = PAD + 46, y + 48
         nf = font(700, 22)
@@ -266,10 +294,10 @@ def draw(m, out):
             n = str(i + 1)
             c.text(cx - c.tw(n, nf) / 2, cy - 14, n, nf, BODY)
         else:
-            col = LIME if flag else FAINT
+            col = YELLOW if flag else FAINT
             c.d.ellipse((cx - 22, cy - 22, cx + 22, cy + 22), outline=col, width=2)
             n = str(i + 1)
-            c.text(cx - c.tw(n, nf) / 2, cy - 14, n, nf, LIME if flag else BODY)
+            c.text(cx - c.tw(n, nf) / 2, cy - 14, n, nf, YELLOW if flag else BODY)
         tx = PAD + 92
         right = W - PAD - 28
         time_s = s.get("time") if not fork else None
@@ -281,7 +309,7 @@ def draw(m, out):
             title_w -= 0
         c.para(tx, y + 24, s.get("title", ""), title_f2, title_w, WHITE, max_lines=1)
         if time_s:
-            col = LIME if flag else BODY
+            col = YELLOW if flag else BODY
             kx, ky = right - time_w + 10, y + 43
             c.d.ellipse((kx - 10, ky - 10, kx + 10, ky + 10), outline=col, width=2)
             c.d.line((kx, ky - 6, kx, ky, kx + 5, ky + 3), fill=col, width=2)
@@ -298,7 +326,7 @@ def draw(m, out):
                 lab = o.get("label", "")
                 lb = font(700, 20)
                 c.text(ox + 14, oy + 9, lab, lb, WHITE)
-                c.para(ox + 14 + c.tw(lab, lb) + 10, oy + 10, "→ " + (o.get("note") or ""), font(400, 19),
+                c.para(ox + 14 + c.tw(lab, lb) + 10, oy + 10, "– " + (o.get("note") or ""), font(400, 19),
                        ow - c.tw(lab, lb) - 38, BODY, max_lines=1)
         else:
             c.para(tx, y + 64, meta, font(400, 21), right - tx, BODY, max_lines=1)
@@ -308,7 +336,7 @@ def draw(m, out):
             pf = font(700, 17)
             label = "ASSISTANT TAKES THIS"
             pw = c.tw(label, pf, 1) + 28
-            c.pill(W - PAD - pw - 20, y - 17, label, pf, INK, bg=LIME, padx=14, h=34, track=1)
+            c.pill(W - PAD - pw - 20, y - 17, label, pf, INK, bg=YELLOW, padx=14, h=34, track=1)
         y += h
         if i < len(steps) - 1:
             c.arrow(PAD + 46, y + 4, y + gaps - 4)
@@ -318,16 +346,16 @@ def draw(m, out):
     if fs:
         box = (PAD, y, W - PAD, y + 180)
         tint = Image.new("RGBA", (W, c.h), (0, 0, 0, 0))
-        ImageDraw.Draw(tint).rounded_rectangle(box, radius=22, fill=LIME_SOFT)
+        ImageDraw.Draw(tint).rounded_rectangle(box, radius=22, fill=YELLOW_SOFT)
         c.base = Image.alpha_composite(c.base, tint)
         c.d = ImageDraw.Draw(c.base)
-        c.d.rounded_rectangle(box, radius=22, outline=LIME, width=3)
-        c.text(PAD + 30, y + 26, "BUILDING FIRST", font(700, 20), LIME, track=3)
+        c.d.rounded_rectangle(box, radius=22, outline=YELLOW, width=3)
+        c.text(PAD + 30, y + 26, "BUILDING FIRST", font(700, 20), YELLOW, track=3)
         save_w = 0
         if fs.get("saves"):
             sf = font(900, 34)
             save_w = c.tw(fs["saves"], sf)
-            c.text(W - PAD - 30 - save_w, y + 58, fs["saves"], sf, LIME)
+            c.text(W - PAD - 30 - save_w, y + 58, fs["saves"], sf, YELLOW)
             c.text(W - PAD - 30 - c.tw("back, on our estimate", font(400, 19)), y + 102, "back, on our estimate", font(400, 19), BODY)
         c.para(PAD + 30, y + 56, str(fs.get("name", "")).upper(), font(900, 36), INNER - 90 - save_w, WHITE, max_lines=1)
         names = []

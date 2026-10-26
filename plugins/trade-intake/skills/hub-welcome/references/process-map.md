@@ -14,8 +14,8 @@ One **self-contained HTML page**, shown as an artifact. No outside scripts, font
 - **Forks:** if a step splits ("site visit or plans?"), show the decision as a diamond-badge card
   with both branches labelled in one line ("Homes → visit · Builders → plans"). Keep it to one or
   two forks; this is the big picture.
-- **Lime !** on the bottleneck steps, with the hours a week and the why in lime under the step.
-- **Hub look:** near-black `#0D0D0D`, cards `#111111`, lime `#90F23C`, white text, grey `#999`, DM Sans.
+- **Yellow !** on the bottleneck steps, with the hours a week and the why in yellow under the step.
+- **Hub look:** ink `#17181A`, cards `#1F2023`, hi-vis yellow `#FFC20E`, white text, body `#C8C8C9`, Barlow (headlines Barlow Condensed).
   Dark in both themes (the Hub is dark). Never red.
 - **Clock note** on slow waits ("waits for the office day").
 - **Legend** at the bottom, and a "Still done by hand" row of chips.
@@ -36,7 +36,7 @@ One **self-contained HTML page**, shown as an artifact. No outside scripts, font
 4. Redraw after every change (update the same artifact) and say what changed in one line.
 5. Last: "Is this how [Business] runs? (1 Yes · 2 Not yet)". These checks don't count toward the 20.
 6. No artifact possible: show the steps as a table (# · step · who · using what · !) and the
-   Mermaid source (`flowchart TD`, steps `S1`…, `classDef pain stroke:#90F23C,stroke-width:3px`).
+   Mermaid source (`flowchart TD`, steps `S1`…, `classDef pain stroke:#FFC20E,stroke-width:3px`).
 
 The confirmed steps go in the profile's "How the business runs", on the card and in the pack.
 
@@ -52,9 +52,9 @@ Copy the shape; change the steps.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coolabah Air map</title>
 <style>
-  :root { --bg:#0d0d0d; --dot:#1a1a1a; --card:#111111; --line:#242424; --ink:#ffffff; --body:#999999;
-          --accent:#90f23c; --soft:rgba(144,242,60,.08); --red:#90f23c; --bang-ink:#000; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 "DM Sans", system-ui, sans-serif;
+  :root { --bg:#17181a; --dot:#26282c; --card:#1f2023; --line:#36383c; --ink:#ffffff; --body:#c8c8c9;
+          --accent:#ffc20e; --soft:rgba(255,194,14,.08); --red:#ffc20e; --bang-ink:#17181a; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 Barlow, system-ui, sans-serif;
          background-image:radial-gradient(circle, var(--dot) 1.5px, transparent 1.5px); background-size:32px 32px; }
   main { max-width:560px; margin:0 auto; padding:24px 16px 48px; }
   h1 { font-size:24px; margin:0 0 4px; } .sub { color:var(--body); margin:0 0 20px; }
@@ -97,7 +97,7 @@ Copy the shape; change the steps.
   <p><b>Still done by hand</b></p>
   <div class="chips"><span>Quote write-ups</span><span>Re-keying into ServiceM8</span><span>Compliance certs</span>
     <span>Refrigerant log</span><span>Service reminders</span><span>Invoice chasing</span></div>
-  <p class="legend">Lime ! = where it slows down or goes wrong · h/wk = hands-on hours a week</p>
+  <p class="legend">Yellow ! = where it slows down or goes wrong · h/wk = hands-on hours a week</p>
 </main>
 </body>
 </html>
